@@ -81,25 +81,55 @@
       </div>
     </div>
     <div class="card table-card review-table-card">
-      <div class="table-wrap"><table id="reviewTable"><thead><tr><th>上周预测排名</th><th>赛道</th><th>实际排名</th><th>实际净流入</th><th>结果</th><th>漏判赛道观察</th></tr></thead><tbody></tbody></table></div>
+      <div class="table-wrap"><table id="reviewTable"><thead><tr><th>上周预测排名</th><th>赛道</th><th>实际排名</th><th>实际净流入</th><th>结果</th></tr></thead><tbody></tbody></table></div>
     </div>
   </div>
   </div>
+
+
+  <div class="section">
+    <div class="section-title"><h2>漏判赛道观察</h2><p>结合最近一周热点事件，复盘实际前十但未进入预测前十的赛道</p></div>
+    <div class="card table-card missed-card">
+      <div class="table-wrap">
+        <table id="missedReasonTable">
+          <thead>
+            <tr><th>漏判赛道</th><th>实际排名</th><th>实际净流入</th><th>热点支撑与漏判原因</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><h2>模型原理解释</h2><p>解释模型看什么、怎么排序、哪里容易失效</p></div>
+    <div class="model-grid">
+      <div class="card model-card">
+        <span class="tag info">预测目标</span>
+        <h3>判断下一周净流入前十赛道</h3>
+        <p>模型不是预测指数涨跌，也不是收益承诺，而是根据多维信号判断哪些赛道更可能进入下一周资金净流入前列。</p>
+      </div>
+      <div class="card model-card">
+        <span class="tag purple">核心输入</span>
+        <h3>热度、行为、引流、舆情</h3>
+        <p>市场热度看赛道涨跌，用户自行为看主动关注，引流因子看风向标带动，舆论热度看讨论强弱；同时结合上周排名、修复位置和同源赛道关系。</p>
+      </div>
+      <div class="card model-card">
+        <span class="tag strong">排序方法</span>
+        <h3>趋势延续 + 低位修复</h3>
+        <p>强势赛道看信号是否继续增强，弱势赛道看是否出现修复拐点。模型会避免只追高，但对突发热点和低基数反弹仍可能反应滞后。</p>
+      </div>
+      <div class="card model-card">
+        <span class="tag watch">复盘方式</span>
+        <h3>看净流入命中率和排名命中率</h3>
+        <p>净流入命中率看预测前十里有多少赛道实际净流入；排名命中率看预测前十里有多少赛道进入实际前十。两个指标结合看，避免只看单一结果。</p>
+      </div>
+    </div>
+    <div class="risk-box model-risk"><b>使用提示：</b>同源赛道需要合并理解，环比变化率要结合实际数值，热点突发、政策事件和低位小赛道修复是模型容易漏判的主要来源。</div>
+  </div>
+
 
   
-  <div class="section">
-    <div class="section-title"><h2>模型原理解释</h2><p>轻量级多因子排序模型的核心逻辑</p></div>
-    <div class="card model-principle-card">
-      <p><b>天工模型是一个轻量级多因子排序模型，</b>目标不是预测赛道涨跌或基金收益，而是判断下一周50个行业赛道中，哪些更可能进入资金净流入前十。</p>
-      <p>模型先从横截面比较出发，把不同赛道放在同一周的同一框架里看强弱，再根据相对位置做排序。它更关注“谁更可能进入前列”，而不是去预测某个赛道的绝对净流入金额。</p>
-      <p>在输入层面，模型综合<b>市场热度、用户自行为、引流因子、舆论热度、上周排名延续性和低位修复信号</b>，对每个赛道进行标准化打分和排序。市场热度反映赛道涨跌和交易表现，用户自行为反映客户主动关注度，引流因子反映风向标对客户的带动作用，舆论热度反映市场讨论强弱；同时，上周排名延续性和低位修复信号帮助模型区分趋势延续与低位反转。</p>
-      <p>在排序过程中，模型不仅看因子水平，还会看因子变化和赛道之间的相对位置变化。强势赛道重点看信号是否继续增强，弱势赛道重点看是否出现修复拐点，因此结果不是简单追高，而是“趋势延续 + 低位修复”的综合排序。</p>
-      <p>同时，模型会对<b>过度拥挤、低基数异常和同源赛道重复</b>进行修正，避免简单追高或重复推荐。比如芯片、半导体及设备、消费电子等方向往往存在产业链共振，模型会尽量避免把同一条主线机械拆成多个独立机会。</p>
-      <p>最终结果用于提供<b>赛道观察和产品推荐线索</b>，帮助运营和投顾优先识别值得跟踪的方向，<b>不构成投资建议</b>。实际使用中，还需要结合最新热点事件、产业催化和赛道间同质性情况一起理解。</p>
-    </div>
-  </div>
-
-
 
   <div class="section"><div class="footer-note" id="compliance"></div></div>
 </div>
@@ -178,7 +208,7 @@ async function init(){
   const obs = DATA.ops_summary?.caution_list?.slice(0,3)?.join('、') || DATA.top10.slice(6,9).map(x=>x.track).join('、');
   document.getElementById('predictionBrief').textContent = `本周模型前列集中在${top3}；第二梯队关注${next3}；${obs ? `观察方向包括${obs}。` : ''}`;
   document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
-  renderTop10(); renderReview(); renderMissedReasons();
+  renderTop10(); renderReview(); renderMissedReasons(); renderMissedReasons();
 }
 function renderTop10(){
   const tb=document.querySelector('#top10Table tbody');
@@ -207,28 +237,7 @@ function renderReview(){
   document.getElementById('reviewSummary').textContent = rev.summary || '';
   document.getElementById('reviewHits').innerHTML = (rev.hits||[]).map(staticChip).join('') || '<span class="muted">暂无</span>';
   document.getElementById('reviewMissed').innerHTML = (rev.missed_actual_top10||[]).map(staticChip).join('') || '<span class="muted">暂无</span>';
-
-  const missedMap = Object.fromEntries(MISSED_REASONS.map(x=>[x.track,x]));
-  const predRows = pred.map(r=>{
-    const extra = missedMap[r.track]?.reason || '—';
-    return `<tr>
-      <td class="rank">${r.pred_rank}</td>
-      <td><b>${r.track}</b></td>
-      <td class="num">${r.actual_rank??'--'}</td>
-      <td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td>
-      <td>${r.hit?'<span class="tag strong">命中</span>':'<span class="tag caution">未进前十</span>'}</td>
-      <td class="missed-reason-cell">${extra}</td>
-    </tr>`;
-  });
-  const missedRows = MISSED_REASONS.map(r=>`<tr>
-    <td class="rank">—</td>
-    <td><b>${r.track}</b></td>
-    <td class="num">${r.actual_rank}</td>
-    <td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td>
-    <td><span class="tag watch">漏判赛道</span></td>
-    <td class="missed-reason-cell">${r.reason}</td>
-  </tr>`);
-  document.querySelector('#reviewTable tbody').innerHTML = [...predRows, ...missedRows].join('') || '<tr><td colspan="6" class="empty">暂无复盘数据</td></tr>';
+  document.querySelector('#reviewTable tbody').innerHTML = pred.map(r=>`<tr><td class="rank">${r.pred_rank}</td><td><b>${r.track}</b></td><td class="num">${r.actual_rank??'--'}</td><td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td><td>${r.hit?'<span class="tag strong">命中</span>':'<span class="tag caution">未进前十</span>'}</td></tr>`).join('') || '<tr><td colspan="5" class="empty">暂无复盘数据</td></tr>';
 }
 init().catch(err=>{document.body.innerHTML='<div class="wrap"><div class="card action-card"><h2>数据加载失败</h2><p>'+err.message+'</p><p class="muted">请确认 assets/latest-data.js 已随网站一起上传。</p></div></div>'});
 </script>

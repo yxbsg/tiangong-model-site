@@ -211,3 +211,15 @@ table th, table td{text-align:center !important;vertical-align:middle !important
 .review-table-card table th:last-child,
 .review-table-card table td:last-child{min-width:420px}
 .review-table-card .missed-reason-cell{text-align:left !important;white-space:normal !important;line-height:1.75;color:#334155}
+
+
+/* v35 revert model/missed to v33 layout */
+.missed-card table th,.missed-card table td{vertical-align:top !important}
+.missed-reason-cell{white-space:normal !important;text-align:left !important;line-height:1.75;color:#334155;min-width:520px}
+.model-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.model-card{padding:18px 18px 20px}
+.model-card h3{font-size:18px;margin:12px 0 8px;color:#172033}
+.model-card p{margin:0;color:#536176;line-height:1.8;font-size:14px}
+.model-risk{margin-top:14px}
+@media(max-width:1100px){.model-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.model-grid{grid-template-columns:1fr}.missed-reason-cell{min-width:320px}}
