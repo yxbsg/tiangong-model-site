@@ -1,0 +1,5343 @@
+window.TIANGONG_FUND_MAP = {
+  "generated_at": "2026-06-25 09:51:48",
+  "source_file": "场内映射表.xlsx",
+  "total_funds": 830,
+  "tracks": [
+    {
+      "track": "科创",
+      "fund_count": 83
+    },
+    {
+      "track": "创新药及生物科技",
+      "fund_count": 54
+    },
+    {
+      "track": "大金融",
+      "fund_count": 41
+    },
+    {
+      "track": "有色",
+      "fund_count": 37
+    },
+    {
+      "track": "AI",
+      "fund_count": 36
+    },
+    {
+      "track": "传统医药",
+      "fund_count": 36
+    },
+    {
+      "track": "港股科技",
+      "fund_count": 35
+    },
+    {
+      "track": "消费",
+      "fund_count": 31
+    },
+    {
+      "track": "农业",
+      "fund_count": 30
+    },
+    {
+      "track": "汽车",
+      "fund_count": 30
+    },
+    {
+      "track": "芯片",
+      "fund_count": 26
+    },
+    {
+      "track": "电力",
+      "fund_count": 24
+    },
+    {
+      "track": "油气石化",
+      "fund_count": 22
+    },
+    {
+      "track": "电池",
+      "fund_count": 22
+    },
+    {
+      "track": "互联网",
+      "fund_count": 21
+    },
+    {
+      "track": "卫星及航天",
+      "fund_count": 21
+    },
+    {
+      "track": "新能源",
+      "fund_count": 20
+    },
+    {
+      "track": "工程机械",
+      "fund_count": 17
+    },
+    {
+      "track": "光伏",
+      "fund_count": 16
+    },
+    {
+      "track": "机器人",
+      "fund_count": 16
+    },
+    {
+      "track": "软件",
+      "fund_count": 15
+    },
+    {
+      "track": "半导体及设备",
+      "fund_count": 14
+    },
+    {
+      "track": "云计算",
+      "fund_count": 13
+    },
+    {
+      "track": "通信",
+      "fund_count": 12
+    },
+    {
+      "track": "家电",
+      "fund_count": 11
+    },
+    {
+      "track": "食品饮料",
+      "fund_count": 11
+    },
+    {
+      "track": "材料",
+      "fund_count": 10
+    },
+    {
+      "track": "物流",
+      "fund_count": 9
+    },
+    {
+      "track": "传统科技",
+      "fund_count": 8
+    },
+    {
+      "track": "信息技术",
+      "fund_count": 8
+    },
+    {
+      "track": "消费电子",
+      "fund_count": 8
+    },
+    {
+      "track": "金融科技",
+      "fund_count": 8
+    },
+    {
+      "track": "信创",
+      "fund_count": 7
+    },
+    {
+      "track": "医疗器械",
+      "fund_count": 7
+    },
+    {
+      "track": "军工",
+      "fund_count": 6
+    },
+    {
+      "track": "化工",
+      "fund_count": 6
+    },
+    {
+      "track": "黄金",
+      "fund_count": 6
+    },
+    {
+      "track": "传媒",
+      "fund_count": 5
+    },
+    {
+      "track": "公用事业",
+      "fund_count": 4
+    },
+    {
+      "track": "地产",
+      "fund_count": 4
+    },
+    {
+      "track": "游戏",
+      "fund_count": 4
+    },
+    {
+      "track": "环保",
+      "fund_count": 4
+    },
+    {
+      "track": "交运",
+      "fund_count": 3
+    },
+    {
+      "track": "建筑材料",
+      "fund_count": 3
+    },
+    {
+      "track": "电子",
+      "fund_count": 3
+    },
+    {
+      "track": "计算机",
+      "fund_count": 3
+    },
+    {
+      "track": "金融地产",
+      "fund_count": 3
+    },
+    {
+      "track": "高端装备",
+      "fund_count": 3
+    },
+    {
+      "track": "旅游",
+      "fund_count": 2
+    },
+    {
+      "track": "能源",
+      "fund_count": 2
+    },
+    {
+      "track": "集成电路",
+      "fund_count": 2
+    },
+    {
+      "track": "VR",
+      "fund_count": 1
+    },
+    {
+      "track": "教育",
+      "fund_count": 1
+    },
+    {
+      "track": "煤炭",
+      "fund_count": 1
+    },
+    {
+      "track": "白酒",
+      "fund_count": 1
+    },
+    {
+      "track": "粮食",
+      "fund_count": 1
+    },
+    {
+      "track": "车联网",
+      "fund_count": 1
+    },
+    {
+      "track": "钢铁",
+      "fund_count": 1
+    },
+    {
+      "track": "银行",
+      "fund_count": 1
+    }
+  ],
+  "funds_by_track": {
+    "消费": [
+      {
+        "code": "159245.SZ",
+        "name": "富国国证港股通消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159265.SZ",
+        "name": "鹏华国证港股通消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159268.SZ",
+        "name": "汇添富国证港股通消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159285.SZ",
+        "name": "华安国证港股通消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159520.SZ",
+        "name": "工银瑞信中证消费龙头ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159670.SZ",
+        "name": "国联安中证消费50ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159672.SZ",
+        "name": "博时中证主要消费ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159689.SZ",
+        "name": "南方中证主要消费ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159699.SZ",
+        "name": "广发恒生消费(QDII-ETF)",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159725.SZ",
+        "name": "工银瑞信中证线上消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159728.SZ",
+        "name": "南方国证在线消费ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159735.SZ",
+        "name": "银华中证港股通消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159793.SZ",
+        "name": "平安中证沪港深线上消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159798.SZ",
+        "name": "易方达中证消费50ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "159928.SZ",
+        "name": "汇添富中证主要消费ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "510150.SH",
+        "name": "招商上证消费80ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "510630.SH",
+        "name": "华夏上证主要消费ETF发起式",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "512600.SH",
+        "name": "嘉实中证主要消费ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "513070.SH",
+        "name": "易方达中证港股通消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "513230.SH",
+        "name": "华夏中证港股通消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "513590.SH",
+        "name": "鹏华中证港股通消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "513970.SH",
+        "name": "景顺长城恒生消费(QDII-ETF)",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "515650.SH",
+        "name": "富国中证消费50ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "515920.SH",
+        "name": "博时中证智能消费主题ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "516130.SH",
+        "name": "华宝中证消费龙头ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "516600.SH",
+        "name": "工银瑞信中证消费服务领先ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "517550.SH",
+        "name": "招商中证沪港深消费龙头ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "517880.SH",
+        "name": "华泰柏瑞中证沪港深品牌消费50ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "520520.SH",
+        "name": "华泰柏瑞恒生消费(QDII-ETF)",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "520620.SH",
+        "name": "嘉实恒生消费ETF",
+        "track": "消费",
+        "issue_date": ""
+      },
+      {
+        "code": "560680.SH",
+        "name": "广发中证主要消费ETF",
+        "track": "消费",
+        "issue_date": ""
+      }
+    ],
+    "大金融": [
+      {
+        "code": "159008.SZ",
+        "name": "景顺长城中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "159016.SZ",
+        "name": "广发中证证券公司30ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "159253.SZ",
+        "name": "博时中证银行ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "159260.SZ",
+        "name": "博时中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "159692.SZ",
+        "name": "东财中证证券公司30ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "159841.SZ",
+        "name": "天弘中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "159842.SZ",
+        "name": "银华中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "159848.SZ",
+        "name": "国联安中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "159887.SZ",
+        "name": "富国中证800银行ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "159933.SZ",
+        "name": "国投瑞银沪深300金融地产ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "159993.SZ",
+        "name": "鹏华国证证券龙头ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "510200.SH",
+        "name": "汇安上证证券ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "510650.SH",
+        "name": "华夏上证金融地产ETF发起式",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "512000.SH",
+        "name": "华宝中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "512070.SH",
+        "name": "易方达沪深300非银行金融ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "512570.SH",
+        "name": "易方达中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "512700.SH",
+        "name": "南方中证银行ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "512730.SH",
+        "name": "鹏华中证银行ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "512800.SH",
+        "name": "华宝中证银行ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "512820.SH",
+        "name": "汇添富中证银行ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "512880.SH",
+        "name": "国泰中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "512900.SH",
+        "name": "南方中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "513090.SH",
+        "name": "易方达中证香港证券投资主题ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "513140.SH",
+        "name": "华泰柏瑞中证港股通金融服务(QDII-ETF)",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "513190.SH",
+        "name": "华夏中证港股通内地金融ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "513750.SH",
+        "name": "广发中证港股通非银行金融主题ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "515010.SH",
+        "name": "华夏中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "515020.SH",
+        "name": "华夏中证银行ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "515290.SH",
+        "name": "天弘中证银行ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "515560.SH",
+        "name": "建信中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "515630.SH",
+        "name": "鹏华中证800证券保险ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "515850.SH",
+        "name": "富国中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "516200.SH",
+        "name": "华安中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "516210.SH",
+        "name": "华安中证银行ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "516310.SH",
+        "name": "易方达中证银行ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "516730.SH",
+        "name": "浦银安盛中证证券公司30ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "516980.SH",
+        "name": "华富中证证券公司先锋策略ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "517900.SH",
+        "name": "招商中证银行AH价格优选ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "560090.SH",
+        "name": "汇添富中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "560400.SH",
+        "name": "华泰柏瑞中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      },
+      {
+        "code": "562870.SH",
+        "name": "嘉实中证全指证券公司ETF",
+        "track": "大金融",
+        "issue_date": ""
+      }
+    ],
+    "传统医药": [
+      {
+        "code": "159137.SZ",
+        "name": "华宝中证港股通医疗主题ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159303.SZ",
+        "name": "大成恒生医疗保健(QDII-ETF)",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159366.SZ",
+        "name": "永赢中证港股通医疗主题ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159377.SZ",
+        "name": "国泰创业板医药卫生ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159557.SZ",
+        "name": "嘉实恒生医疗保健(QDII-ETF)",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159647.SZ",
+        "name": "鹏华中证中药ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159718.SZ",
+        "name": "平安中证港股通医药卫生综合ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159760.SZ",
+        "name": "泰康国证公共卫生与医疗健康ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159776.SZ",
+        "name": "银华中证港股通医药卫生综合ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159828.SZ",
+        "name": "国泰中证医疗ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159838.SZ",
+        "name": "博时中证医药50ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159847.SZ",
+        "name": "易方达中证医疗ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159873.SZ",
+        "name": "天弘中证全指医疗保健设备与服务ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159877.SZ",
+        "name": "南方中证全指医疗保健设备与服务ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159891.SZ",
+        "name": "建信中证全指医疗保健设备与服务ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159929.SZ",
+        "name": "汇添富中证医药卫生ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "159938.SZ",
+        "name": "广发中证全指医药卫生ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "510660.SH",
+        "name": "华夏上证医药卫生ETF发起式",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "512010.SH",
+        "name": "易方达沪深300医药卫生ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "512120.SH",
+        "name": "华安中证细分医药ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "512170.SH",
+        "name": "华宝中证医疗ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "513060.SH",
+        "name": "博时恒生医疗保健(QDII-ETF)",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "513200.SH",
+        "name": "易方达中证港股通医药卫生综合ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "513700.SH",
+        "name": "鹏华中证港股通医药卫生综合ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "515950.SH",
+        "name": "富国中证医药50ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "515960.SH",
+        "name": "嘉实中证医药健康100策略ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "516610.SH",
+        "name": "大成中证全指医疗保健设备与服务ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "516790.SH",
+        "name": "华泰柏瑞中证全指医疗保健设备与服务ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "517990.SH",
+        "name": "招商中证沪港深500医药卫生ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "520510.SH",
+        "name": "华夏中证港股通医疗主题ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "520850.SH",
+        "name": "易方达中证港股通医疗主题ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "560080.SH",
+        "name": "汇添富中证中药ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "560260.SH",
+        "name": "广发中证医疗ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "561510.SH",
+        "name": "华泰柏瑞中证中药ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "562050.SH",
+        "name": "华宝中证制药ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      },
+      {
+        "code": "562390.SH",
+        "name": "银华中证中药ETF",
+        "track": "传统医药",
+        "issue_date": ""
+      }
+    ],
+    "地产": [
+      {
+        "code": "159707.SZ",
+        "name": "华宝中证800地产ETF",
+        "track": "地产",
+        "issue_date": ""
+      },
+      {
+        "code": "159768.SZ",
+        "name": "银华中证内地地产主题ETF",
+        "track": "地产",
+        "issue_date": ""
+      },
+      {
+        "code": "512200.SH",
+        "name": "南方中证全指房地产ETF",
+        "track": "地产",
+        "issue_date": ""
+      },
+      {
+        "code": "515060.SH",
+        "name": "华夏中证全指房地产ETF",
+        "track": "地产",
+        "issue_date": ""
+      }
+    ],
+    "通信": [
+      {
+        "code": "159507.SZ",
+        "name": "广发国证通信ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "159511.SZ",
+        "name": "南方中证通信服务ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "159583.SZ",
+        "name": "富国中证通信设备主题ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "159695.SZ",
+        "name": "嘉实国证通信ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "159811.SZ",
+        "name": "博时中证5G产业50ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "159994.SZ",
+        "name": "银华中证5G通信主题ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "512220.SH",
+        "name": "景顺长城中证科技传媒通信150ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "515050.SH",
+        "name": "华夏中证5G通信主题ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "515880.SH",
+        "name": "国泰中证全指通信设备ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "560300.SH",
+        "name": "汇添富中证电信主题ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "560690.SH",
+        "name": "鹏华中证电信主题ETF",
+        "track": "通信",
+        "issue_date": ""
+      },
+      {
+        "code": "563010.SH",
+        "name": "易方达中证电信主题ETF",
+        "track": "通信",
+        "issue_date": ""
+      }
+    ],
+    "创新药及生物科技": [
+      {
+        "code": "159102.SZ",
+        "name": "华安恒生生物科技ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159105.SZ",
+        "name": "易方达恒生生物科技ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159130.SZ",
+        "name": "鹏华恒生生物科技ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159132.SZ",
+        "name": "富国恒生生物科技ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159217.SZ",
+        "name": "工银瑞信国证港股通创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159286.SZ",
+        "name": "鹏华国证港股通创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159297.SZ",
+        "name": "南方国证港股通创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159316.SZ",
+        "name": "易方达恒生港股通创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159502.SZ",
+        "name": "嘉实标普生物科技精选行业(QDII-ETF)",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159506.SZ",
+        "name": "富国恒生港股通创新药及医疗保健ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159508.SZ",
+        "name": "华安国证生物医药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159567.SZ",
+        "name": "银华国证港股通创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159570.SZ",
+        "name": "汇添富国证港股通创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159615.SZ",
+        "name": "南方恒生生物科技(QDII-ETF)",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159622.SZ",
+        "name": "东财中证沪港深创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159643.SZ",
+        "name": "国泰国证疫苗与生物科技ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159645.SZ",
+        "name": "富国国证疫苗与生物科技ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159657.SZ",
+        "name": "鹏华国证疫苗与生物科技ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159748.SZ",
+        "name": "富国中证沪港深创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159835.SZ",
+        "name": "建信中证创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159837.SZ",
+        "name": "易方达中证生物科技主题ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159839.SZ",
+        "name": "汇添富国证生物医药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159849.SZ",
+        "name": "招商中证生物科技主题ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159858.SZ",
+        "name": "南方中证创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159859.SZ",
+        "name": "天弘国证生物医药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159892.SZ",
+        "name": "华夏恒生生物科技(QDII-ETF)",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159992.SZ",
+        "name": "银华中证创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "512290.SH",
+        "name": "国泰中证生物医药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513120.SH",
+        "name": "广发中证香港创新药(QDII-ETF)",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513280.SH",
+        "name": "汇添富恒生生物科技(QDII-ETF)",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513780.SH",
+        "name": "景顺长城中证港股通创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "515120.SH",
+        "name": "广发中证创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "516060.SH",
+        "name": "工银瑞信中证创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "516080.SH",
+        "name": "易方达中证创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "516500.SH",
+        "name": "华夏中证生物科技主题ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "516820.SH",
+        "name": "平安中证医药及医疗器械创新ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "516930.SH",
+        "name": "民生加银中证生物科技主题ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "517110.SH",
+        "name": "国泰中证沪港深创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "517120.SH",
+        "name": "华泰柏瑞中证沪港深创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "517380.SH",
+        "name": "天弘恒生沪深港创新药精选50ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520500.SH",
+        "name": "华泰柏瑞恒生创新药(QDII-ETF)",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520690.SH",
+        "name": "博时恒生港股通创新药精选ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520700.SH",
+        "name": "万家中证港股通创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520880.SH",
+        "name": "华宝恒生港股通创新药精选ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520970.SH",
+        "name": "嘉实中证港股通创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "560900.SH",
+        "name": "摩根中证创新药产业ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "561920.SH",
+        "name": "招商中证疫苗与生物技术ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "562860.SH",
+        "name": "嘉实中证疫苗与生物技术ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "588130.SH",
+        "name": "华夏上证科创板生物医药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "588250.SH",
+        "name": "鹏华上证科创板生物医药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "588700.SH",
+        "name": "嘉实上证科创板生物医药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "588860.SH",
+        "name": "工银瑞信上证科创板生物医药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "589120.SH",
+        "name": "汇添富上证科创板创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      },
+      {
+        "code": "589720.SH",
+        "name": "国泰上证科创板创新药ETF",
+        "track": "创新药及生物科技",
+        "issue_date": ""
+      }
+    ],
+    "信息技术": [
+      {
+        "code": "159131.SZ",
+        "name": "华宝中证港股通信息技术综合ETF",
+        "track": "信息技术",
+        "issue_date": ""
+      },
+      {
+        "code": "159909.SZ",
+        "name": "招商深证电子信息传媒产业(TMT)50ETF",
+        "track": "信息技术",
+        "issue_date": ""
+      },
+      {
+        "code": "159939.SZ",
+        "name": "广发中证全指信息技术ETF",
+        "track": "信息技术",
+        "issue_date": ""
+      },
+      {
+        "code": "512330.SH",
+        "name": "南方中证500信息技术指数ETF",
+        "track": "信息技术",
+        "issue_date": ""
+      },
+      {
+        "code": "562560.SH",
+        "name": "华夏中证全指信息技术ETF",
+        "track": "信息技术",
+        "issue_date": ""
+      },
+      {
+        "code": "588100.SH",
+        "name": "嘉实上证科创板新一代信息技术ETF",
+        "track": "信息技术",
+        "issue_date": ""
+      },
+      {
+        "code": "588260.SH",
+        "name": "华安上证科创板新一代信息技术ETF",
+        "track": "信息技术",
+        "issue_date": ""
+      },
+      {
+        "code": "588770.SH",
+        "name": "摩根上证科创板新一代信息技术ETF",
+        "track": "信息技术",
+        "issue_date": ""
+      }
+    ],
+    "有色": [
+      {
+        "code": "159029.SZ",
+        "name": "广发中证有色金属矿业主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159032.SZ",
+        "name": "易方达中证工业有色金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159045.SZ",
+        "name": "大成中证稀有金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159053.SZ",
+        "name": "华夏中证稀有金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159055.SZ",
+        "name": "富国中证稀有金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159062.SZ",
+        "name": "南方中证稀有金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159157.SZ",
+        "name": "天弘中证工业有色金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159162.SZ",
+        "name": "鹏华中证工业有色金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159163.SZ",
+        "name": "泰康中证有色金属矿业主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159168.SZ",
+        "name": "富国中证工业有色金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159171.SZ",
+        "name": "博时中证工业有色金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159608.SZ",
+        "name": "广发中证稀有金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159652.SZ",
+        "name": "汇添富中证细分有色金属产业主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159671.SZ",
+        "name": "工银瑞信中证稀有金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159690.SZ",
+        "name": "招商中证有色金属矿业主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159713.SZ",
+        "name": "富国中证稀土产业ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159715.SZ",
+        "name": "易方达中证稀土产业ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159871.SZ",
+        "name": "银华中证有色金属ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159876.SZ",
+        "name": "华宝中证有色金属ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159880.SZ",
+        "name": "鹏华国证有色金属行业ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "159881.SZ",
+        "name": "国泰中证有色金属ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "512140.SH",
+        "name": "华安中证全指电力公用事业ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "512400.SH",
+        "name": "南方中证申万有色金属ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "512940.SH",
+        "name": "华安中证有色金属矿业主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "516150.SH",
+        "name": "嘉实中证稀土产业ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "516650.SH",
+        "name": "华夏中证细分有色金属产业主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "516780.SH",
+        "name": "华泰柏瑞中证稀土产业ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "560290.SH",
+        "name": "景顺长城中证有色金属矿业主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "560470.SH",
+        "name": "易方达中证细分有色金属产业主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "560490.SH",
+        "name": "华泰柏瑞中证工业有色金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "560860.SH",
+        "name": "万家中证工业有色金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "560870.SH",
+        "name": "中银中证工业有色金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "560970.SH",
+        "name": "平安中证工业有色金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "561050.SH",
+        "name": "易方达中证稀有金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "561330.SH",
+        "name": "国泰中证有色金属矿业主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "561800.SH",
+        "name": "华富中证稀有金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      },
+      {
+        "code": "562800.SH",
+        "name": "嘉实中证稀有金属主题ETF",
+        "track": "有色",
+        "issue_date": ""
+      }
+    ],
+    "半导体及设备": [
+      {
+        "code": "159325.SZ",
+        "name": "南方中证半导体行业精选ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "159327.SZ",
+        "name": "万家中证半导体材料设备主题交易ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "159516.SZ",
+        "name": "国泰中证半导体材料设备主题ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "159558.SZ",
+        "name": "易方达中证半导体材料设备主题ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "159582.SZ",
+        "name": "博时中证半导体产业ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "512480.SH",
+        "name": "国联安中证全指半导体产品与设备ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "512760.SH",
+        "name": "国泰CES半导体芯片行业ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "513310.SH",
+        "name": "华泰柏瑞中证韩交所中韩半导体(QDII-ETF)",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "560780.SH",
+        "name": "广发中证半导体材料设备主题ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "561980.SH",
+        "name": "招商中证半导体产业ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "562590.SH",
+        "name": "华夏中证半导体材料设备主题ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "588170.SH",
+        "name": "华夏上证科创板半导体材料设备主题ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "588710.SH",
+        "name": "华泰柏瑞上证科创板半导体材料设备主题ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      },
+      {
+        "code": "589020.SH",
+        "name": "鹏华上证科创板半导体材料设备主题ETF",
+        "track": "半导体及设备",
+        "issue_date": ""
+      }
+    ],
+    "军工": [
+      {
+        "code": "512560.SH",
+        "name": "易方达中证军工ETF",
+        "track": "军工",
+        "issue_date": ""
+      },
+      {
+        "code": "512660.SH",
+        "name": "国泰中证军工ETF",
+        "track": "军工",
+        "issue_date": ""
+      },
+      {
+        "code": "512670.SH",
+        "name": "鹏华中证国防ETF",
+        "track": "军工",
+        "issue_date": ""
+      },
+      {
+        "code": "512680.SH",
+        "name": "广发中证军工ETF",
+        "track": "军工",
+        "issue_date": ""
+      },
+      {
+        "code": "512710.SH",
+        "name": "富国中证军工龙头ETF",
+        "track": "军工",
+        "issue_date": ""
+      },
+      {
+        "code": "512810.SH",
+        "name": "华宝中证军工ETF",
+        "track": "军工",
+        "issue_date": ""
+      }
+    ],
+    "环保": [
+      {
+        "code": "159861.SZ",
+        "name": "国泰中证环保产业50ETF",
+        "track": "环保",
+        "issue_date": ""
+      },
+      {
+        "code": "512580.SH",
+        "name": "广发中证环保产业ETF",
+        "track": "环保",
+        "issue_date": ""
+      },
+      {
+        "code": "517160.SH",
+        "name": "南方中证长江保护主题ETF",
+        "track": "环保",
+        "issue_date": ""
+      },
+      {
+        "code": "517330.SH",
+        "name": "易方达中证长江保护主题ETF",
+        "track": "环保",
+        "issue_date": ""
+      }
+    ],
+    "农业": [
+      {
+        "code": "159007.SZ",
+        "name": "华泰柏瑞中证畜牧养殖产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159011.SZ",
+        "name": "华安中证畜牧养殖产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159020.SZ",
+        "name": "易方达中证畜牧养殖产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159023.SZ",
+        "name": "万家中证畜牧养殖产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159027.SZ",
+        "name": "大成中证畜牧养殖产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159030.SZ",
+        "name": "华夏国证粮食产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159033.SZ",
+        "name": "国泰国证粮食产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159038.SZ",
+        "name": "易方达国证粮食产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159041.SZ",
+        "name": "鹏华中证农业主题ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159060.SZ",
+        "name": "浦银安盛国证粮食产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159063.SZ",
+        "name": "南方国证粮食产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159165.SZ",
+        "name": "永赢中证畜牧养殖产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159172.SZ",
+        "name": "汇添富中证畜牧养殖产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159173.SZ",
+        "name": "南方中证全指农牧渔ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159275.SZ",
+        "name": "华宝中证全指农牧渔ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159616.SZ",
+        "name": "建信中证农牧主题ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159825.SZ",
+        "name": "富国中证农业主题ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159827.SZ",
+        "name": "银华中证农业主题ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159865.SZ",
+        "name": "国泰中证畜牧养殖ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "159867.SZ",
+        "name": "鹏华中证畜牧养殖ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "512450.SH",
+        "name": "广发中证畜牧养殖产业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "512620.SH",
+        "name": "天弘中证农业主题ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "516550.SH",
+        "name": "嘉实中证大农业ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "516670.SH",
+        "name": "招商中证畜牧养殖ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "516760.SH",
+        "name": "平安中证畜牧养殖ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "516810.SH",
+        "name": "华夏中证农业主题ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "560210.SH",
+        "name": "景顺长城中证全指农牧渔ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "560320.SH",
+        "name": "富国中证全指食品ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "560420.SH",
+        "name": "前海开源中证全指食品ETF",
+        "track": "农业",
+        "issue_date": ""
+      },
+      {
+        "code": "562900.SH",
+        "name": "易方达中证现代农业主题ETF",
+        "track": "农业",
+        "issue_date": ""
+      }
+    ],
+    "卫星及航天": [
+      {
+        "code": "159206.SZ",
+        "name": "永赢国证商用卫星通信产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159208.SZ",
+        "name": "万家国证航天航空行业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159218.SZ",
+        "name": "招商中证卫星产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159227.SZ",
+        "name": "华夏国证航天航空行业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159230.SZ",
+        "name": "华夏国证通用航空产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159231.SZ",
+        "name": "华宝国证通用航空产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159241.SZ",
+        "name": "天弘国证航天航空行业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159255.SZ",
+        "name": "易方达国证通用航空产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159257.SZ",
+        "name": "汇添富国证通用航空产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159267.SZ",
+        "name": "华安国证航天航空行业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159283.SZ",
+        "name": "南方中证通用航空主题ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159378.SZ",
+        "name": "永赢国证通用航空产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "159392.SZ",
+        "name": "富国国证通用航空产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "512630.SH",
+        "name": "广发中证卫星产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "561660.SH",
+        "name": "平安中证通用航空主题ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "563230.SH",
+        "name": "富国中证卫星产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "563320.SH",
+        "name": "华泰柏瑞中证通用航空主题ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "563380.SH",
+        "name": "华泰柏瑞中证全指航空航天ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "563530.SH",
+        "name": "易方达中证卫星产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "563790.SH",
+        "name": "鹏华中证卫星产业ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      },
+      {
+        "code": "563870.SH",
+        "name": "鹏华中证通用航空主题ETF",
+        "track": "卫星及航天",
+        "issue_date": ""
+      }
+    ],
+    "金融地产": [
+      {
+        "code": "159931.SZ",
+        "name": "汇添富中证金融地产ETF",
+        "track": "金融地产",
+        "issue_date": ""
+      },
+      {
+        "code": "159940.SZ",
+        "name": "广发中证全指金融地产ETF",
+        "track": "金融地产",
+        "issue_date": ""
+      },
+      {
+        "code": "512640.SH",
+        "name": "嘉实中证金融地产ETF",
+        "track": "金融地产",
+        "issue_date": ""
+      }
+    ],
+    "白酒": [
+      {
+        "code": "512690.SH",
+        "name": "鹏华中证酒ETF",
+        "track": "白酒",
+        "issue_date": ""
+      }
+    ],
+    "计算机": [
+      {
+        "code": "159586.SZ",
+        "name": "南方中证全指计算机ETF",
+        "track": "计算机",
+        "issue_date": ""
+      },
+      {
+        "code": "159998.SZ",
+        "name": "天弘中证计算机主题ETF",
+        "track": "计算机",
+        "issue_date": ""
+      },
+      {
+        "code": "512720.SH",
+        "name": "国泰中证计算机主题ETF",
+        "track": "计算机",
+        "issue_date": ""
+      }
+    ],
+    "传媒": [
+      {
+        "code": "159805.SZ",
+        "name": "鹏华中证传媒ETF",
+        "track": "传媒",
+        "issue_date": ""
+      },
+      {
+        "code": "159855.SZ",
+        "name": "银华中证影视主题ETF",
+        "track": "传媒",
+        "issue_date": ""
+      },
+      {
+        "code": "512980.SH",
+        "name": "广发中证传媒ETF",
+        "track": "传媒",
+        "issue_date": ""
+      },
+      {
+        "code": "516190.SH",
+        "name": "华夏中证文娱传媒ETF",
+        "track": "传媒",
+        "issue_date": ""
+      },
+      {
+        "code": "516620.SH",
+        "name": "国泰中证影视主题ETF",
+        "track": "传媒",
+        "issue_date": ""
+      }
+    ],
+    "港股科技": [
+      {
+        "code": "159101.SZ",
+        "name": "华夏国证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159120.SZ",
+        "name": "国联安恒生港股通科技主题ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159125.SZ",
+        "name": "招商国证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159128.SZ",
+        "name": "天弘国证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159251.SZ",
+        "name": "万家国证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159262.SZ",
+        "name": "广发恒生港股通科技主题ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159269.SZ",
+        "name": "南方中证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159636.SZ",
+        "name": "工银瑞信国证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159740.SZ",
+        "name": "大成恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159741.SZ",
+        "name": "嘉实恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159742.SZ",
+        "name": "博时恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159747.SZ",
+        "name": "南方中证香港科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159750.SZ",
+        "name": "招商中证香港科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159751.SZ",
+        "name": "鹏华中证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513010.SH",
+        "name": "易方达恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513020.SH",
+        "name": "国泰中证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513130.SH",
+        "name": "华泰柏瑞南方东英恒生科技指数(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513150.SH",
+        "name": "华泰柏瑞中证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513160.SH",
+        "name": "银华恒生港股通中国科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513180.SH",
+        "name": "华夏恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513260.SH",
+        "name": "汇添富恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513380.SH",
+        "name": "广发恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513560.SH",
+        "name": "兴银中证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513580.SH",
+        "name": "华安恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513860.SH",
+        "name": "海富通中证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513890.SH",
+        "name": "摩根恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "513980.SH",
+        "name": "景顺长城中证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520530.SH",
+        "name": "东财中证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520570.SH",
+        "name": "南方恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520590.SH",
+        "name": "鹏华恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520670.SH",
+        "name": "嘉实恒生港股通科技主题ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520840.SH",
+        "name": "华安恒生港股通科技主题ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520860.SH",
+        "name": "富国中证港股通科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520920.SH",
+        "name": "天弘恒生科技(QDII-ETF)",
+        "track": "港股科技",
+        "issue_date": ""
+      },
+      {
+        "code": "520980.SH",
+        "name": "汇添富恒生港股通中国科技ETF",
+        "track": "港股科技",
+        "issue_date": ""
+      }
+    ],
+    "互联网": [
+      {
+        "code": "159202.SZ",
+        "name": "万家恒生互联网科技业(QDII-ETF)",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "159280.SZ",
+        "name": "汇添富国证港股通互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "159550.SZ",
+        "name": "东财中证沪港深互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "159568.SZ",
+        "name": "博时中证港股通互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "159605.SZ",
+        "name": "广发中证海外中国互联网30(QDII-ETF)",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "159607.SZ",
+        "name": "嘉实中证海外中国互联网30(QDII-ETF)",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "159688.SZ",
+        "name": "华安恒生互联网科技业(QDII-ETF)",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "159729.SZ",
+        "name": "汇添富中证沪港深互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "159778.SZ",
+        "name": "鹏华中证工业互联网主题ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "159792.SZ",
+        "name": "富国中证港股通互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "159856.SZ",
+        "name": "工银瑞信中证沪港深互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "513040.SH",
+        "name": "易方达中证港股通互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "513050.SH",
+        "name": "易方达中证海外中国互联网50(QDII-ETF)",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "513220.SH",
+        "name": "招商中证全球中国互联网(QDII-ETF)",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "513330.SH",
+        "name": "华夏恒生互联网科技业(QDII-ETF)",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "513720.SH",
+        "name": "国泰中证港股通互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "513770.SH",
+        "name": "华宝中证港股通互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "517050.SH",
+        "name": "华泰柏瑞中证沪港深互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "517200.SH",
+        "name": "嘉实中证沪港深互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "520630.SH",
+        "name": "广发中证港股通互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      },
+      {
+        "code": "520650.SH",
+        "name": "南方中证港股通互联网ETF",
+        "track": "互联网",
+        "issue_date": ""
+      }
+    ],
+    "油气石化": [
+      {
+        "code": "159017.SZ",
+        "name": "工银瑞信国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159018.SZ",
+        "name": "广发国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159019.SZ",
+        "name": "华宝国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159026.SZ",
+        "name": "南方国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159148.SZ",
+        "name": "富国国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159181.SZ",
+        "name": "易方达国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159189.SZ",
+        "name": "华夏国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159195.SZ",
+        "name": "华安国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159197.SZ",
+        "name": "招商国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159199.SZ",
+        "name": "平安国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159309.SZ",
+        "name": "汇添富中证油气资源ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159518.SZ",
+        "name": "嘉实标普石油天然气勘探及生产精选行业(QDII-ETF)",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159588.SZ",
+        "name": "景顺长城国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159697.SZ",
+        "name": "鹏华国证石油天然气ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "159731.SZ",
+        "name": "华夏中证石化产业ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "513350.SH",
+        "name": "富国标普石油天然气勘探及生产精选行业(QDII-ETF)",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "516570.SH",
+        "name": "易方达中证石化产业ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "560710.SH",
+        "name": "富国中证智选船舶产业ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "561360.SH",
+        "name": "国泰中证油气产业ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "561570.SH",
+        "name": "华泰柏瑞中证油气产业ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "561760.SH",
+        "name": "博时中证油气资源ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      },
+      {
+        "code": "563150.SH",
+        "name": "银华中证油气资源ETF",
+        "track": "油气石化",
+        "issue_date": ""
+      }
+    ],
+    "教育": [
+      {
+        "code": "513360.SH",
+        "name": "博时中证全球中国教育主题(QDII-ETF)",
+        "track": "教育",
+        "issue_date": ""
+      }
+    ],
+    "科创": [
+      {
+        "code": "159603.SZ",
+        "name": "天弘中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "159780.SZ",
+        "name": "南方中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "159781.SZ",
+        "name": "易方达中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "159782.SZ",
+        "name": "银华中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "159783.SZ",
+        "name": "华夏中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "159807.SZ",
+        "name": "易方达中证科技50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "515000.SH",
+        "name": "华宝中证科技龙头ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "515580.SH",
+        "name": "华泰柏瑞中证科技100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "516050.SH",
+        "name": "工银瑞信中证科技龙头ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "560990.SH",
+        "name": "中金中证科技先锋ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588000.SH",
+        "name": "华夏上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588030.SH",
+        "name": "博时上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588040.SH",
+        "name": "鹏华上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588050.SH",
+        "name": "工银瑞信上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588060.SH",
+        "name": "广发上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588080.SH",
+        "name": "易方达上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588090.SH",
+        "name": "华泰柏瑞上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588120.SH",
+        "name": "国泰上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588140.SH",
+        "name": "广发上证科创板200ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588150.SH",
+        "name": "南方上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588180.SH",
+        "name": "国联安上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588190.SH",
+        "name": "银华上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588210.SH",
+        "name": "易方达上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588220.SH",
+        "name": "鹏华上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588230.SH",
+        "name": "华泰柏瑞上证科创板200ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588240.SH",
+        "name": "鹏华上证科创板200ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588270.SH",
+        "name": "易方达上证科创板200ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588280.SH",
+        "name": "华安上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588300.SH",
+        "name": "招商中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588310.SH",
+        "name": "方正富邦科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588320.SH",
+        "name": "广发中证科创创业50增强策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588330.SH",
+        "name": "华宝中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588350.SH",
+        "name": "鹏扬中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588360.SH",
+        "name": "国泰中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588370.SH",
+        "name": "南方上证科创板50成份增强策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588380.SH",
+        "name": "富国中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588390.SH",
+        "name": "博时中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588400.SH",
+        "name": "嘉实中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588450.SH",
+        "name": "招商上证科创板50成份增强策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588460.SH",
+        "name": "鹏华上证科创板50成份增强策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588500.SH",
+        "name": "易方达上证科创板100增强策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588520.SH",
+        "name": "永赢上证科创板综合价格增强策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588550.SH",
+        "name": "易方达上证科创板综合增强策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588660.SH",
+        "name": "兴银中证科创创业50ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588670.SH",
+        "name": "嘉实上证科创板综合增强策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588680.SH",
+        "name": "广发上证科创板100增强策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588690.SH",
+        "name": "银华上证科创板综合增强策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588720.SH",
+        "name": "中银上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588800.SH",
+        "name": "华夏上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588820.SH",
+        "name": "华夏上证科创板200ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588840.SH",
+        "name": "万家上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588870.SH",
+        "name": "汇添富上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588880.SH",
+        "name": "华泰柏瑞上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588900.SH",
+        "name": "南方上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588940.SH",
+        "name": "富国上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588950.SH",
+        "name": "景顺长城上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "588980.SH",
+        "name": "广发上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589000.SH",
+        "name": "华夏上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589050.SH",
+        "name": "兴业上证科创板综合价格ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589060.SH",
+        "name": "东财上证科创板综合价格ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589080.SH",
+        "name": "汇添富上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589150.SH",
+        "name": "平安上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589200.SH",
+        "name": "工银瑞信上证科创板200ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589300.SH",
+        "name": "嘉实上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589500.SH",
+        "name": "工银瑞信上证科创板综合价格ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589550.SH",
+        "name": "华夏上证智选科创板价值50策略ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589580.SH",
+        "name": "兴银上证科创板综合价格ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589600.SH",
+        "name": "富国上证科创板综合价格ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589630.SH",
+        "name": "国泰上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589660.SH",
+        "name": "南方上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589680.SH",
+        "name": "鹏华上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589770.SH",
+        "name": "招商上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589780.SH",
+        "name": "富国上证科创板200ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589800.SH",
+        "name": "易方达上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589820.SH",
+        "name": "建信上证科创板200ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589850.SH",
+        "name": "东财上证科创板50成份ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589860.SH",
+        "name": "天弘上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589880.SH",
+        "name": "建信上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589890.SH",
+        "name": "景顺长城上证科创板综合价格ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589900.SH",
+        "name": "博时上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589950.SH",
+        "name": "富国上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589980.SH",
+        "name": "汇添富上证科创板100ETF",
+        "track": "科创",
+        "issue_date": ""
+      },
+      {
+        "code": "589990.SH",
+        "name": "华泰柏瑞上证科创板综合ETF",
+        "track": "科创",
+        "issue_date": ""
+      }
+    ],
+    "汽车": [
+      {
+        "code": "159121.SZ",
+        "name": "易方达恒生港股通汽车主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159210.SZ",
+        "name": "汇添富中证港股通汽车产业主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159237.SZ",
+        "name": "工银瑞信中证港股通汽车产业主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159239.SZ",
+        "name": "富国恒生港股通汽车主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159306.SZ",
+        "name": "平安中证汽车零部件主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159323.SZ",
+        "name": "华夏中证港股通汽车产业主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159512.SZ",
+        "name": "广发中证全指汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159565.SZ",
+        "name": "易方达中证汽车零部件主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159637.SZ",
+        "name": "东财中证新能源汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159720.SZ",
+        "name": "泰康中证智能电动汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159795.SZ",
+        "name": "汇添富中证智能汽车主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159806.SZ",
+        "name": "国泰中证新能源汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159824.SZ",
+        "name": "博时中证新能源汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159888.SZ",
+        "name": "华夏中证智能汽车主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "159889.SZ",
+        "name": "国泰中证智能汽车主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "515030.SH",
+        "name": "华夏中证新能源汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "515250.SH",
+        "name": "富国中证智能汽车主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "515700.SH",
+        "name": "平安中证新能源汽车产业ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "516110.SH",
+        "name": "国泰中证800汽车与零部件ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "516380.SH",
+        "name": "华宝中证智能电动汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "516390.SH",
+        "name": "汇添富中证新能源汽车产业ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "516520.SH",
+        "name": "华泰柏瑞中证智能汽车主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "516590.SH",
+        "name": "易方达中证智能电动汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "516660.SH",
+        "name": "华安中证新能源汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "516840.SH",
+        "name": "南方中证全指汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "520600.SH",
+        "name": "广发中证港股通汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "520720.SH",
+        "name": "国泰中证港股通汽车产业主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "520780.SH",
+        "name": "华宝中证港股通汽车产业主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "560000.SH",
+        "name": "浦银安盛中证智能电动汽车ETF",
+        "track": "汽车",
+        "issue_date": ""
+      },
+      {
+        "code": "562700.SH",
+        "name": "华夏中证汽车零部件主题ETF",
+        "track": "汽车",
+        "issue_date": ""
+      }
+    ],
+    "食品饮料": [
+      {
+        "code": "159151.SZ",
+        "name": "华夏中证全指食品ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      },
+      {
+        "code": "159587.SZ",
+        "name": "广发国证粮食产业ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      },
+      {
+        "code": "159698.SZ",
+        "name": "鹏华国证粮食产业ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      },
+      {
+        "code": "159736.SZ",
+        "name": "天弘中证食品饮料ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      },
+      {
+        "code": "159843.SZ",
+        "name": "招商国证食品饮料行业ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      },
+      {
+        "code": "159862.SZ",
+        "name": "银华中证细分食品饮料产业主题ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      },
+      {
+        "code": "515170.SH",
+        "name": "华夏中证细分食品饮料产业主题ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      },
+      {
+        "code": "515710.SH",
+        "name": "华宝中证细分食品饮料产业主题ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      },
+      {
+        "code": "516900.SH",
+        "name": "华安中证申万食品饮料ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      },
+      {
+        "code": "560130.SH",
+        "name": "鹏华中证全指食品ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      },
+      {
+        "code": "563850.SH",
+        "name": "广发中证全指食品ETF",
+        "track": "食品饮料",
+        "issue_date": ""
+      }
+    ],
+    "钢铁": [
+      {
+        "code": "515210.SH",
+        "name": "国泰中证钢铁ETF",
+        "track": "钢铁",
+        "issue_date": ""
+      }
+    ],
+    "煤炭": [
+      {
+        "code": "515220.SH",
+        "name": "国泰中证煤炭ETF",
+        "track": "煤炭",
+        "issue_date": ""
+      }
+    ],
+    "软件": [
+      {
+        "code": "159035.SZ",
+        "name": "天弘中证软件服务ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "159036.SZ",
+        "name": "华宝中证全指软件开发ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "159107.SZ",
+        "name": "富国创业板软件ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "159108.SZ",
+        "name": "博时国证工业软件主题ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "159145.SZ",
+        "name": "广发国证工业软件主题ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "159180.SZ",
+        "name": "银华国证工业软件主题ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "159256.SZ",
+        "name": "华夏创业板软件ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "159590.SZ",
+        "name": "汇添富中证全指软件ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "159852.SZ",
+        "name": "嘉实中证软件服务ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "159899.SZ",
+        "name": "招商中证全指软件ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "515230.SH",
+        "name": "国泰中证全指软件ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "560360.SH",
+        "name": "万家中证软件服务ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "560790.SH",
+        "name": "鹏华中证软件服务ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "561010.SH",
+        "name": "华安中证全指软件开发ETF",
+        "track": "软件",
+        "issue_date": ""
+      },
+      {
+        "code": "562930.SH",
+        "name": "易方达中证软件服务ETF",
+        "track": "软件",
+        "issue_date": ""
+      }
+    ],
+    "电子": [
+      {
+        "code": "159997.SZ",
+        "name": "天弘中证电子ETF",
+        "track": "电子",
+        "issue_date": ""
+      },
+      {
+        "code": "515260.SH",
+        "name": "华宝中证电子50ETF",
+        "track": "电子",
+        "issue_date": ""
+      },
+      {
+        "code": "515320.SH",
+        "name": "华安中证电子50ETF",
+        "track": "电子",
+        "issue_date": ""
+      }
+    ],
+    "光伏": [
+      {
+        "code": "159123.SZ",
+        "name": "嘉实中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "159609.SZ",
+        "name": "浦银安盛中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "159618.SZ",
+        "name": "华安中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "159857.SZ",
+        "name": "天弘中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "159863.SZ",
+        "name": "鹏华中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "159864.SZ",
+        "name": "国泰中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "515370.SH",
+        "name": "华夏中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "515790.SH",
+        "name": "华泰柏瑞中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "516180.SH",
+        "name": "平安中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "516230.SH",
+        "name": "招商中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "516290.SH",
+        "name": "汇添富中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "516880.SH",
+        "name": "银华中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "560230.SH",
+        "name": "富国中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "560310.SH",
+        "name": "博时中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "560980.SH",
+        "name": "广发中证光伏龙头30ETF指数",
+        "track": "光伏",
+        "issue_date": ""
+      },
+      {
+        "code": "562970.SH",
+        "name": "易方达中证光伏产业ETF",
+        "track": "光伏",
+        "issue_date": ""
+      }
+    ],
+    "云计算": [
+      {
+        "code": "159273.SZ",
+        "name": "汇添富中证沪港深云计算产业ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "159527.SZ",
+        "name": "广发中证云计算与大数据主题ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "159738.SZ",
+        "name": "华泰柏瑞中证沪港深云计算产业ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "159739.SZ",
+        "name": "鹏华中证云计算与大数据主题ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "159890.SZ",
+        "name": "招商中证云计算与大数据主题ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "515400.SH",
+        "name": "富国中证大数据产业ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "516000.SH",
+        "name": "华夏中证大数据产业ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "516510.SH",
+        "name": "易方达中证云计算与大数据主题ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "516630.SH",
+        "name": "华夏中证云计算与大数据主题ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "516700.SH",
+        "name": "华宝中证大数据产业ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "517130.SH",
+        "name": "嘉实中证沪港深云计算产业ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "517390.SH",
+        "name": "天弘中证沪港深云计算产业ETF",
+        "track": "云计算",
+        "issue_date": ""
+      },
+      {
+        "code": "560660.SH",
+        "name": "新华中证云计算50ETF",
+        "track": "云计算",
+        "issue_date": ""
+      }
+    ],
+    "金融科技": [
+      {
+        "code": "159103.SZ",
+        "name": "汇添富中证金融科技主题ETF",
+        "track": "金融科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159299.SZ",
+        "name": "易方达中证金融科技主题ETF",
+        "track": "金融科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159851.SZ",
+        "name": "华宝中证金融科技主题ETF",
+        "track": "金融科技",
+        "issue_date": ""
+      },
+      {
+        "code": "515720.SH",
+        "name": "富国中证金融科技主题ETF",
+        "track": "金融科技",
+        "issue_date": ""
+      },
+      {
+        "code": "516100.SH",
+        "name": "华夏中证金融科技主题ETF",
+        "track": "金融科技",
+        "issue_date": ""
+      },
+      {
+        "code": "516860.SH",
+        "name": "博时中证金融科技主题ETF",
+        "track": "金融科技",
+        "issue_date": ""
+      },
+      {
+        "code": "563570.SH",
+        "name": "兴业中证金融科技主题ETF",
+        "track": "金融科技",
+        "issue_date": ""
+      },
+      {
+        "code": "563670.SH",
+        "name": "鹏华中证金融科技主题ETF",
+        "track": "金融科技",
+        "issue_date": ""
+      }
+    ],
+    "家电": [
+      {
+        "code": "159176.SZ",
+        "name": "华宝中证全指家用电器ETF",
+        "track": "家电",
+        "issue_date": ""
+      },
+      {
+        "code": "159182.SZ",
+        "name": "南方中证家用电器ETF",
+        "track": "家电",
+        "issue_date": ""
+      },
+      {
+        "code": "159192.SZ",
+        "name": "汇添富中证家电龙头ETF",
+        "track": "家电",
+        "issue_date": ""
+      },
+      {
+        "code": "159328.SZ",
+        "name": "易方达中证家电龙头ETF",
+        "track": "家电",
+        "issue_date": ""
+      },
+      {
+        "code": "159730.SZ",
+        "name": "博时国证龙头家电ETF",
+        "track": "家电",
+        "issue_date": ""
+      },
+      {
+        "code": "159996.SZ",
+        "name": "国泰中证全指家用电器ETF",
+        "track": "家电",
+        "issue_date": ""
+      },
+      {
+        "code": "512430.SH",
+        "name": "华泰柏瑞中证家居家电ETF",
+        "track": "家电",
+        "issue_date": ""
+      },
+      {
+        "code": "515640.SH",
+        "name": "华夏中证全指家用电器ETF",
+        "track": "家电",
+        "issue_date": ""
+      },
+      {
+        "code": "515730.SH",
+        "name": "永赢中证家居家电ETF",
+        "track": "家电",
+        "issue_date": ""
+      },
+      {
+        "code": "560880.SH",
+        "name": "广发中证全指家用电器ETF",
+        "track": "家电",
+        "issue_date": ""
+      },
+      {
+        "code": "561120.SH",
+        "name": "富国中证全指家用电器ETF",
+        "track": "家电",
+        "issue_date": ""
+      }
+    ],
+    "传统科技": [
+      {
+        "code": "159723.SZ",
+        "name": "汇添富中证沪港深科技龙头ETF",
+        "track": "传统科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159773.SZ",
+        "name": "华泰柏瑞创业板科技ETF",
+        "track": "传统科技",
+        "issue_date": ""
+      },
+      {
+        "code": "159777.SZ",
+        "name": "国联安创业板科技ETF",
+        "track": "传统科技",
+        "issue_date": ""
+      },
+      {
+        "code": "515750.SH",
+        "name": "富国中证科技50策略ETF",
+        "track": "传统科技",
+        "issue_date": ""
+      },
+      {
+        "code": "515860.SH",
+        "name": "嘉实中证新兴科技100策略ETF",
+        "track": "传统科技",
+        "issue_date": ""
+      },
+      {
+        "code": "517350.SH",
+        "name": "广发中证沪港深科技龙头ETF",
+        "track": "传统科技",
+        "issue_date": ""
+      },
+      {
+        "code": "517360.SH",
+        "name": "华安中证沪港深科技100ETF",
+        "track": "传统科技",
+        "issue_date": ""
+      },
+      {
+        "code": "517950.SH",
+        "name": "交银施罗德中证智选沪深港科技50ETF",
+        "track": "传统科技",
+        "issue_date": ""
+      }
+    ],
+    "游戏": [
+      {
+        "code": "159869.SZ",
+        "name": "华夏中证动漫游戏ETF",
+        "track": "游戏",
+        "issue_date": ""
+      },
+      {
+        "code": "516010.SH",
+        "name": "国泰中证动漫游戏ETF",
+        "track": "游戏",
+        "issue_date": ""
+      },
+      {
+        "code": "516770.SH",
+        "name": "华泰柏瑞中证动漫游戏ETF",
+        "track": "游戏",
+        "issue_date": ""
+      },
+      {
+        "code": "517770.SH",
+        "name": "浦银安盛中证沪港深游戏及文化传媒ETF",
+        "track": "游戏",
+        "issue_date": ""
+      }
+    ],
+    "化工": [
+      {
+        "code": "159129.SZ",
+        "name": "嘉实中证细分化工产业主题ETF",
+        "track": "化工",
+        "issue_date": ""
+      },
+      {
+        "code": "159133.SZ",
+        "name": "天弘中证细分化工产业主题ETF",
+        "track": "化工",
+        "issue_date": ""
+      },
+      {
+        "code": "159870.SZ",
+        "name": "鹏华中证细分化工产业主题ETF",
+        "track": "化工",
+        "issue_date": ""
+      },
+      {
+        "code": "516020.SH",
+        "name": "华宝中证细分化工产业主题ETF",
+        "track": "化工",
+        "issue_date": ""
+      },
+      {
+        "code": "516120.SH",
+        "name": "富国中证细分化工产业主题ETF",
+        "track": "化工",
+        "issue_date": ""
+      },
+      {
+        "code": "516220.SH",
+        "name": "国泰中证细分化工产业主题ETF",
+        "track": "化工",
+        "issue_date": ""
+      }
+    ],
+    "新能源": [
+      {
+        "code": "159009.SZ",
+        "name": "易方达创业板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159122.SZ",
+        "name": "富国创业板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159149.SZ",
+        "name": "工银瑞信创业板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159183.SZ",
+        "name": "招商中证新能源汽车ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159187.SZ",
+        "name": "景顺长城创业板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159190.SZ",
+        "name": "天弘创业板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159261.SZ",
+        "name": "鹏华创业板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159368.SZ",
+        "name": "华夏创业板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159387.SZ",
+        "name": "国泰创业板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159752.SZ",
+        "name": "申万菱信中证内地新能源主题ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159875.SZ",
+        "name": "嘉实中证新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "516090.SH",
+        "name": "易方达中证新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "516160.SH",
+        "name": "南方中证新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "516270.SH",
+        "name": "华安中证内地新能源主题ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "516580.SH",
+        "name": "博时中证新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "516850.SH",
+        "name": "华夏中证新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "562010.SH",
+        "name": "华宝中证绿色能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "588830.SH",
+        "name": "鹏华上证科创板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "588960.SH",
+        "name": "富国上证科创板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      },
+      {
+        "code": "589960.SH",
+        "name": "易方达上证科创板新能源ETF",
+        "track": "新能源",
+        "issue_date": ""
+      }
+    ],
+    "工程机械": [
+      {
+        "code": "159013.SZ",
+        "name": "大成中证工业互联网主题ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "159138.SZ",
+        "name": "易方达中证工程机械主题ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "159177.SZ",
+        "name": "鹏华中证工程机械主题ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "159542.SZ",
+        "name": "大成中证工程机械主题ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "159619.SZ",
+        "name": "国泰中证基建ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "159635.SZ",
+        "name": "华夏中证基建ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "159663.SZ",
+        "name": "华夏中证机床ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "159667.SZ",
+        "name": "国泰中证机床ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "159886.SZ",
+        "name": "富国中证细分机械设备产业主题ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "515970.SH",
+        "name": "华夏中证工程机械主题ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "516250.SH",
+        "name": "富国中证工程机械主题ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "516950.SH",
+        "name": "银华中证基建ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "516960.SH",
+        "name": "国泰中证细分机械设备产业主题ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "516970.SH",
+        "name": "广发中证基建工程ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "560280.SH",
+        "name": "广发中证工程机械主题ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "561030.SH",
+        "name": "华泰柏瑞中证工程机械主题ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      },
+      {
+        "code": "588850.SH",
+        "name": "嘉实上证科创板工业机械ETF",
+        "track": "工程机械",
+        "issue_date": ""
+      }
+    ],
+    "物流": [
+      {
+        "code": "159701.SZ",
+        "name": "招商中证物联网主题ETF",
+        "track": "物流",
+        "issue_date": ""
+      },
+      {
+        "code": "159709.SZ",
+        "name": "工银瑞信深证物联网50ETF",
+        "track": "物流",
+        "issue_date": ""
+      },
+      {
+        "code": "159895.SZ",
+        "name": "易方达中证物联网主题ETF",
+        "track": "物流",
+        "issue_date": ""
+      },
+      {
+        "code": "159896.SZ",
+        "name": "南方中证物联网主题ETF",
+        "track": "物流",
+        "issue_date": ""
+      },
+      {
+        "code": "516260.SH",
+        "name": "华夏中证物联网主题ETF",
+        "track": "物流",
+        "issue_date": ""
+      },
+      {
+        "code": "516330.SH",
+        "name": "华泰柏瑞中证物联网主题ETF",
+        "track": "物流",
+        "issue_date": ""
+      },
+      {
+        "code": "516530.SH",
+        "name": "银华中证现代物流ETF",
+        "track": "物流",
+        "issue_date": ""
+      },
+      {
+        "code": "516910.SH",
+        "name": "富国中证现代物流ETF",
+        "track": "物流",
+        "issue_date": ""
+      },
+      {
+        "code": "517660.SH",
+        "name": "天弘中证沪港深物联网主题ETF",
+        "track": "物流",
+        "issue_date": ""
+      }
+    ],
+    "高端装备": [
+      {
+        "code": "159638.SZ",
+        "name": "嘉实中证高端装备细分50ETF",
+        "track": "高端装备",
+        "issue_date": ""
+      },
+      {
+        "code": "516320.SH",
+        "name": "华夏中证装备产业ETF",
+        "track": "高端装备",
+        "issue_date": ""
+      },
+      {
+        "code": "562910.SH",
+        "name": "易方达中证装备产业ETF",
+        "track": "高端装备",
+        "issue_date": ""
+      }
+    ],
+    "芯片": [
+      {
+        "code": "159310.SZ",
+        "name": "天弘中证芯片产业ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "159560.SZ",
+        "name": "景顺长城中证芯片产业ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "159599.SZ",
+        "name": "东财中证芯片产业ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "159665.SZ",
+        "name": "工银瑞信国证半导体芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "159801.SZ",
+        "name": "广发国证半导体芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "159813.SZ",
+        "name": "鹏华国证半导体芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "159995.SZ",
+        "name": "华夏国证半导体芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "516350.SH",
+        "name": "易方达中证芯片产业ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "516640.SH",
+        "name": "富国中证芯片产业ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "516920.SH",
+        "name": "汇添富中证芯片产业ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "588200.SH",
+        "name": "嘉实上证科创板芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "588290.SH",
+        "name": "华安上证科创板芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "588750.SH",
+        "name": "汇添富上证科创板芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "588780.SH",
+        "name": "国联安上证科创板芯片设计主题ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "588810.SH",
+        "name": "富国上证科创板芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "588890.SH",
+        "name": "南方上证科创板芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "588920.SH",
+        "name": "鹏华上证科创板芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "588990.SH",
+        "name": "博时上证科创板芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "589030.SH",
+        "name": "易方达上证科创板芯片设计主题ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "589070.SH",
+        "name": "天弘上证科创板芯片设计主题ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "589100.SH",
+        "name": "国泰上证科创板芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "589130.SH",
+        "name": "易方达上证科创板芯片ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "589170.SH",
+        "name": "鹏华上证科创板芯片设计主题ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "589210.SH",
+        "name": "广发上证科创板芯片设计主题ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "589250.SH",
+        "name": "浦银安盛上证科创板芯片设计主题ETF",
+        "track": "芯片",
+        "issue_date": ""
+      },
+      {
+        "code": "589260.SH",
+        "name": "国泰上证科创板芯片设计主题ETF",
+        "track": "芯片",
+        "issue_date": ""
+      }
+    ],
+    "材料": [
+      {
+        "code": "159703.SZ",
+        "name": "天弘中证新材料主题ETF",
+        "track": "材料",
+        "issue_date": ""
+      },
+      {
+        "code": "159761.SZ",
+        "name": "国泰中证新材料主题ETF",
+        "track": "材料",
+        "issue_date": ""
+      },
+      {
+        "code": "159763.SZ",
+        "name": "建信中证新材料主题ETF",
+        "track": "材料",
+        "issue_date": ""
+      },
+      {
+        "code": "159944.SZ",
+        "name": "广发中证全指原材料ETF",
+        "track": "材料",
+        "issue_date": ""
+      },
+      {
+        "code": "516360.SH",
+        "name": "华宝中证新材料主题ETF",
+        "track": "材料",
+        "issue_date": ""
+      },
+      {
+        "code": "516710.SH",
+        "name": "华夏中证新材料主题ETF",
+        "track": "材料",
+        "issue_date": ""
+      },
+      {
+        "code": "516890.SH",
+        "name": "平安中证新材料主题ETF",
+        "track": "材料",
+        "issue_date": ""
+      },
+      {
+        "code": "588010.SH",
+        "name": "博时上证科创板新材料ETF",
+        "track": "材料",
+        "issue_date": ""
+      },
+      {
+        "code": "588160.SH",
+        "name": "南方上证科创板新材料ETF",
+        "track": "材料",
+        "issue_date": ""
+      },
+      {
+        "code": "589180.SH",
+        "name": "汇添富上证科创板新材料ETF",
+        "track": "材料",
+        "issue_date": ""
+      }
+    ],
+    "建筑材料": [
+      {
+        "code": "159745.SZ",
+        "name": "国泰中证全指建筑材料ETF",
+        "track": "建筑材料",
+        "issue_date": ""
+      },
+      {
+        "code": "159787.SZ",
+        "name": "易方达中证全指建筑材料ETF",
+        "track": "建筑材料",
+        "issue_date": ""
+      },
+      {
+        "code": "516750.SH",
+        "name": "富国中证全指建筑材料ETF",
+        "track": "建筑材料",
+        "issue_date": ""
+      }
+    ],
+    "黄金": [
+      {
+        "code": "159315.SZ",
+        "name": "工银瑞信中证沪深港黄金产业股票ETF",
+        "track": "黄金",
+        "issue_date": ""
+      },
+      {
+        "code": "159321.SZ",
+        "name": "华安中证沪深港黄金产业股票ETF",
+        "track": "黄金",
+        "issue_date": ""
+      },
+      {
+        "code": "159322.SZ",
+        "name": "平安中证沪深港黄金产业股票ETF",
+        "track": "黄金",
+        "issue_date": ""
+      },
+      {
+        "code": "159562.SZ",
+        "name": "华夏中证沪深港黄金产业股票ETF",
+        "track": "黄金",
+        "issue_date": ""
+      },
+      {
+        "code": "517400.SH",
+        "name": "国泰中证沪深港黄金产业股票ETF",
+        "track": "黄金",
+        "issue_date": ""
+      },
+      {
+        "code": "517520.SH",
+        "name": "永赢中证沪深港黄金产业股票ETF",
+        "track": "黄金",
+        "issue_date": ""
+      }
+    ],
+    "公用事业": [
+      {
+        "code": "159159.SZ",
+        "name": "国投瑞银中证全指公用事业ETF",
+        "track": "公用事业",
+        "issue_date": ""
+      },
+      {
+        "code": "159301.SZ",
+        "name": "华夏中证全指公用事业ETF",
+        "track": "公用事业",
+        "issue_date": ""
+      },
+      {
+        "code": "560190.SH",
+        "name": "鹏华中证全指公用事业ETF",
+        "track": "公用事业",
+        "issue_date": ""
+      },
+      {
+        "code": "560620.SH",
+        "name": "万家中证全指公用事业ETF",
+        "track": "公用事业",
+        "issue_date": ""
+      }
+    ],
+    "电力": [
+      {
+        "code": "159046.SZ",
+        "name": "天弘国证绿色电力ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "159061.SZ",
+        "name": "南方国证绿色电力ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "159158.SZ",
+        "name": "景顺长城中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "159320.SZ",
+        "name": "广发恒生A股电网设备ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "159326.SZ",
+        "name": "华夏中证电网设备主题ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "159611.SZ",
+        "name": "广发中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "159625.SZ",
+        "name": "嘉实国证绿色电力ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "159669.SZ",
+        "name": "国泰国证绿色电力ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "516370.SH",
+        "name": "汇添富中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "560270.SH",
+        "name": "工银瑞信中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "560390.SH",
+        "name": "易方达恒生A股电网设备ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "560450.SH",
+        "name": "天弘中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "560460.SH",
+        "name": "平安中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "560480.SH",
+        "name": "招商中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "560580.SH",
+        "name": "南方中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "560830.SH",
+        "name": "华夏中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "560930.SH",
+        "name": "易方达中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "561170.SH",
+        "name": "富国中证绿色电力ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "561380.SH",
+        "name": "国泰恒生A股电网设备ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "561560.SH",
+        "name": "华泰柏瑞中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "561700.SH",
+        "name": "博时中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "562350.SH",
+        "name": "银华中证全指电力公用事业ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "562550.SH",
+        "name": "华夏中证绿色电力ETF",
+        "track": "电力",
+        "issue_date": ""
+      },
+      {
+        "code": "562960.SH",
+        "name": "易方达中证绿色电力ETF",
+        "track": "电力",
+        "issue_date": ""
+      }
+    ],
+    "机器人": [
+      {
+        "code": "159039.SZ",
+        "name": "华安国证机器人产业ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159048.SZ",
+        "name": "大成国证机器人产业ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159050.SZ",
+        "name": "广发国证机器人产业ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159213.SZ",
+        "name": "汇添富中证机器人ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159258.SZ",
+        "name": "南方中证机器人ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159272.SZ",
+        "name": "富国国证机器人产业ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159278.SZ",
+        "name": "鹏华国证机器人产业ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159526.SZ",
+        "name": "嘉实中证机器人ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159530.SZ",
+        "name": "易方达国证机器人产业ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159551.SZ",
+        "name": "国泰中证机器人ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159559.SZ",
+        "name": "景顺长城国证机器人产业ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "159770.SZ",
+        "name": "天弘中证机器人ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "560630.SH",
+        "name": "万家中证机器人ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "560770.SH",
+        "name": "招商中证机器人ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "562360.SH",
+        "name": "银华中证机器人ETF",
+        "track": "机器人",
+        "issue_date": ""
+      },
+      {
+        "code": "562500.SH",
+        "name": "华夏中证机器人ETF",
+        "track": "机器人",
+        "issue_date": ""
+      }
+    ],
+    "信创": [
+      {
+        "code": "159537.SZ",
+        "name": "国泰国证信息技术创新主题ETF",
+        "track": "信创",
+        "issue_date": ""
+      },
+      {
+        "code": "159538.SZ",
+        "name": "富国国证信息技术创新主题ETF",
+        "track": "信创",
+        "issue_date": ""
+      },
+      {
+        "code": "159539.SZ",
+        "name": "广发国证信息技术创新主题ETF",
+        "track": "信创",
+        "issue_date": ""
+      },
+      {
+        "code": "159540.SZ",
+        "name": "易方达国证信息技术创新主题ETF",
+        "track": "信创",
+        "issue_date": ""
+      },
+      {
+        "code": "560850.SH",
+        "name": "汇添富中证信息技术应用创新产业ETF",
+        "track": "信创",
+        "issue_date": ""
+      },
+      {
+        "code": "562030.SH",
+        "name": "华宝中证信息技术应用创新产业ETF",
+        "track": "信创",
+        "issue_date": ""
+      },
+      {
+        "code": "562570.SH",
+        "name": "华夏中证信息技术应用创新产业ETF",
+        "track": "信创",
+        "issue_date": ""
+      }
+    ],
+    "消费电子": [
+      {
+        "code": "159153.SZ",
+        "name": "鹏华国证消费电子主题ETF",
+        "track": "消费电子",
+        "issue_date": ""
+      },
+      {
+        "code": "159178.SZ",
+        "name": "汇添富国证消费电子ETF",
+        "track": "消费电子",
+        "issue_date": ""
+      },
+      {
+        "code": "159732.SZ",
+        "name": "华夏国证消费电子主题ETF",
+        "track": "消费电子",
+        "issue_date": ""
+      },
+      {
+        "code": "159779.SZ",
+        "name": "招商中证消费电子主题ETF",
+        "track": "消费电子",
+        "issue_date": ""
+      },
+      {
+        "code": "561100.SH",
+        "name": "富国中证消费电子主题ETF",
+        "track": "消费电子",
+        "issue_date": ""
+      },
+      {
+        "code": "561310.SH",
+        "name": "国泰中证消费电子主题ETF",
+        "track": "消费电子",
+        "issue_date": ""
+      },
+      {
+        "code": "561600.SH",
+        "name": "平安中证消费电子主题ETF",
+        "track": "消费电子",
+        "issue_date": ""
+      },
+      {
+        "code": "562950.SH",
+        "name": "易方达中证消费电子主题ETF",
+        "track": "消费电子",
+        "issue_date": ""
+      }
+    ],
+    "电池": [
+      {
+        "code": "159052.SZ",
+        "name": "嘉实国证新能源电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159071.SZ",
+        "name": "华宝国证新能源电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159147.SZ",
+        "name": "南方中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159155.SZ",
+        "name": "大成中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159156.SZ",
+        "name": "万家国证新能源车电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159160.SZ",
+        "name": "东财中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159175.SZ",
+        "name": "易方达中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159193.SZ",
+        "name": "银华新能源电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159305.SZ",
+        "name": "广发国证新能源电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159566.SZ",
+        "name": "易方达国证新能源电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159755.SZ",
+        "name": "广发国证新能源车电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159757.SZ",
+        "name": "景顺长城国证新能源车电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159767.SZ",
+        "name": "兴银国证新能源车电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159775.SZ",
+        "name": "建信国证新能源车电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159796.SZ",
+        "name": "汇添富中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "159840.SZ",
+        "name": "工银瑞信国证新能源车电池ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "512460.SH",
+        "name": "华夏中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "560410.SH",
+        "name": "鹏华中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "560910.SH",
+        "name": "华泰柏瑞中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "561160.SH",
+        "name": "富国中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "561910.SH",
+        "name": "招商中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      },
+      {
+        "code": "562880.SH",
+        "name": "嘉实中证电池主题ETF",
+        "track": "电池",
+        "issue_date": ""
+      }
+    ],
+    "交运": [
+      {
+        "code": "159662.SZ",
+        "name": "南方国证交通运输行业ETF",
+        "track": "交运",
+        "issue_date": ""
+      },
+      {
+        "code": "159666.SZ",
+        "name": "华夏中证全指运输ETF",
+        "track": "交运",
+        "issue_date": ""
+      },
+      {
+        "code": "561320.SH",
+        "name": "国泰中证内地运输主题ETF",
+        "track": "交运",
+        "issue_date": ""
+      }
+    ],
+    "旅游": [
+      {
+        "code": "159766.SZ",
+        "name": "富国中证旅游主题ETF",
+        "track": "旅游",
+        "issue_date": ""
+      },
+      {
+        "code": "562510.SH",
+        "name": "华夏中证旅游主题ETF",
+        "track": "旅游",
+        "issue_date": ""
+      }
+    ],
+    "医疗器械": [
+      {
+        "code": "159051.SZ",
+        "name": "易方达中证全指医疗器械ETF",
+        "track": "医疗器械",
+        "issue_date": ""
+      },
+      {
+        "code": "159056.SZ",
+        "name": "富国中证全指医疗器械ETF",
+        "track": "医疗器械",
+        "issue_date": ""
+      },
+      {
+        "code": "159057.SZ",
+        "name": "鹏华中证全指医疗器械ETF",
+        "track": "医疗器械",
+        "issue_date": ""
+      },
+      {
+        "code": "159797.SZ",
+        "name": "汇添富中证全指医疗器械ETF",
+        "track": "医疗器械",
+        "issue_date": ""
+      },
+      {
+        "code": "159883.SZ",
+        "name": "永赢中证全指医疗器械ETF",
+        "track": "医疗器械",
+        "issue_date": ""
+      },
+      {
+        "code": "159898.SZ",
+        "name": "招商中证全指医疗器械ETF",
+        "track": "医疗器械",
+        "issue_date": ""
+      },
+      {
+        "code": "562600.SH",
+        "name": "华夏中证全指医疗器械ETF",
+        "track": "医疗器械",
+        "issue_date": ""
+      }
+    ],
+    "集成电路": [
+      {
+        "code": "159546.SZ",
+        "name": "国泰中证全指集成电路ETF",
+        "track": "集成电路",
+        "issue_date": ""
+      },
+      {
+        "code": "562820.SH",
+        "name": "嘉实中证全指集成电路ETF",
+        "track": "集成电路",
+        "issue_date": ""
+      }
+    ],
+    "VR": [
+      {
+        "code": "159786.SZ",
+        "name": "银华中证虚拟现实主题ETF",
+        "track": "VR",
+        "issue_date": ""
+      }
+    ],
+    "车联网": [
+      {
+        "code": "159872.SZ",
+        "name": "鹏华中证车联网主题ETF",
+        "track": "车联网",
+        "issue_date": ""
+      }
+    ],
+    "能源": [
+      {
+        "code": "159930.SZ",
+        "name": "汇添富中证能源ETF",
+        "track": "能源",
+        "issue_date": ""
+      },
+      {
+        "code": "159945.SZ",
+        "name": "广发中证全指能源ETF",
+        "track": "能源",
+        "issue_date": ""
+      }
+    ],
+    "粮食": [
+      {
+        "code": "159031.SZ",
+        "name": "博时国证粮食产业ETF",
+        "track": "粮食",
+        "issue_date": ""
+      }
+    ],
+    "银行": [
+      {
+        "code": "560670.SH",
+        "name": "华泰柏瑞中证银行ETF",
+        "track": "银行",
+        "issue_date": ""
+      }
+    ],
+    "人工智能综合指数": [
+      {
+        "code": "159022.SZ",
+        "name": "富国中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159139.SZ",
+        "name": "华泰柏瑞中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159140.SZ",
+        "name": "易方达中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159141.SZ",
+        "name": "永赢中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159142.SZ",
+        "name": "景顺长城中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159242.SZ",
+        "name": "大成创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159243.SZ",
+        "name": "招商创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159246.SZ",
+        "name": "富国创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159248.SZ",
+        "name": "万家中证人工智能主题ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159279.SZ",
+        "name": "华安创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159363.SZ",
+        "name": "华宝创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159381.SZ",
+        "name": "华夏创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159382.SZ",
+        "name": "南方创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159388.SZ",
+        "name": "国泰创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159819.SZ",
+        "name": "易方达中证人工智能主题ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "512930.SH",
+        "name": "平安中证人工智能主题ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "515070.SH",
+        "name": "华夏中证人工智能主题ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "515980.SH",
+        "name": "华富中证人工智能产业ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "517800.SH",
+        "name": "方正富邦中证沪港深人工智能50ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588410.SH",
+        "name": "鹏华中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588420.SH",
+        "name": "摩根中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588430.SH",
+        "name": "工银瑞信中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588470.SH",
+        "name": "华安中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588480.SH",
+        "name": "中金中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588510.SH",
+        "name": "华夏中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588730.SH",
+        "name": "易方达上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588760.SH",
+        "name": "广发上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588790.SH",
+        "name": "博时上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588930.SH",
+        "name": "银华上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589010.SH",
+        "name": "华夏上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589090.SH",
+        "name": "鹏华上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589110.SH",
+        "name": "国泰上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589230.SH",
+        "name": "南方上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589380.SH",
+        "name": "富国上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589520.SH",
+        "name": "华宝上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589560.SH",
+        "name": "汇添富上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      }
+    ]
+  }
+};
