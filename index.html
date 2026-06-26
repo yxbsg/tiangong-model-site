@@ -85,6 +85,49 @@
     </div>
   </div>
 
+
+  <div class="section">
+    <div class="section-title"><h2>漏判赛道观察</h2><p>结合最近一周热点事件，复盘实际前十但未进入预测前十的赛道</p></div>
+    <div class="card table-card missed-card">
+      <div class="table-wrap">
+        <table id="missedReasonTable">
+          <thead>
+            <tr><th>漏判赛道</th><th>实际排名</th><th>实际净流入</th><th>热点支撑与漏判原因</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><h2>模型原理解释</h2><p>解释模型看什么、怎么排序、哪里容易失效</p></div>
+    <div class="model-grid">
+      <div class="card model-card">
+        <span class="tag info">预测目标</span>
+        <h3>判断下一周净流入前十赛道</h3>
+        <p>模型不是预测指数涨跌，也不是收益承诺，而是根据多维信号判断哪些赛道更可能进入下一周资金净流入前列。</p>
+      </div>
+      <div class="card model-card">
+        <span class="tag purple">核心输入</span>
+        <h3>热度、行为、引流、舆情</h3>
+        <p>市场热度看赛道涨跌，用户自行为看主动关注，引流因子看风向标带动，舆论热度看讨论强弱；同时结合上周排名、修复位置和同源赛道关系。</p>
+      </div>
+      <div class="card model-card">
+        <span class="tag strong">排序方法</span>
+        <h3>趋势延续 + 低位修复</h3>
+        <p>强势赛道看信号是否继续增强，弱势赛道看是否出现修复拐点。模型会避免只追高，但对突发热点和低基数反弹仍可能反应滞后。</p>
+      </div>
+      <div class="card model-card">
+        <span class="tag watch">复盘方式</span>
+        <h3>看净流入命中率和排名命中率</h3>
+        <p>净流入命中率看预测前十里有多少赛道实际净流入；排名命中率看预测前十里有多少赛道进入实际前十。两个指标结合看，避免只看单一结果。</p>
+      </div>
+    </div>
+    <div class="risk-box model-risk"><b>使用提示：</b>同源赛道需要合并理解，环比变化率要结合实际数值，热点突发、政策事件和低位小赛道修复是模型容易漏判的主要来源。</div>
+  </div>
+
+
   <div class="section"><div class="footer-note" id="compliance"></div></div>
 </div>
 <script src="assets/latest-data.js"></script>
@@ -113,6 +156,39 @@ function link(track, count){return `<a class="btn" href="details/index.html?trac
 function viewLink(track){return `<a class="btn" href="views/index.html?track=${encodeURIComponent(track)}">最新观点</a>`}
 function chip(track){return `<a class="chip" href="details/index.html?track=${encodeURIComponent(track)}">${track}</a>`}
 function staticChip(track){return `<span class="chip static">${track}</span>`}
+const MISSED_REASONS = [
+  {
+    track: '工程机械',
+    actual_rank: 3,
+    actual_net_inflow: 7.87,
+    reason: '工程机械属于低位制造和顺周期修复方向。最近一周热点中，科技链高波动后资金开始寻找低位制造、出海链和设备更新线索，工程机械承接了部分非拥挤方向的再平衡资金。模型漏判主要因为此前因子更多集中在科技制造主线，对低位顺周期的阶段性扩散反应偏慢。'
+  },
+  {
+    track: '消费电子',
+    actual_rank: 5,
+    actual_net_inflow: 6.62,
+    reason: '消费电子受端侧AI、AI手机、AI眼镜和智能终端扩散支撑，同时存储涨价向终端传导也提升了硬件链关注度。模型低估的地方在于把消费电子更多视为半导体链同源分支，而不是单独的资金弹性方向。'
+  },
+  {
+    track: '材料',
+    actual_rank: 6,
+    actual_net_inflow: 4.59,
+    reason: '材料是最近一周热点中最密集的上游瓶颈方向之一，高纯红磷、InP衬底、MLCC、PCB材料、电子布、铜箔、CCL等均有涨价、缺货或认证线索。模型漏判主要因为材料内部子方向较分散，单一赛道标签容易低估其合力。'
+  },
+  {
+    track: '创新药及生物科技',
+    actual_rank: 8,
+    actual_net_inflow: 3.16,
+    reason: '创新药及生物科技更偏低位修复和资金再平衡。近期医药从负向交易性贝塔修复转向创新供应链、出海和政策边际变化，具备一定独立景气。模型低估主要因为该方向与AI硬件主线相关性低，且用户行为因子没有明显领先。'
+  },
+  {
+    track: '农业',
+    actual_rank: 10,
+    actual_net_inflow: 1.14,
+    reason: '农业更偏防御和低位轮动，热点强度弱于AI硬件、半导体和材料，但在市场风格再平衡时容易出现阶段性资金流入。模型漏判主要因为农业缺少持续高频产业催化，更多来自短期风格切换和资金分散。'
+  }
+];
+
 let DATA;
 async function init(){
   DATA = window.TIANGONG_LATEST_DATA;
@@ -129,12 +205,18 @@ async function init(){
   const obs = DATA.ops_summary?.caution_list?.slice(0,3)?.join('、') || DATA.top10.slice(6,9).map(x=>x.track).join('、');
   document.getElementById('predictionBrief').textContent = `本周模型前列集中在${top3}；第二梯队关注${next3}；${obs ? `观察方向包括${obs}。` : ''}`;
   document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
-  renderTop10(); renderReview();
+  renderTop10(); renderReview(); renderMissedReasons();
 }
 function renderTop10(){
   const tb=document.querySelector('#top10Table tbody');
   tb.innerHTML = DATA.top10.map(r=>`<tr><td class="rank">${r.rank}</td><td><b>${r.track}</b></td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${displayFactorName(r.key_factor)}</span></td><td class="factor-change-cell"><b>${fmtFactor(displayFactorName(r.key_factor),r.key_factor_value)}</b><span class="${wowClass(r.key_factor_wow)}">环比${fmtWow(r.key_factor_wow)}</span></td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`).join('');
 }
+function renderMissedReasons(){
+  const tb = document.querySelector('#missedReasonTable tbody');
+  if(!tb) return;
+  tb.innerHTML = MISSED_REASONS.map(r=>`<tr><td><b>${r.track}</b></td><td class="num">${r.actual_rank}</td><td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td><td class="missed-reason-cell">${r.reason}</td></tr>`).join('');
+}
+
 function renderReview(){
   const rev=DATA.last_review || {};
   const pred = rev.predicted_top10 || [];
