@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>天工模型——前十大净流入行业赛道预测</title>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="card hero-main">
+      <div class="eyebrow">TIANGONG MODEL · OPS DASHBOARD</div>
+      <h1 id="pageTitle">天工模型——前十大净流入行业赛道预测</h1>
+      <p id="pageSubtitle">预测前十大净流入赛道，观察关键因子变化，不构成投资建议。</p>
+      <div class="mini-kpis mini-kpis-2">
+        <div class="kpi"><b id="kpiWeek">--</b><span>预测周期</span></div>
+        <div class="kpi"><b id="kpiUniverse">--</b><span>赛道池</span></div>
+      </div>
+      <div class="summary-box">
+        <span class="tag info">结果概括</span>
+        <p id="predictionBrief"></p>
+      </div>
+    </div>
+    <div class="card hero-side factor-card">
+      <span class="tag purple">因子解释</span>
+      <div class="factor-explains">
+        <div class="factor-item"><b>市场热度</b><span>赛道涨跌情况</span></div>
+        <div class="factor-item"><b>用户自行为</b><span>用户对赛道的关注度</span></div>
+        <div class="factor-item"><b>引流因子</b><span>具有带动客户作用的风向标</span></div>
+        <div class="factor-item"><b>舆论热度</b><span>赛道的舆情情况</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><h2>推荐等级</h2><p>赛道推荐等级，注意赛道间的同质性情况</p></div>
+    <div class="grid3">
+      <div class="card action-card"><span class="tag strong">强关注</span><div id="strongList" class="chips"></div></div>
+      <div class="card action-card"><span class="tag watch">观察跟踪</span><div id="watchList" class="chips"></div></div>
+      <div class="card action-card"><span class="tag caution">谨慎跟踪</span><div id="cautionList" class="chips"></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><h2>本周预测净流入前十大赛道</h2><p>赛道逻辑、关键因子与变化情况</p></div>
+    <div class="card table-card">
+      <div class="table-wrap"><table id="top10Table"><thead><tr><th>排名</th><th>赛道</th><th>推荐层级</th><th>Top10概率</th><th>上周排名</th><th>关键因子</th><th>关键因子变化</th><th>预测理由</th><th>赛道净流入详情</th><th>赛道最新观点</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="risk-box"><b>同源赛道提示：</b><span id="sameSourceNote">芯片、半导体及设备、集成电路、电子、消费电子存在同源关系；若同时上榜，应理解为半导体链整体信号增强，不要当成多个完全独立方向重复推荐。</span></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><h2 id="reviewTitle">上周预测回顾</h2><p>用于校准模型，不作为收益承诺</p></div>
+    <div class="review-grid review-grid-v2">
+      <div class="card review-card">
+        <span class="tag info">净流入命中率</span>
+        <div class="review-kpi"><b id="reviewInflowRate">--</b><span id="reviewInflowSub">实际净流入数量 / 10</span></div>
+        <p id="reviewInflowSummary" class="muted"></p>
+      </div>
+      <div class="card review-card">
+        <span class="tag purple">排名命中率</span>
+        <div class="review-kpi"><b id="reviewHitRate">--</b><span id="reviewWeek">--</span></div>
+        <p id="reviewSummary" class="muted"></p>
+      </div>
+      <div class="card review-card">
+        <span class="tag strong">命中赛道与漏判赛道</span>
+        <div class="review-group">
+          <div class="review-subgroup">
+            <div class="review-subtitle">命中赛道</div>
+            <div id="reviewHits" class="chips"></div>
+          </div>
+          <div class="review-subgroup" style="margin-top:14px;">
+            <div class="review-subtitle">漏判赛道</div>
+            <div id="reviewMissed" class="chips"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card table-card review-table-card">
+      <div class="table-wrap"><table id="reviewTable"><thead><tr><th>上周预测排名</th><th>赛道</th><th>实际排名</th><th>实际净流入</th><th>结果</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="section"><div class="footer-note" id="compliance"></div></div>
+</div>
+<script src="assets/latest-data.js"></script>
+<script src="assets/fund-map-data.js"></script>
+<script>
+const fmtPct=v=> (v==null||isNaN(v))?'--':(Number(v)*100).toFixed(1)+'%';
+const displayFactorName=name=> name==='大V带动因子' || name==='大V因子' ? '引流因子' : (name||'--');
+const fmtFactor=(name,v)=>{
+  if(v==null||isNaN(v)) return '--';
+  const n=Number(v);
+  if(name==='市场热度') return n.toFixed(2)+'%';
+  if(name==='客户自行为' || name==='舆情') return Math.round(n).toLocaleString('zh-CN');
+  return n.toLocaleString('zh-CN',{maximumFractionDigits:0});
+};
+const fmtWow=v=>{
+  if(v==null||isNaN(v)) return '--';
+  const n=Number(v)*100;
+  const sign=n>0?'+':'';
+  return sign+n.toFixed(1)+'%';
+};
+const wowClass=v=> Number(v)>=0?'positive':'negative';
+const fmtMoney=v=> (v==null||isNaN(v))?'--':Number(v).toFixed(2);
+const moneyClass=v=> Number(v)>=0?'positive':'negative';
+const tierClass=t=> t==='强关注'?'strong':(t==='观察跟踪'?'watch':(t==='谨慎跟踪'?'caution':'info'));
+function link(track, count){return `<a class="btn" href="details/index.html?track=${encodeURIComponent(track)}">净流入详情</a>`}
+function viewLink(track){return `<a class="btn" href="views/index.html?track=${encodeURIComponent(track)}">最新观点</a>`}
+function chip(track){return `<a class="chip" href="details/index.html?track=${encodeURIComponent(track)}">${track}</a>`}
+function staticChip(track){return `<span class="chip static">${track}</span>`}
+let DATA;
+async function init(){
+  DATA = window.TIANGONG_LATEST_DATA;
+  document.title = '天工模型——前十大净流入行业赛道预测';
+  document.getElementById('pageTitle').textContent = '天工模型——前十大净流入行业赛道预测';
+  document.getElementById('pageSubtitle').textContent = '预测前十大净流入赛道，观察关键因子变化，不构成投资建议。';
+  document.getElementById('kpiWeek').textContent = DATA.current_week.period || DATA.current_week.label;
+  document.getElementById('kpiUniverse').textContent = DATA.current_week.universe.match(/\d+/)?.[0] || '--';
+  document.getElementById('strongList').innerHTML = DATA.ops_summary.strong_focus.map(chip).join('') || '<span class="muted">暂无</span>';
+  document.getElementById('watchList').innerHTML = DATA.ops_summary.watch_list.map(chip).join('') || '<span class="muted">暂无</span>';
+  document.getElementById('cautionList').innerHTML = DATA.ops_summary.caution_list.map(chip).join('') || '<span class="muted">暂无</span>';
+  const top3 = (DATA.summary?.top3_tracks || DATA.top10.slice(0,3).map(x=>x.track)).join('、');
+  const next3 = DATA.top10.slice(3,6).map(x=>x.track).join('、');
+  const obs = DATA.ops_summary?.caution_list?.slice(0,3)?.join('、') || DATA.top10.slice(6,9).map(x=>x.track).join('、');
+  document.getElementById('predictionBrief').textContent = `本周模型前列集中在${top3}；第二梯队关注${next3}；${obs ? `观察方向包括${obs}。` : ''}`;
+  document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
+  renderTop10(); renderReview();
+}
+function renderTop10(){
+  const tb=document.querySelector('#top10Table tbody');
+  tb.innerHTML = DATA.top10.map(r=>`<tr><td class="rank">${r.rank}</td><td><b>${r.track}</b></td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${displayFactorName(r.key_factor)}</span></td><td class="factor-change-cell"><b>${fmtFactor(displayFactorName(r.key_factor),r.key_factor_value)}</b><span class="${wowClass(r.key_factor_wow)}">环比${fmtWow(r.key_factor_wow)}</span></td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`).join('');
+}
+function renderReview(){
+  const rev=DATA.last_review || {};
+  const pred = rev.predicted_top10 || [];
+  const inflowHitCount = pred.filter(r => Number(r.actual_net_inflow) > 0).length;
+  const total = rev.total ?? 10;
+  const actualPositive = rev.actual_positive_count ?? 17;
+  const actualUniverse = rev.actual_universe_total ?? 50;
+  const reviewTitleEl = document.getElementById('reviewTitle');
+  if(reviewTitleEl) reviewTitleEl.textContent = `上周预测回顾——${actualPositive}/${actualUniverse}个赛道净流入`;
+  document.getElementById('reviewInflowRate').textContent = inflowHitCount + '/' + total;
+  document.getElementById('reviewInflowSub').textContent = '实际净流入数量 / ' + total;
+  document.getElementById('reviewInflowSummary').textContent = `上周预测前10中，实际实现净流入的赛道有 ${inflowHitCount} 个。`;
+  document.getElementById('reviewHitRate').textContent = (rev.hit_count??'--') + '/' + total;
+  document.getElementById('reviewWeek').textContent = rev.week || '--';
+  document.getElementById('reviewSummary').textContent = rev.summary || '';
+  document.getElementById('reviewHits').innerHTML = (rev.hits||[]).map(staticChip).join('') || '<span class="muted">暂无</span>';
+  document.getElementById('reviewMissed').innerHTML = (rev.missed_actual_top10||[]).map(staticChip).join('') || '<span class="muted">暂无</span>';
+  document.querySelector('#reviewTable tbody').innerHTML = pred.map(r=>`<tr><td class="rank">${r.pred_rank}</td><td><b>${r.track}</b></td><td class="num">${r.actual_rank??'--'}</td><td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td><td>${r.hit?'<span class="tag strong">命中</span>':'<span class="tag caution">未进前十</span>'}</td></tr>`).join('') || '<tr><td colspan="5" class="empty">暂无复盘数据</td></tr>';
+}
+init().catch(err=>{document.body.innerHTML='<div class="wrap"><div class="card action-card"><h2>数据加载失败</h2><p>'+err.message+'</p><p class="muted">请确认 assets/latest-data.js 已随网站一起上传。</p></div></div>'});
+</script>
+</body>
+</html>
