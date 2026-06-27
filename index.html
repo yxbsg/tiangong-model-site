@@ -25,10 +25,12 @@
     <div class="card hero-side factor-card">
       <span class="tag purple">因子解释</span>
       <div class="factor-explains">
-        <div class="factor-item"><b>市场热度</b><span>赛道涨跌情况</span></div>
-        <div class="factor-item"><b>用户自行为</b><span>用户对赛道的关注度</span></div>
-        <div class="factor-item"><b>引流因子</b><span>具有带动客户作用的风向标</span></div>
-        <div class="factor-item"><b>舆论热度</b><span>赛道的舆情情况</span></div>
+        <div class="factor-item"><b>市场热度</b><span>赛道涨跌与交易表现</span></div>
+        <div class="factor-item"><b>用户自行为</b><span>用户主动关注度</span></div>
+        <div class="factor-item"><b>引流因子</b><span>风向标对客户关注的带动</span></div>
+        <div class="factor-item"><b>舆论热度</b><span>市场讨论与内容传播强弱</span></div>
+        <div class="factor-item"><b>上周排名延续</b><span>资金关注是否延续</span></div>
+        <div class="factor-item"><b>低位修复信号</b><span>弱势赛道是否出现边际改善</span></div>
       </div>
     </div>
   </div>
@@ -43,9 +45,9 @@
   </div>
 
   <div class="section">
-    <div class="section-title"><h2>本周预测净流入前十大赛道</h2><p>赛道逻辑、关键因子与变化情况</p></div>
+    <div class="section-title"><h2>本周预测净流入前十大赛道</h2><p>赛道逻辑、核心驱动与信号变化情况</p></div>
     <div class="card table-card">
-      <div class="table-wrap"><table id="top10Table"><thead><tr><th>排名</th><th>赛道</th><th>推荐层级</th><th>Top10概率</th><th>上周排名</th><th>关键因子</th><th>关键因子变化</th><th>预测理由</th><th>赛道净流入详情</th><th>赛道最新观点</th></tr></thead><tbody></tbody></table></div>
+      <div class="table-wrap"><table id="top10Table"><thead><tr><th>排名</th><th>赛道</th><th>推荐层级</th><th>Top10概率</th><th>上周排名</th><th>核心驱动</th><th>核心信号变化</th><th>预测理由</th><th>赛道净流入详情</th><th>赛道最新观点</th></tr></thead><tbody></tbody></table></div>
     </div>
   </div>
 
@@ -159,36 +161,78 @@ function link(track, count){return `<a class="btn" href="details/index.html?trac
 function viewLink(track){return `<a class="btn" href="views/index.html?track=${encodeURIComponent(track)}">最新观点</a>`}
 function chip(track){return `<a class="chip" href="details/index.html?track=${encodeURIComponent(track)}">${track}</a>`}
 function staticChip(track){return `<span class="chip static">${track}</span>`}
+const DRIVER_OVERRIDES = {
+  '半导体及设备': {
+    driver: '市场热度 / 趋势延续',
+    signal: '<b>市场热度16.11%</b><span class="positive">环比+257.7%，上周第1</span>'
+  },
+  '通信': {
+    driver: '引流因子',
+    signal: '<b>引流因子721.46万</b><span class="positive">环比+496.2%</span>'
+  },
+  '消费电子': {
+    driver: '市场热度',
+    signal: '<b>市场热度17.69%</b><span class="positive">环比+464.7%</span>'
+  },
+  '电池': {
+    driver: '引流因子 / 上周排名延续',
+    signal: '<b>引流因子90.49万</b><span class="positive">环比+98.5%，上周第3</span>'
+  },
+  '有色': {
+    driver: '引流因子',
+    signal: '<b>引流因子641.47万</b><span class="positive">环比+376.1%</span>'
+  },
+  '工程机械': {
+    driver: '低位修复信号',
+    signal: '<b>市场热度7.24%</b><span class="positive">环比+362.8%，低位制造修复</span>'
+  },
+  '人工智能综合指数': {
+    driver: '引流因子 / 低位修复信号',
+    signal: '<b>引流因子226.92万</b><span class="positive">环比+344.9%，上周第46</span>'
+  },
+  '芯片': {
+    driver: '低位修复信号 / 同源修复',
+    signal: '<b>市场热度18.21%</b><span class="positive">低基数大幅修复，上周第50</span>'
+  },
+  '材料': {
+    driver: '市场热度 / 产业链扩散',
+    signal: '<b>市场热度8.79%</b><span class="positive">环比+182.9%，上游扩散</span>'
+  },
+  '创新药及生物科技': {
+    driver: '低位修复信号',
+    signal: '<b>用户自行为560</b><span class="negative">环比-1.8%，主要看低位修复</span>'
+  }
+};
 const MISSED_REASONS = [
   {
     track: '工程机械',
     actual_rank: 3,
     actual_net_inflow: 7.87,
-    reason: '工程机械属于低位制造和顺周期修复方向。最近一周热点中，科技链高波动后资金开始寻找低位制造、出海链和设备更新线索，工程机械承接了部分非拥挤方向的再平衡资金。模型漏判主要因为此前因子更多集中在科技制造主线，对低位顺周期的阶段性扩散反应偏慢。'
+    reason: '科技链波动后，资金向低位制造、出海和设备更新扩散，顺周期修复强于模型预估。'
   },
   {
     track: '消费电子',
     actual_rank: 5,
     actual_net_inflow: 6.62,
-    reason: '消费电子受端侧AI、AI手机、AI眼镜和智能终端扩散支撑，同时存储涨价向终端传导也提升了硬件链关注度。模型低估的地方在于把消费电子更多视为半导体链同源分支，而不是单独的资金弹性方向。'
+    reason: '端侧AI、存储涨价传导和硬件终端预期升温，半导体链弹性分支被资金单独交易。'
   },
   {
     track: '材料',
     actual_rank: 6,
     actual_net_inflow: 4.59,
-    reason: '材料是最近一周热点中最密集的上游瓶颈方向之一，高纯红磷、InP衬底、MLCC、PCB材料、电子布、铜箔、CCL等均有涨价、缺货或认证线索。模型漏判主要因为材料内部子方向较分散，单一赛道标签容易低估其合力。'
+    reason: '高纯红磷、MLCC、PCB材料等上游瓶颈集中发酵，分散子方向形成合力。'
   },
   {
     track: '创新药及生物科技',
     actual_rank: 8,
     actual_net_inflow: 3.16,
-    reason: '创新药及生物科技更偏低位修复和资金再平衡。近期医药从负向交易性贝塔修复转向创新供应链、出海和政策边际变化，具备一定独立景气。模型低估主要因为该方向与AI硬件主线相关性低，且用户行为因子没有明显领先。'
+    reason: '低位医药修复叠加创新药出海、政策边际变化，资金做非拥挤方向再平衡。'
   },
   {
     track: '农业',
     actual_rank: 10,
     actual_net_inflow: 1.14,
-    reason: '农业更偏防御和低位轮动，热点强度弱于AI硬件、半导体和材料，但在市场风格再平衡时容易出现阶段性资金流入。模型漏判主要因为农业缺少持续高频产业催化，更多来自短期风格切换和资金分散。'
+    reason: '偏防御和低位轮动，更多来自风格切换下的资金分散，产业催化不强。'
   }
 ];
 
@@ -212,7 +256,12 @@ async function init(){
 }
 function renderTop10(){
   const tb=document.querySelector('#top10Table tbody');
-  tb.innerHTML = DATA.top10.map(r=>`<tr><td class="rank">${r.rank}</td><td><b>${r.track}</b></td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${displayFactorName(r.key_factor)}</span></td><td class="factor-change-cell"><b>${fmtFactor(displayFactorName(r.key_factor),r.key_factor_value)}</b><span class="${wowClass(r.key_factor_wow)}">环比${fmtWow(r.key_factor_wow)}</span></td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`).join('');
+  tb.innerHTML = DATA.top10.map(r=>{
+    const ov = DRIVER_OVERRIDES[r.track] || {};
+    const driver = ov.driver || displayFactorName(r.key_factor);
+    const signal = ov.signal || `<b>${fmtFactor(displayFactorName(r.key_factor),r.key_factor_value)}</b><span class="${wowClass(r.key_factor_wow)}">环比${fmtWow(r.key_factor_wow)}</span>`;
+    return `<tr><td class="rank">${r.rank}</td><td><b>${r.track}</b></td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${driver}</span></td><td class="factor-change-cell">${signal}</td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`;
+  }).join('');
 }
 function renderMissedReasons(){
   const tb = document.querySelector('#missedReasonTable tbody');
