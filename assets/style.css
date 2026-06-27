@@ -233,3 +233,61 @@ table th, table td{text-align:center !important;vertical-align:middle !important
 /* v37 core driver updates */
 .factor-pill{white-space:normal;line-height:1.45}
 .factor-change-cell span{display:block;margin-top:4px;line-height:1.45}
+
+
+/* v38 missed sector layout */
+.missed-section .section-title p{max-width:820px}
+.missed-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:14px;
+}
+.missed-item-card{
+  padding:18px 18px 16px;
+  min-height:210px;
+  position:relative;
+  overflow:hidden;
+}
+.missed-item-card:before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:4px;
+  background:linear-gradient(90deg,rgba(59,130,246,.55),rgba(20,184,166,.38));
+}
+.missed-card-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:14px;
+}
+.missed-rank{
+  font-size:12px;
+  color:#64748b;
+  white-space:nowrap;
+}
+.missed-number{
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:-0.02em;
+  line-height:1;
+}
+.missed-number-label{
+  margin-top:6px;
+  font-size:12px;
+  color:#94a3b8;
+}
+.missed-item-card p{
+  margin:14px 0 0;
+  color:#334155;
+  line-height:1.75;
+  font-size:14px;
+}
+@media(max-width:1200px){
+  .missed-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .missed-grid{grid-template-columns:1fr}
+  .missed-item-card{min-height:auto}
+}

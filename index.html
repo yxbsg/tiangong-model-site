@@ -89,18 +89,12 @@
   </div>
 
 
-  <div class="section">
-    <div class="section-title"><h2>漏判赛道观察</h2><p>结合最近一周热点事件，复盘实际前十但未进入预测前十的赛道</p></div>
-    <div class="card table-card missed-card">
-      <div class="table-wrap">
-        <table id="missedReasonTable">
-          <thead>
-            <tr><th>漏判赛道</th><th>实际排名</th><th>实际净流入</th><th>热点支撑与漏判原因</th></tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+  <div class="section missed-section">
+    <div class="section-title">
+      <h2>漏判赛道观察</h2>
+      <p>实际进入前十但未被模型提前排入前十的赛道，主要用于复盘热点突发、低位修复和风格切换</p>
     </div>
+    <div id="missedReasonCards" class="missed-grid"></div>
   </div>
 
   <div class="section">
@@ -264,9 +258,17 @@ function renderTop10(){
   }).join('');
 }
 function renderMissedReasons(){
-  const tb = document.querySelector('#missedReasonTable tbody');
-  if(!tb) return;
-  tb.innerHTML = MISSED_REASONS.map(r=>`<tr><td><b>${r.track}</b></td><td class="num">${r.actual_rank}</td><td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td><td class="missed-reason-cell">${r.reason}</td></tr>`).join('');
+  const wrap = document.getElementById('missedReasonCards');
+  if(!wrap) return;
+  wrap.innerHTML = MISSED_REASONS.map(r=>`<div class="card missed-item-card">
+    <div class="missed-card-head">
+      <span class="tag watch">${r.track}</span>
+      <span class="missed-rank">实际第${r.actual_rank}</span>
+    </div>
+    <div class="missed-number ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</div>
+    <div class="missed-number-label">实际净流入</div>
+    <p>${r.reason}</p>
+  </div>`).join('');
 }
 
 function renderReview(){
