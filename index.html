@@ -19,7 +19,7 @@
       </div>
       <div class="summary-box">
         <span class="tag info">结果概括</span>
-        <p id="predictionBrief"></p>
+        <div id="predictionBrief" class="result-brief"></div>
       </div>
     </div>
     <div class="card hero-side factor-card">
@@ -243,8 +243,15 @@ async function init(){
   document.getElementById('cautionList').innerHTML = DATA.ops_summary.caution_list.map(chip).join('') || '<span class="muted">暂无</span>';
   const top3 = (DATA.summary?.top3_tracks || DATA.top10.slice(0,3).map(x=>x.track)).join('、');
   const next3 = DATA.top10.slice(3,6).map(x=>x.track).join('、');
-  const obs = DATA.ops_summary?.caution_list?.slice(0,3)?.join('、') || DATA.top10.slice(6,9).map(x=>x.track).join('、');
-  document.getElementById('predictionBrief').textContent = `本周模型前列集中在${top3}；第二梯队关注${next3}；${obs ? `观察方向包括${obs}。` : ''}`;
+  const obs = DATA.top10.slice(6,10).map(x=>x.track).join('、');
+  document.getElementById('predictionBrief').innerHTML = `
+    <div class="brief-main">本周模型前列集中在<b>${top3}</b>，主线仍是AI硬件、半导体制造、光通信和端侧硬件扩散。</div>
+    <div class="brief-grid">
+      <div><b>前排主线</b><span>${top3}：趋势延续信号更强，适合作为本周优先观察方向。</span></div>
+      <div><b>第二梯队</b><span>${next3}：电池、有色、工程机械分别对应储能电力、资源品再平衡和低位制造修复。</span></div>
+      <div><b>观察方向</b><span>${obs}：人工智能和芯片偏低位修复，材料是上游扩散，创新药偏非拥挤方向再平衡。</span></div>
+      <div><b>使用提醒</b><span>芯片、半导体及设备、消费电子存在同源关系，应理解为半导体链共振，避免重复推荐。</span></div>
+    </div>`;
   document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
   renderTop10(); renderReview(); renderMissedReasons(); renderMissedReasons();
 }

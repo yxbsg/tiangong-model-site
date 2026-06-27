@@ -291,3 +291,40 @@ table th, table td{text-align:center !important;vertical-align:middle !important
   .missed-grid{grid-template-columns:1fr}
   .missed-item-card{min-height:auto}
 }
+
+
+/* v39 richer result summary */
+.result-brief{margin-top:10px}
+.brief-main{
+  color:#1e293b;
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:12px;
+}
+.brief-main b{color:#0f172a}
+.brief-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.brief-grid div{
+  background:rgba(248,250,252,.86);
+  border:1px solid rgba(226,232,240,.9);
+  border-radius:14px;
+  padding:11px 12px;
+}
+.brief-grid b{
+  display:block;
+  color:#172033;
+  font-size:13px;
+  margin-bottom:5px;
+}
+.brief-grid span{
+  display:block;
+  color:#536176;
+  line-height:1.65;
+  font-size:13px;
+}
+@media(max-width:760px){
+  .brief-grid{grid-template-columns:1fr}
+}
