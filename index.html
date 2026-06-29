@@ -45,9 +45,9 @@
   </div>
 
   <div class="section">
-    <div class="section-title"><h2>本周预测净流入前十大赛道</h2><p>赛道逻辑、核心驱动与信号变化情况</p></div>
+    <div class="section-title"><h2>本周预测净流入前十大赛道</h2><p>赛道逻辑、核心驱动与信号观察情况</p></div>
     <div class="card table-card">
-      <div class="table-wrap"><table id="top10Table"><thead><tr><th>排名</th><th>赛道</th><th>推荐层级</th><th>Top10概率</th><th>上周排名</th><th>核心驱动</th><th>核心信号变化</th><th>预测理由</th><th>赛道净流入详情</th><th>赛道最新观点</th></tr></thead><tbody></tbody></table></div>
+      <div class="table-wrap"><table id="top10Table"><thead><tr><th>排名</th><th>赛道</th><th>推荐层级</th><th>Top10概率</th><th>上周排名</th><th>核心驱动</th><th>核心信号观察</th><th>预测理由</th><th>赛道净流入详情</th><th>赛道最新观点</th></tr></thead><tbody></tbody></table></div>
     </div>
   </div>
 
@@ -158,44 +158,44 @@ function staticChip(track){return `<span class="chip static">${track}</span>`}
 const DRIVER_OVERRIDES = {
   '半导体及设备': {
     driver: '市场热度 / 趋势延续',
-    signal: '<b>净流入179.66亿</b><span class="positive">市场热度11.55%，实际第1</span>'
+    signal: '<b>市场热度11.55%</b><span class="positive">引流因子1225.45万，用户自行为1105</span>'
   },
   '芯片': {
     driver: '低位修复信号 / 同源修复',
-    signal: '<b>净流入89.98亿</b><span class="positive">市场热度9.61%，实际第3</span>'
+    signal: '<b>市场热度9.61%</b><span class="positive">引流因子911.18万，用户自行为1589</span>'
   },
   '通信': {
     driver: '引流因子 / 趋势延续',
-    signal: '<b>净流入130.58亿</b><span class="positive">引流因子618.32万，实际第2</span>'
+    signal: '<b>引流因子618.32万</b><span class="negative">市场热度-2.08%，高位后需看承接</span>'
   },
   '消费电子': {
     driver: '市场热度 / 产业链扩散',
-    signal: '<b>净流入16.56亿</b><span class="positive">市场热度3.51%，实际第4</span>'
+    signal: '<b>市场热度3.51%</b><span class="positive">引流因子270.32万，端侧硬件扩散</span>'
   },
   '创新药及生物科技': {
     driver: '低位修复信号',
-    signal: '<b>净流入7.28亿</b><span class="positive">用户自行为564，实际第5</span>'
+    signal: '<b>用户自行为564</b><span class="positive">引流因子310.11万，关注度稳定</span>'
   },
   '信息技术': {
     driver: '市场热度 / 科技链扩散',
-    signal: '<b>净流入5.69亿</b><span class="positive">市场热度3.59%，实际第6</span>'
+    signal: '<b>市场热度3.59%</b><span class="positive">科技链向软件、信创扩散</span>'
   },
   '集成电路': {
     driver: '同源修复 / 市场热度',
-    signal: '<b>净流入3.38亿</b><span class="positive">市场热度8.68%，实际第7</span>'
+    signal: '<b>市场热度8.68%</b><span class="positive">半导体链内部扩散，用户行为待跟进</span>'
   },
   '游戏': {
     driver: '引流因子 / 低位修复',
-    signal: '<b>净流入2.04亿</b><span class="positive">引流因子872.58万，实际第10</span>'
+    signal: '<b>引流因子872.58万</b><span class="negative">市场热度-2.14%，偏交易性修复</span>'
   },
   '金融科技': {
     driver: '低位修复信号',
-    signal: '<b>净流入3.07亿</b><span class="positive">实际第8，低位修复</span>'
+    signal: '<b>市场热度-2.44%</b><span class="negative">低位修复，强趋势仍待确认</span>'
   },
   '材料': {
     driver: '产业链扩散',
-    signal: '<b>净流入3.01亿</b><span class="positive">实际第9，上游扩散</span>'
-  },
+    signal: '<b>市场热度0.88%</b><span class="positive">上游扩散，强度弱于前排主线</span>'
+  }
 };
 const MISSED_REASONS = [
   {

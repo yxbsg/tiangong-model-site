@@ -361,3 +361,40 @@ table th, table td{text-align:center !important;vertical-align:middle !important
   background:linear-gradient(90deg,rgba(209,250,229,.95),rgba(240,253,250,.85));
   border-color:rgba(110,231,183,.75);
 }
+
+
+/* v43 core signal observation: factor-based, not net-inflow-based */
+.factor-change-cell b{white-space:normal;line-height:1.45}
+.factor-change-cell span{font-size:12px}
+
+
+/* v44 detail chart: single-row horizontal layout and date alignment */
+.chart-card{
+  overflow-x:auto;
+  overflow-y:visible;
+}
+.history-chart-wrap,
+.split-bar-chart,
+.bar-axis{
+  min-width:1120px;
+}
+.split-bar-chart{
+  grid-template-columns:repeat(50,18px) !important;
+  justify-content:start;
+  gap:5px;
+}
+.bar-axis{
+  grid-template-columns:repeat(50,18px) !important;
+  justify-content:start;
+  gap:5px;
+  white-space:nowrap;
+}
+.bar-axis span{
+  white-space:nowrap;
+  overflow:visible;
+  line-height:1.2;
+  font-size:10px;
+}
+.bar-col{
+  min-width:18px;
+}

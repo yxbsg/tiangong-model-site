@@ -25,7 +25,7 @@
   </div>
 
   <div class="section">
-    <div class="section-title"><h2>过去50周度净流入额</h2><p>柱子上方为净流入，下方为净流出；鼠标悬停可查看日期和金额</p></div>
+    <div class="section-title"><h2>过去50周度净流入额</h2><p>展示上周实际流入数据；横向单行排列，鼠标悬停可查看日期和金额</p></div>
     <div class="card chart-card">
       <div id="inflowLegend" class="chart-legend muted"></div>
       <div id="historyChartWrap" class="history-chart-wrap">
@@ -93,7 +93,7 @@ async function init(){
   document.getElementById('fundSearch').addEventListener('input', renderFunds);
 }
 function getWeekRangeLabel(week){
-  const period = data?.current_week?.period || '';
+  const period = data?.current_week?.actual_period || data?.current_week?.period || '';
   const match = period.match(/(\d{4}-\d{2}-\d{2})\s*至\s*(\d{4}-\d{2}-\d{2})/);
   if(!match) return `第${week}周`;
   const currentWeek = Math.max(...(hdata.weeks||[]).map(Number));
@@ -113,8 +113,11 @@ function getWeekStartLabel(week){
   return `${m}/${d}`;
 }
 function renderHistory(){
-  const weeks = hdata.weeks || [];
-  const values = (hdata.tracks||{})[track] || [];
+  const rawWeeks = hdata.weeks || [];
+  const rawValues = (hdata.tracks||{})[track] || [];
+  const startIdx = Math.max(0, rawValues.length - 50);
+  const weeks = rawWeeks.slice(startIdx);
+  const values = rawValues.slice(startIdx);
   const chart = document.getElementById('historyChart');
   const axis = document.getElementById('historyAxis');
   const legend = document.getElementById('inflowLegend');
@@ -128,7 +131,7 @@ function renderHistory(){
   const maxAbs = Math.max(...values.map(v=>Math.abs(Number(v)||0)), 1);
   const recent = values[values.length-1];
   const hi = Math.max(...values), lo = Math.min(...values);
-  legend.textContent = `最新一周：${fmtMoney(recent)} ｜ 50周最高：${fmtMoney(hi)} ｜ 50周最低：${fmtMoney(lo)}`;
+  legend.textContent = `上周实际流入：${fmtMoney(recent)} ｜ 50周最高：${fmtMoney(hi)} ｜ 50周最低：${fmtMoney(lo)}`;
   chart.innerHTML = values.map((v,i)=>{
     const n = Number(v)||0;
     const h = Math.max(4, Math.round(Math.abs(n)/maxAbs*100));
