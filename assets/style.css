@@ -417,3 +417,22 @@ table th, table td{text-align:center !important;vertical-align:middle !important
 .bar-col{
   min-width:20px;
 }
+
+
+/* v46 detail chart uses latest 45 weeks */
+.history-chart-wrap,
+.split-bar-chart,
+.bar-axis{
+  min-width:1000px !important;
+}
+.split-bar-chart{
+  grid-template-columns:repeat(45,18px) !important;
+  gap:5px;
+}
+.bar-axis{
+  grid-template-columns:repeat(45,18px) !important;
+  gap:5px;
+}
+.bar-col{
+  min-width:18px;
+}
