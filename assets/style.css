@@ -398,3 +398,22 @@ table th, table td{text-align:center !important;vertical-align:middle !important
 .bar-col{
   min-width:18px;
 }
+
+
+/* v45 detail chart uses latest 30 weeks */
+.history-chart-wrap,
+.split-bar-chart,
+.bar-axis{
+  min-width:760px !important;
+}
+.split-bar-chart{
+  grid-template-columns:repeat(30,20px) !important;
+  gap:5px;
+}
+.bar-axis{
+  grid-template-columns:repeat(30,20px) !important;
+  gap:5px;
+}
+.bar-col{
+  min-width:20px;
+}

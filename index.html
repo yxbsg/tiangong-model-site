@@ -45,9 +45,9 @@
   </div>
 
   <div class="section">
-    <div class="section-title"><h2>本周预测净流入前十大赛道</h2><p>赛道逻辑、核心驱动与信号观察情况</p></div>
+    <div class="section-title"><h2>本周预测净流入前十大赛道</h2><p>赛道逻辑、核心驱动与推荐理由</p></div>
     <div class="card table-card">
-      <div class="table-wrap"><table id="top10Table"><thead><tr><th>排名</th><th>赛道</th><th>推荐层级</th><th>Top10概率</th><th>上周排名</th><th>核心驱动</th><th>核心信号观察</th><th>预测理由</th><th>赛道净流入详情</th><th>赛道最新观点</th></tr></thead><tbody></tbody></table></div>
+      <div class="table-wrap"><table id="top10Table"><thead><tr><th>排名</th><th>赛道</th><th>推荐层级</th><th>Top10概率</th><th>上周排名</th><th>核心驱动</th><th>预测理由</th><th>赛道净流入详情</th><th>赛道最新观点</th></tr></thead><tbody></tbody></table></div>
     </div>
   </div>
 
@@ -254,8 +254,7 @@ function renderTop10(){
   tb.innerHTML = DATA.top10.map(r=>{
     const ov = DRIVER_OVERRIDES[r.track] || {};
     const driver = ov.driver || displayFactorName(r.key_factor);
-    const signal = ov.signal || `<b>${fmtFactor(displayFactorName(r.key_factor),r.key_factor_value)}</b><span class="${wowClass(r.key_factor_wow)}">环比${fmtWow(r.key_factor_wow)}</span>`;
-    return `<tr><td class="rank">${r.rank}</td><td><b>${r.track}</b></td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${driver}</span></td><td class="factor-change-cell">${signal}</td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`;
+    return `<tr><td class="rank">${r.rank}</td><td><b>${r.track}</b></td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${driver}</span></td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`;
   }).join('');
 }
 function renderMissedReasons(){
