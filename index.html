@@ -158,76 +158,70 @@ function staticChip(track){return `<span class="chip static">${track}</span>`}
 const DRIVER_OVERRIDES = {
   '半导体及设备': {
     driver: '市场热度 / 趋势延续',
-    signal: '<b>市场热度16.11%</b><span class="positive">环比+257.7%，上周第1</span>'
-  },
-  '通信': {
-    driver: '引流因子',
-    signal: '<b>引流因子721.46万</b><span class="positive">环比+496.2%</span>'
-  },
-  '消费电子': {
-    driver: '市场热度',
-    signal: '<b>市场热度17.69%</b><span class="positive">环比+464.7%</span>'
-  },
-  '电池': {
-    driver: '引流因子 / 上周排名延续',
-    signal: '<b>引流因子90.49万</b><span class="positive">环比+98.5%，上周第3</span>'
-  },
-  '有色': {
-    driver: '引流因子',
-    signal: '<b>引流因子641.47万</b><span class="positive">环比+376.1%</span>'
-  },
-  '工程机械': {
-    driver: '低位修复信号',
-    signal: '<b>市场热度7.24%</b><span class="positive">环比+362.8%，低位制造修复</span>'
-  },
-  '人工智能综合指数': {
-    driver: '引流因子 / 低位修复信号',
-    signal: '<b>引流因子226.92万</b><span class="positive">环比+344.9%，上周第46</span>'
+    signal: '<b>净流入179.66亿</b><span class="positive">市场热度11.55%，实际第1</span>'
   },
   '芯片': {
     driver: '低位修复信号 / 同源修复',
-    signal: '<b>市场热度18.21%</b><span class="positive">低基数大幅修复，上周第50</span>'
+    signal: '<b>净流入89.98亿</b><span class="positive">市场热度9.61%，实际第3</span>'
   },
-  '材料': {
+  '通信': {
+    driver: '引流因子 / 趋势延续',
+    signal: '<b>净流入130.58亿</b><span class="positive">引流因子618.32万，实际第2</span>'
+  },
+  '消费电子': {
     driver: '市场热度 / 产业链扩散',
-    signal: '<b>市场热度8.79%</b><span class="positive">环比+182.9%，上游扩散</span>'
+    signal: '<b>净流入16.56亿</b><span class="positive">市场热度3.51%，实际第4</span>'
   },
   '创新药及生物科技': {
     driver: '低位修复信号',
-    signal: '<b>用户自行为560</b><span class="negative">环比-1.8%，主要看低位修复</span>'
-  }
+    signal: '<b>净流入7.28亿</b><span class="positive">用户自行为564，实际第5</span>'
+  },
+  '信息技术': {
+    driver: '市场热度 / 科技链扩散',
+    signal: '<b>净流入5.69亿</b><span class="positive">市场热度3.59%，实际第6</span>'
+  },
+  '集成电路': {
+    driver: '同源修复 / 市场热度',
+    signal: '<b>净流入3.38亿</b><span class="positive">市场热度8.68%，实际第7</span>'
+  },
+  '游戏': {
+    driver: '引流因子 / 低位修复',
+    signal: '<b>净流入2.04亿</b><span class="positive">引流因子872.58万，实际第10</span>'
+  },
+  '金融科技': {
+    driver: '低位修复信号',
+    signal: '<b>净流入3.07亿</b><span class="positive">实际第8，低位修复</span>'
+  },
+  '材料': {
+    driver: '产业链扩散',
+    signal: '<b>净流入3.01亿</b><span class="positive">实际第9，上游扩散</span>'
+  },
 };
 const MISSED_REASONS = [
   {
-    track: '工程机械',
-    actual_rank: 3,
-    actual_net_inflow: 7.87,
-    reason: '科技链波动后，资金向低位制造、出海和设备更新扩散，顺周期修复强于模型预估。'
-  },
-  {
-    track: '消费电子',
-    actual_rank: 5,
-    actual_net_inflow: 6.62,
-    reason: '端侧AI、存储涨价传导和硬件终端预期升温，半导体链弹性分支被资金单独交易。'
-  },
-  {
-    track: '材料',
+    track: '信息技术',
     actual_rank: 6,
-    actual_net_inflow: 4.59,
-    reason: '高纯红磷、MLCC、PCB材料等上游瓶颈集中发酵，分散子方向形成合力。'
+    actual_net_inflow: 5.692743,
+    reason: '科技链从硬件向软件、信创和信息化扩散，市场热度与净流入同步改善。'
   },
   {
-    track: '创新药及生物科技',
+    track: '集成电路',
+    actual_rank: 7,
+    actual_net_inflow: 3.383049,
+    reason: '半导体链内部同源扩散，芯片和设备走强后资金继续向集成电路延伸。'
+  },
+  {
+    track: '金融科技',
     actual_rank: 8,
-    actual_net_inflow: 3.16,
-    reason: '低位医药修复叠加创新药出海、政策边际变化，资金做非拥挤方向再平衡。'
+    actual_net_inflow: 3.066337,
+    reason: '低位修复叠加科技金融属性，更多是风险偏好修复后的补涨线索。'
   },
   {
-    track: '农业',
+    track: '游戏',
     actual_rank: 10,
-    actual_net_inflow: 1.14,
-    reason: '偏防御和低位轮动，更多来自风格切换下的资金分散，产业催化不强。'
-  }
+    actual_net_inflow: 2.041369,
+    reason: '引流因子较强，内容、AI应用和低位修复共同带动阶段性关注。'
+  },
 ];
 
 let DATA;
@@ -245,12 +239,12 @@ async function init(){
   const next3 = DATA.top10.slice(3,6).map(x=>x.track).join('、');
   const obs = DATA.top10.slice(6,10).map(x=>x.track).join('、');
   document.getElementById('predictionBrief').innerHTML = `
-    <div class="brief-main">本周模型前列集中在<b>${top3}</b>，主线仍是AI硬件、半导体制造、光通信和端侧硬件扩散。</div>
+    <div class="brief-main">本周模型前列集中在<b>${top3}</b>，资金继续围绕半导体链、AI硬件和光通信展开，科技链内部扩散明显。</div>
     <div class="brief-grid">
-      <div><b>前排主线</b><span>${top3}：趋势延续信号更强，适合作为本周优先观察方向。</span></div>
-      <div><b>第二梯队</b><span>${next3}：电池、有色、工程机械分别对应储能电力、资源品再平衡和低位制造修复。</span></div>
-      <div><b>观察方向</b><span>${obs}：人工智能和芯片偏低位修复，材料是上游扩散，创新药偏非拥挤方向再平衡。</span></div>
-      <div><b>使用提醒</b><span>芯片、半导体及设备、消费电子存在同源关系，应理解为半导体链共振，避免重复推荐。</span></div>
+      <div><b>前排主线</b><span>${top3}：净流入、市场热度和客户关注度均处在前列，适合作为本周优先观察方向。</span></div>
+      <div><b>第二梯队</b><span>${next3}：消费电子代表硬件扩散，创新药偏低位修复，信息技术体现科技链二线扩散。</span></div>
+      <div><b>观察方向</b><span>${obs}：集成电路和材料属于半导体链同源扩散，游戏、金融科技更偏引流和低位修复。</span></div>
+      <div><b>使用提醒</b><span>半导体及设备、芯片、集成电路、消费电子存在同源关系，应理解为半导体链共振，避免重复推荐。</span></div>
     </div>`;
   document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
   renderTop10(); renderReview(); renderMissedReasons(); renderMissedReasons();
