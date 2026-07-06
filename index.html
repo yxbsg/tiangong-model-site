@@ -157,70 +157,60 @@ function chip(track){return `<a class="chip" href="details/index.html?track=${en
 function staticChip(track){return `<span class="chip static">${track}</span>`}
 const DRIVER_OVERRIDES = {
   '半导体及设备': {
-    driver: '市场热度 / 趋势延续',
-    signal: '<b>市场热度11.55%</b><span class="positive">引流因子1225.45万，用户自行为1105</span>'
-  },
-  '芯片': {
-    driver: '低位修复信号 / 同源修复',
-    signal: '<b>市场热度9.61%</b><span class="positive">引流因子911.18万，用户自行为1589</span>'
+    driver: '资金延续 / 半导体设备景气'
   },
   '通信': {
-    driver: '引流因子 / 趋势延续',
-    signal: '<b>引流因子618.32万</b><span class="negative">市场热度-2.08%，高位后需看承接</span>'
+    driver: '光通信 / 上游材料扩散'
   },
-  '消费电子': {
-    driver: '市场热度 / 产业链扩散',
-    signal: '<b>市场热度3.51%</b><span class="positive">引流因子270.32万，端侧硬件扩散</span>'
+  '芯片': {
+    driver: '同源修复 / 半导体瓶颈'
+  },
+  '大金融': {
+    driver: '低位修复 / 风格再平衡'
   },
   '创新药及生物科技': {
-    driver: '低位修复信号',
-    signal: '<b>用户自行为564</b><span class="positive">引流因子310.11万，关注度稳定</span>'
+    driver: '低位修复 / 非拥挤高风偏'
   },
-  '信息技术': {
-    driver: '市场热度 / 科技链扩散',
-    signal: '<b>市场热度3.59%</b><span class="positive">科技链向软件、信创扩散</span>'
+  '人工智能综合指数': {
+    driver: 'AI应用 / 算力云化'
   },
-  '集成电路': {
-    driver: '同源修复 / 市场热度',
-    signal: '<b>市场热度8.68%</b><span class="positive">半导体链内部扩散，用户行为待跟进</span>'
+  '卫星及航天': {
+    driver: '事件催化 / 低位科技承接'
+  },
+  '机器人': {
+    driver: '量产节点 / 物理AI'
   },
   '游戏': {
-    driver: '引流因子 / 低位修复',
-    signal: '<b>引流因子872.58万</b><span class="negative">市场热度-2.14%，偏交易性修复</span>'
-  },
-  '金融科技': {
-    driver: '低位修复信号',
-    signal: '<b>市场热度-2.44%</b><span class="negative">低位修复，强趋势仍待确认</span>'
+    driver: 'AI应用 / 引流修复'
   },
   '材料': {
-    driver: '产业链扩散',
-    signal: '<b>市场热度0.88%</b><span class="positive">上游扩散，强度弱于前排主线</span>'
-  }
+    driver: '上游涨价 / 产业链扩散'
+  },
 };
 const MISSED_REASONS = [
   {
-    track: '信息技术',
+    track: '大金融',
+    actual_rank: 4,
+    actual_net_inflow: 90.411895,
+    reason: '科技高位分歧后，非银金融和低位价值方向承接资金，风格再平衡速度快于模型预期。'
+  },
+  {
+    track: '卫星及航天',
     actual_rank: 6,
-    actual_net_inflow: 5.692743,
-    reason: '科技链从硬件向软件、信创和信息化扩散，市场热度与净流入同步改善。'
+    actual_net_inflow: 35.014276,
+    reason: '商业航天7月发射窗口、火箭回收和低轨卫星链形成事件催化，低位科技承接强于预期。'
   },
   {
-    track: '集成电路',
+    track: '人工智能综合指数',
     actual_rank: 7,
-    actual_net_inflow: 3.383049,
-    reason: '半导体链内部同源扩散，芯片和设备走强后资金继续向集成电路延伸。'
+    actual_net_inflow: 23.831225,
+    reason: 'AI安全、代码Agent、算力云化和应用收入验证继续发酵，产业线索没有因硬件震荡而中断。'
   },
   {
-    track: '金融科技',
-    actual_rank: 8,
-    actual_net_inflow: 3.066337,
-    reason: '低位修复叠加科技金融属性，更多是风险偏好修复后的补涨线索。'
-  },
-  {
-    track: '游戏',
-    actual_rank: 10,
-    actual_net_inflow: 2.041369,
-    reason: '引流因子较强，内容、AI应用和低位修复共同带动阶段性关注。'
+    track: '机器人',
+    actual_rank: 9,
+    actual_net_inflow: 11.956923,
+    reason: '人形机器人量产节点、物理AI和车企链共振催化密集，低位实体AI承接明显。'
   },
 ];
 
@@ -239,15 +229,15 @@ async function init(){
   const next3 = DATA.top10.slice(3,6).map(x=>x.track).join('、');
   const obs = DATA.top10.slice(6,10).map(x=>x.track).join('、');
   document.getElementById('predictionBrief').innerHTML = `
-    <div class="brief-main">本周模型前列集中在<b>${top3}</b>，资金继续围绕半导体链、AI硬件和光通信展开，科技链内部扩散明显。</div>
+    <div class="brief-main">本周模型前列集中在<b>${top3}</b>，科技硬件主线仍在，但大金融、创新药、商业航天和机器人等低位承接方向开始进入排序前列。</div>
     <div class="brief-grid">
-      <div><b>前排主线</b><span>${top3}：净流入、市场热度和客户关注度均处在前列，适合作为本周优先观察方向。</span></div>
-      <div><b>第二梯队</b><span>${next3}：消费电子代表硬件扩散，创新药偏低位修复，信息技术体现科技链二线扩散。</span></div>
-      <div><b>观察方向</b><span>${obs}：集成电路和材料属于半导体链同源扩散，游戏、金融科技更偏引流和低位修复。</span></div>
-      <div><b>使用提醒</b><span>半导体及设备、芯片、集成电路、消费电子存在同源关系，应理解为半导体链共振，避免重复推荐。</span></div>
+      <div><b>前排主线</b><span>${top3}：半导体设备、光通信和芯片仍是AI硬件链最核心的三条线，重点看订单、交付和价格兑现。</span></div>
+      <div><b>第二梯队</b><span>${next3}：大金融体现风格再平衡，创新药承接高风偏资金，人工智能综合指数关注AI应用和算力云化。</span></div>
+      <div><b>观察方向</b><span>${obs}：卫星及航天、机器人和游戏更偏事件催化，材料继续对应AI硬件上游涨价和瓶颈扩散。</span></div>
+      <div><b>使用提醒</b><span>半导体及设备、芯片、集成电路、电子、消费电子存在同源关系，通信和材料也与AI硬件链高度关联，推荐时避免重复堆叠。</span></div>
     </div>`;
   document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
-  renderTop10(); renderReview(); renderMissedReasons(); renderMissedReasons();
+  renderTop10(); renderReview(); renderMissedReasons();
 }
 function renderTop10(){
   const tb=document.querySelector('#top10Table tbody');
