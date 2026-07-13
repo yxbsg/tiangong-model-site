@@ -27,7 +27,7 @@
       <div class="factor-explains">
         <div class="factor-item"><b>市场热度</b><span>赛道涨跌与交易表现</span></div>
         <div class="factor-item"><b>用户自行为</b><span>用户主动关注度</span></div>
-        <div class="factor-item"><b>引流因子</b><span>风向标对客户关注的带动</span></div>
+        <div class="factor-item"><b>引流因子</b><span>本周暂无数据，暂不参与排序</span></div>
         <div class="factor-item"><b>舆论热度</b><span>市场讨论与内容传播强弱</span></div>
         <div class="factor-item"><b>上周排名延续</b><span>资金关注是否延续</span></div>
         <div class="factor-item"><b>低位修复信号</b><span>弱势赛道是否出现边际改善</span></div>
@@ -159,20 +159,20 @@ const DRIVER_OVERRIDES = {
   '半导体及设备': {
     driver: '资金延续 / 半导体设备景气'
   },
-  '通信': {
-    driver: '光通信 / 上游材料扩散'
-  },
   '芯片': {
-    driver: '同源修复 / 半导体瓶颈'
-  },
-  '大金融': {
-    driver: '低位修复 / 风格再平衡'
-  },
-  '创新药及生物科技': {
-    driver: '低位修复 / 非拥挤高风偏'
+    driver: '同源修复 / 用户关注'
   },
   '人工智能综合指数': {
-    driver: 'AI应用 / 算力云化'
+    driver: '用户关注 / AI应用扩散'
+  },
+  '云计算': {
+    driver: '市场热度 / AI基础设施扩散'
+  },
+  '游戏': {
+    driver: '市场热度 / AI应用修复'
+  },
+  '通信': {
+    driver: '光通信 / 订单验证'
   },
   '卫星及航天': {
     driver: '事件催化 / 低位科技承接'
@@ -180,37 +180,31 @@ const DRIVER_OVERRIDES = {
   '机器人': {
     driver: '量产节点 / 物理AI'
   },
-  '游戏': {
-    driver: 'AI应用 / 引流修复'
+  '大金融': {
+    driver: '用户关注 / 风格再平衡'
   },
-  '材料': {
-    driver: '上游涨价 / 产业链扩散'
+  '创新药及生物科技': {
+    driver: '低位修复 / 非拥挤高风偏'
   },
 };
 const MISSED_REASONS = [
   {
-    track: '大金融',
-    actual_rank: 4,
-    actual_net_inflow: 90.411895,
-    reason: '科技高位分歧后，非银金融和低位价值方向承接资金，风格再平衡速度快于模型预期。'
+    track: '黄金',
+    actual_rank: 8,
+    actual_net_inflow: 14.098780,
+    reason: '避险和资源品低位轮动强于预期，模型前期更偏科技和AI链条，低估了风格切换。'
   },
   {
-    track: '卫星及航天',
-    actual_rank: 6,
-    actual_net_inflow: 35.014276,
-    reason: '商业航天7月发射窗口、火箭回收和低轨卫星链形成事件催化，低位科技承接强于预期。'
-  },
-  {
-    track: '人工智能综合指数',
-    actual_rank: 7,
-    actual_net_inflow: 23.831225,
-    reason: 'AI安全、代码Agent、算力云化和应用收入验证继续发酵，产业线索没有因硬件震荡而中断。'
-  },
-  {
-    track: '机器人',
+    track: '煤炭',
     actual_rank: 9,
-    actual_net_inflow: 11.956923,
-    reason: '人形机器人量产节点、物理AI和车企链共振催化密集，低位实体AI承接明显。'
+    actual_net_inflow: 12.171634,
+    reason: '煤炭受低位修复和顺周期轮动支撑，防御/红利类方向承接强于模型预期。'
+  },
+  {
+    track: '云计算',
+    actual_rank: 10,
+    actual_net_inflow: 9.534578,
+    reason: '云计算热度改善明显，AI基础设施从硬件向云服务和资源调度扩散速度快于模型预期。'
   },
 ];
 
@@ -229,12 +223,12 @@ async function init(){
   const next3 = DATA.top10.slice(3,6).map(x=>x.track).join('、');
   const obs = DATA.top10.slice(6,10).map(x=>x.track).join('、');
   document.getElementById('predictionBrief').innerHTML = `
-    <div class="brief-main">本周模型前列集中在<b>${top3}</b>，科技硬件主线仍在，但大金融、创新药、商业航天和机器人等低位承接方向开始进入排序前列。</div>
+    <div class="brief-main">本周<b>引流因子暂无数据</b>，模型临时剔除该项，不把大V实盘金额周变动列的0值当作真实降温；排序更侧重市场热度、用户自行为、舆论热度、资金延续和事件催化。</div>
     <div class="brief-grid">
-      <div><b>前排主线</b><span>${top3}：半导体设备、光通信和芯片仍是AI硬件链最核心的三条线，重点看订单、交付和价格兑现。</span></div>
-      <div><b>第二梯队</b><span>${next3}：大金融体现风格再平衡，创新药承接高风偏资金，人工智能综合指数关注AI应用和算力云化。</span></div>
-      <div><b>观察方向</b><span>${obs}：卫星及航天、机器人和游戏更偏事件催化，材料继续对应AI硬件上游涨价和瓶颈扩散。</span></div>
-      <div><b>使用提醒</b><span>半导体及设备、芯片、集成电路、电子、消费电子存在同源关系，通信和材料也与AI硬件链高度关联，推荐时避免重复堆叠。</span></div>
+      <div><b>前排主线</b><span>${top3}：半导体设备和芯片仍有资金延续，人工智能综合指数更多依赖用户关注和AI应用扩散。</span></div>
+      <div><b>第二梯队</b><span>${next3}：云计算、游戏和通信分别对应AI基础设施扩散、AI应用修复和光通信订单验证。</span></div>
+      <div><b>观察方向</b><span>${obs}：卫星及航天、机器人、大金融和创新药更偏事件催化、低位承接和非拥挤修复。</span></div>
+      <div><b>使用提醒</b><span>由于本周缺少引流因子，榜单对“传播带动能力”的刻画会弱一些，建议重点结合热点事件和后续客户行为变化复核。</span></div>
     </div>`;
   document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
   renderTop10(); renderReview(); renderMissedReasons();
