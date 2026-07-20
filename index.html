@@ -25,9 +25,9 @@
     <div class="card hero-side factor-card">
       <span class="tag purple">因子解释</span>
       <div class="factor-explains">
-        <div class="factor-item"><b>市场热度</b><span>赛道涨跌与交易表现</span></div>
+        <div class="factor-item"><b>市场热度</b><span>本周异常压缩后低权重使用</span></div>
         <div class="factor-item"><b>用户自行为</b><span>用户主动关注度</span></div>
-        <div class="factor-item"><b>引流因子</b><span>风向标对客户关注的带动</span></div>
+        <div class="factor-item"><b>引流因子</b><span>仅用本周横截面，不算0706环比</span></div>
         <div class="factor-item"><b>舆论热度</b><span>市场讨论与内容传播强弱</span></div>
         <div class="factor-item"><b>上周排名延续</b><span>资金关注是否延续</span></div>
         <div class="factor-item"><b>低位修复信号</b><span>弱势赛道是否出现边际改善</span></div>
@@ -44,8 +44,34 @@
     </div>
   </div>
 
+
+  <div class="section chart-overview-section">
+    <div class="section-title"><h2>图表概览</h2><p>保留结构分布和因子结构，快速判断本周赛道组成</p></div>
+    <div class="chart-grid chart-grid-pie chart-grid-pie-only">
+      <div class="card chart-card">
+        <div class="chart-head">
+          <div>
+            <span class="tag watch">结构分布</span>
+            <h3>前十大赛道结构分布</h3>
+          </div>
+          <p>看本周是科技主导，还是低位修复开始扩散</p>
+        </div>
+        <div id="trackStructureChart" class="donut-wrap"></div>
+      </div>
+      <div class="card chart-card">
+        <div class="chart-head">
+          <div>
+            <span class="tag purple">因子结构</span>
+            <h3>前十大核心因子分布</h3>
+          </div>
+          <p>看本周前十大主要是由哪些因子在驱动</p>
+        </div>
+        <div id="factorDonutChart" class="donut-wrap"></div>
+      </div>
+    </div>
+  </div>
   <div class="section">
-    <div class="section-title"><h2>本周预测净流入前十大赛道</h2><p>赛道逻辑、核心驱动与推荐理由</p></div>
+    <div class="section-title"><h2>本周预测净流入前十大赛道</h2><p>赛道、驱动与一句话理由</p></div>
     <div class="card table-card">
       <div class="table-wrap"><table id="top10Table"><thead><tr><th>排名</th><th>赛道</th><th>推荐层级</th><th>Top10概率</th><th>上周排名</th><th>核心驱动</th><th>预测理由</th><th>赛道净流入详情</th><th>赛道最新观点</th></tr></thead><tbody></tbody></table></div>
     </div>
@@ -57,6 +83,7 @@
 
   <div class="section">
     <div class="section-title"><h2 id="reviewTitle">上周预测回顾</h2><p>用于校准模型，不作为收益承诺</p></div>
+    <div id="reviewTimeline" class="review-timeline"></div>
     <div class="review-grid review-grid-v2">
       <div class="card review-card">
         <span class="tag info">净流入命中率</span>
@@ -95,6 +122,56 @@
       <p>实际进入前十但未被模型提前排入前十的赛道，主要用于复盘热点突发、低位修复和风格切换</p>
     </div>
     <div id="missedReasonCards" class="missed-grid"></div>
+  </div>
+
+
+  <div class="section four-week-section">
+    <div class="section-title">
+      <h2>最近四周预测结果分析</h2>
+      <p>汇总近四周预测命中、主线变化和模型漏判来源，用于判断模型是否在持续迭代</p>
+    </div>
+    <div id="fourWeekKpis" class="four-week-kpis"></div>
+    <div class="card four-week-main-card">
+      <div class="table-wrap">
+        <table id="fourWeekTable">
+          <thead>
+            <tr>
+              <th>预测周期</th>
+              <th>模型口径</th>
+              <th>预测前三</th>
+              <th>复盘结果</th>
+              <th>漏判赛道</th>
+              <th>阶段分析</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="chart-grid chart-grid-bottom">
+      <div class="card chart-card">
+        <div class="chart-head">
+          <div>
+            <span class="tag strong">近四周复盘</span>
+            <h3>近四周命中率走势</h3>
+          </div>
+          <p>看模型命中率是否在迭代中逐步改善</p>
+        </div>
+        <div id="fourWeekHitChart" class="vbar-chart"></div>
+      </div>
+      <div class="card chart-card">
+        <div class="chart-head">
+          <div>
+            <span class="tag watch">高频上榜</span>
+            <h3>近四周主线赛道频次</h3>
+          </div>
+          <p>统计近四周进入预测前十次数最多的赛道</p>
+        </div>
+        <div id="coreTrackFreqChart" class="compact-chart"></div>
+      </div>
+    </div>
+    <div id="fourWeekConclusions" class="four-week-conclusions"></div>
   </div>
 
   <div class="section">
@@ -153,64 +230,79 @@ const moneyClass=v=> Number(v)>=0?'positive':'negative';
 const tierClass=t=> t==='强关注'?'strong':(t==='观察跟踪'?'watch':(t==='谨慎跟踪'?'caution':'info'));
 function link(track, count){return `<a class="btn" href="details/index.html?track=${encodeURIComponent(track)}">净流入详情</a>`}
 function viewLink(track){return `<a class="btn" href="views/index.html?track=${encodeURIComponent(track)}">最新观点</a>`}
-function chip(track){return `<a class="chip" href="details/index.html?track=${encodeURIComponent(track)}">${track}</a>`}
-function staticChip(track){return `<span class="chip static">${track}</span>`}
+const TRACK_ICON_MAP = {
+  '半导体及设备': {icon:'⚙️', cls:'semis'},
+  '芯片': {icon:'▣', cls:'chip'},
+  '大金融': {icon:'¥', cls:'finance'},
+  '创新药及生物科技': {icon:'🧬', cls:'bio'},
+  '人工智能综合指数': {icon:'AI', cls:'ai'},
+  '通信': {icon:'📡', cls:'comm'},
+  '互联网': {icon:'🌐', cls:'web'},
+  '游戏': {icon:'🎮', cls:'game'},
+  '机器人': {icon:'🤖', cls:'robot'},
+  '卫星及航天': {icon:'🚀', cls:'space'},
+  '军工': {icon:'盾', cls:'mil'},
+  '云计算': {icon:'☁', cls:'ai'},
+  '材料': {icon:'材', cls:'mat'},
+  '消费电子': {icon:'📱', cls:'elect'},
+  '集成电路': {icon:'集', cls:'chip'},
+  '电子': {icon:'电', cls:'elect'},
+  '黄金': {icon:'金', cls:'gold'},
+  '煤炭': {icon:'煤', cls:'coal'}
+};
+function trackIcon(track){
+  const meta = TRACK_ICON_MAP[track] || {icon:(track||'--').slice(0,1), cls:'default'};
+  return `<span class="track-icon ${meta.cls}">${meta.icon}</span>`;
+}
+function trackLabel(track){
+  return `<span class="track-label">${trackIcon(track)}<span class="track-name-text">${track}</span></span>`;
+}
+function chip(track){return `<a class="chip track-chip" href="details/index.html?track=${encodeURIComponent(track)}">${trackIcon(track)}<span>${track}</span></a>`}
+function staticChip(track){return `<span class="chip static track-chip">${trackIcon(track)}<span>${track}</span></span>`}
 const DRIVER_OVERRIDES = {
   '半导体及设备': {
-    driver: '资金延续 / 半导体设备景气'
-  },
-  '通信': {
-    driver: '光通信 / 上游材料扩散'
+    driver: '资金延续 / 引流横截面 / 设备景气'
   },
   '芯片': {
-    driver: '同源修复 / 半导体瓶颈'
+    driver: '资金延续 / 用户关注'
   },
   '大金融': {
-    driver: '低位修复 / 风格再平衡'
+    driver: '风格再平衡 / 低位承接'
   },
   '创新药及生物科技': {
     driver: '低位修复 / 非拥挤高风偏'
   },
   '人工智能综合指数': {
-    driver: 'AI应用 / 算力云化'
+    driver: 'AI应用 / 用户关注'
   },
-  '卫星及航天': {
-    driver: '事件催化 / 低位科技承接'
+  '通信': {
+    driver: '光通信 / 订单验证'
+  },
+  '互联网': {
+    driver: '低位修复 / 非硬件科技'
+  },
+  '游戏': {
+    driver: 'AI应用 / 引流横截面'
   },
   '机器人': {
     driver: '量产节点 / 物理AI'
   },
-  '游戏': {
-    driver: 'AI应用 / 引流修复'
-  },
-  '材料': {
-    driver: '上游涨价 / 产业链扩散'
+  '卫星及航天': {
+    driver: '商业航天 / 事件催化'
   },
 };
 const MISSED_REASONS = [
   {
-    track: '大金融',
-    actual_rank: 4,
-    actual_net_inflow: 90.411895,
-    reason: '科技高位分歧后，非银金融和低位价值方向承接资金，风格再平衡速度快于模型预期。'
-  },
-  {
-    track: '卫星及航天',
-    actual_rank: 6,
-    actual_net_inflow: 35.014276,
-    reason: '商业航天7月发射窗口、火箭回收和低轨卫星链形成事件催化，低位科技承接强于预期。'
-  },
-  {
-    track: '人工智能综合指数',
-    actual_rank: 7,
-    actual_net_inflow: 23.831225,
-    reason: 'AI安全、代码Agent、算力云化和应用收入验证继续发酵，产业线索没有因硬件震荡而中断。'
-  },
-  {
-    track: '机器人',
+    track: '互联网',
     actual_rank: 9,
-    actual_net_inflow: 11.956923,
-    reason: '人形机器人量产节点、物理AI和车企链共振催化密集，低位实体AI承接明显。'
+    actual_net_inflow: 26.024072,
+    reason: '低位修复和风险偏好回补强于预期，科技链从硬件向非硬件方向扩散。'
+  },
+  {
+    track: '军工',
+    actual_rank: 10,
+    actual_net_inflow: 12.937323,
+    reason: '军工受地缘、低位科技轮动和事件催化带动，模型前期低估了短期修复强度。'
   },
 ];
 
@@ -228,23 +320,43 @@ async function init(){
   const top3 = (DATA.summary?.top3_tracks || DATA.top10.slice(0,3).map(x=>x.track)).join('、');
   const next3 = DATA.top10.slice(3,6).map(x=>x.track).join('、');
   const obs = DATA.top10.slice(6,10).map(x=>x.track).join('、');
+  const techPool = ['半导体及设备','芯片','人工智能综合指数','通信','互联网','游戏','机器人','卫星及航天','集成电路','电子','消费电子','云计算'];
+  const techCount = DATA.top10.filter(x => techPool.includes(x.track)).length;
   document.getElementById('predictionBrief').innerHTML = `
-    <div class="brief-main">本周模型前列集中在<b>${top3}</b>，科技硬件主线仍在，但大金融、创新药、商业航天和机器人等低位承接方向开始进入排序前列。</div>
-    <div class="brief-grid">
-      <div><b>前排主线</b><span>${top3}：半导体设备、光通信和芯片仍是AI硬件链最核心的三条线，重点看订单、交付和价格兑现。</span></div>
-      <div><b>第二梯队</b><span>${next3}：大金融体现风格再平衡，创新药承接高风偏资金，人工智能综合指数关注AI应用和算力云化。</span></div>
-      <div><b>观察方向</b><span>${obs}：卫星及航天、机器人和游戏更偏事件催化，材料继续对应AI硬件上游涨价和瓶颈扩散。</span></div>
-      <div><b>使用提醒</b><span>半导体及设备、芯片、集成电路、电子、消费电子存在同源关系，通信和材料也与AI硬件链高度关联，推荐时避免重复堆叠。</span></div>
+    <div class="brief-banner"><b>一句话判断：</b>科技主线仍占优，低位修复开始扩散；本周更适合先看主线分层，再看赛道细节。</div>
+    <div class="brief-cards">
+      <div class="brief-card">
+        <span class="brief-kicker">前排主线</span>
+        <b>${top3}</b>
+        <p>半导体链仍有资金承接，大金融体现风格再平衡。</p>
+      </div>
+      <div class="brief-card">
+        <span class="brief-kicker">第二梯队</span>
+        <b>${next3}</b>
+        <p>对应高风偏修复、AI应用扩散和光通信订单验证。</p>
+      </div>
+      <div class="brief-card">
+        <span class="brief-kicker">观察方向</span>
+        <b>${obs}</b>
+        <p>更偏低位修复和事件催化，后续仍需数据确认。</p>
+      </div>
+      <div class="brief-card highlight">
+        <span class="brief-kicker">结构特征</span>
+        <b>科技链 ${techCount}/10</b>
+        <p>本周价格噪音较大，判断热度时不宜只看涨跌幅。</p>
+      </div>
     </div>`;
   document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
-  renderTop10(); renderReview(); renderMissedReasons();
+  renderTop10(); renderCharts(); renderReview(); renderMissedReasons(); renderFourWeekAnalysis();
 }
+
+
 function renderTop10(){
   const tb=document.querySelector('#top10Table tbody');
   tb.innerHTML = DATA.top10.map(r=>{
     const ov = DRIVER_OVERRIDES[r.track] || {};
     const driver = ov.driver || displayFactorName(r.key_factor);
-    return `<tr><td class="rank">${r.rank}</td><td><b>${r.track}</b></td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${driver}</span></td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`;
+    return `<tr><td class="rank">${r.rank}</td><td>${trackLabel(r.track)}</td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${driver}</span></td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`;
   }).join('');
 }
 function renderMissedReasons(){
@@ -260,6 +372,174 @@ function renderMissedReasons(){
     <p>${r.reason}</p>
   </div>`).join('');
 }
+
+function renderFourWeekAnalysis(){
+  const box = DATA.four_week_analysis || {};
+  const weeks = box.weeks || [];
+  const kpis = document.getElementById('fourWeekKpis');
+  const table = document.querySelector('#fourWeekTable tbody');
+  const cons = document.getElementById('fourWeekConclusions');
+  if(!kpis || !table || !cons) return;
+
+  const avg = box.avg_hit_rate != null ? Math.round(box.avg_hit_rate * 100) + '%' : '--';
+  const core = (box.core_tracks || []).join('、') || '--';
+  kpis.innerHTML = `
+    <div class="card four-week-kpi-card">
+      <span class="tag strong">已复盘周数</span>
+      <b>${box.realized_weeks || 0}/4</b>
+      <p>当前周仍待实际资金流向验证</p>
+    </div>
+    <div class="card four-week-kpi-card">
+      <span class="tag info">平均命中率</span>
+      <b>${avg}</b>
+      <p>已复盘三周的前十命中均值</p>
+    </div>
+    <div class="card four-week-kpi-card">
+      <span class="tag purple">命中趋势</span>
+      <b>${box.hit_trend || '--'}</b>
+      <p>模型迭代后复盘结果逐周改善</p>
+    </div>
+    <div class="card four-week-kpi-card">
+      <span class="tag watch">稳定主线</span>
+      <b class="four-week-core">${core}</b>
+      <p>近四周反复进入预测池的核心赛道</p>
+    </div>
+  `;
+
+  table.innerHTML = weeks.map(w => `
+    <tr>
+      <td><b>${w.period}</b><br><span class="muted">${w.status || ''}</span></td>
+      <td>${w.version_note || '--'}</td>
+      <td>${(w.top3 || []).map(staticChip).join('')}</td>
+      <td>${w.hit === '待复盘' ? '<span class="tag caution">待复盘</span>' : '<span class="tag strong">'+w.hit+'</span>'}</td>
+      <td>${(w.missed && w.missed.length) ? w.missed.map(staticChip).join('') : '<span class="muted">暂无</span>'}</td>
+      <td class="four-week-analysis-cell">${w.analysis || '--'}</td>
+    </tr>
+  `).join('');
+
+  renderFourWeekCharts(box);
+
+  cons.innerHTML = (box.conclusions || []).map((t, idx) => `
+    <div class="card four-week-conclusion-card">
+      <span class="tag ${idx===0?'strong':idx===1?'info':idx===2?'purple':'watch'}">${idx===0?'复盘结论':idx===1?'稳定主线':idx===2?'漏判来源':'后续修正'}</span>
+      <p>${t}</p>
+    </div>
+  `).join('');
+}
+
+
+function renderCharts(){
+  renderTrackStructureChart();
+  renderFactorDonutChart();
+}
+
+
+function buildDonut(containerId, items, totalText, centerLabel){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const total = items.reduce((s, x) => s + x.value, 0) || 1;
+  let acc = 0;
+  const gradient = items.map(it => {
+    const start = (acc / total) * 360;
+    acc += it.value;
+    const end = (acc / total) * 360;
+    return `${it.color} ${start}deg ${end}deg`;
+  }).join(', ');
+  wrap.innerHTML = `
+    <div class="donut-box">
+      <div class="donut-chart" style="background: conic-gradient(${gradient})">
+        <div class="donut-hole">
+          <span>${centerLabel}</span>
+          <b>${totalText}</b>
+        </div>
+      </div>
+      <div class="donut-legend">
+        ${items.map(it => `<div class="legend-item"><span class="legend-dot" style="background:${it.color}"></span><span class="legend-name">${it.name}</span><b class="legend-value">${it.value}</b></div>`).join('')}
+      </div>
+    </div>`;
+}
+
+function renderTrackStructureChart(){
+  const top10 = DATA.top10 || [];
+  const techPool = ['半导体及设备','芯片','人工智能综合指数','通信','互联网','游戏','机器人','卫星及航天','集成电路','电子','消费电子','云计算'];
+  const repairPool = ['大金融','创新药及生物科技','传统医药','食品饮料','家电','公用事业','煤炭','油气石化','黄金'];
+  let tech = 0, repair = 0, other = 0;
+  top10.forEach(r => {
+    if(techPool.includes(r.track)) tech += 1;
+    else if(repairPool.includes(r.track)) repair += 1;
+    else other += 1;
+  });
+  buildDonut('trackStructureChart', [
+    {name:'科技主线', value:tech, color:'#5b7cfa'},
+    {name:'低位修复', value:repair, color:'#8b5cf6'},
+    {name:'其他方向', value:other, color:'#7cc6ff'}
+  ].filter(x=>x.value>0), `${top10.length}`, '前十赛道');
+}
+
+function renderFactorDonutChart(){
+  const map = new Map();
+  (DATA.top10 || []).forEach(r=>{
+    const key = displayFactorName(r.key_factor) || '其他';
+    map.set(key, (map.get(key)||0)+1);
+  });
+  const palette = {
+    '市场热度':'#5b7cfa',
+    '客户自行为':'#8b5cf6',
+    '引流因子':'#22c55e',
+    '舆论热度':'#f59e0b',
+    '其他':'#7cc6ff'
+  };
+  const items = Array.from(map.entries()).sort((a,b)=>b[1]-a[1]).map(([name, value]) => ({name, value, color: palette[name] || '#7cc6ff'}));
+  buildDonut('factorDonutChart', items, `${DATA.top10.length}`, '核心因子');
+}
+
+
+function renderFourWeekCharts(box){
+  renderFourWeekHitChart(box);
+  renderCoreTrackFreqChart(box);
+}
+
+function renderFourWeekHitChart(box){
+  const wrap = document.getElementById('fourWeekHitChart');
+  if(!wrap) return;
+  const weeks = (box.weeks || []).slice(-4);
+  const vals = weeks.map(w => {
+    if(!w.hit || w.hit === '待复盘') return null;
+    const m = String(w.hit).match(/(\d+)\/(\d+)/);
+    return m ? Number(m[1]) : null;
+  });
+  const max = 10;
+  wrap.innerHTML = weeks.map((w, idx) => {
+    const v = vals[idx];
+    const h = v == null ? 18 : Math.max(20, v / max * 120);
+    const lbl = w.period.slice(5).replace(' 至 ','<br>');
+    return `<div class="vbar-item ${v == null ? 'pending' : ''}">
+      <div class="vbar-top">${w.hit || '--'}</div>
+      <div class="vbar-col"><div class="vbar-fill" style="height:${h}px"></div></div>
+      <div class="vbar-label">${lbl}</div>
+    </div>`;
+  }).join('') + `<div class="chart-footnote">已复盘三周命中率：${box.hit_trend || '--'}。</div>`;
+}
+
+function renderCoreTrackFreqChart(box){
+  const wrap = document.getElementById('coreTrackFreqChart');
+  if(!wrap) return;
+  const freq = new Map();
+  (box.weeks || []).forEach(w => {
+    (w.top10 || []).forEach(track => freq.set(track, (freq.get(track)||0)+1));
+  });
+  const rows = Array.from(freq.entries()).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  const max = Math.max(...rows.map(r=>r[1]), 1);
+  wrap.innerHTML = rows.map(([name, count]) => {
+    const width = count / max * 100;
+    return `<div class="compact-row">
+      <div class="compact-title">${name}</div>
+      <div class="compact-bar"><div class="compact-fill alt" style="width:${width}%"></div></div>
+      <div class="compact-value">${count}次</div>
+    </div>`;
+  }).join('') + `<div class="chart-footnote">近四周高频上榜赛道更适合做主线观察池，低频赛道更偏事件驱动。</div>`;
+}
+
 
 function renderReview(){
   const rev=DATA.last_review || {};
@@ -278,7 +558,25 @@ function renderReview(){
   document.getElementById('reviewSummary').textContent = rev.summary || '';
   document.getElementById('reviewHits').innerHTML = (rev.hits||[]).map(staticChip).join('') || '<span class="muted">暂无</span>';
   document.getElementById('reviewMissed').innerHTML = (rev.missed_actual_top10||[]).map(staticChip).join('') || '<span class="muted">暂无</span>';
-  document.querySelector('#reviewTable tbody').innerHTML = pred.map(r=>`<tr><td class="rank">${r.pred_rank}</td><td><b>${r.track}</b></td><td class="num">${r.actual_rank??'--'}</td><td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td><td>${r.hit?'<span class="tag strong">命中</span>':'<span class="tag caution">未进前十</span>'}</td></tr>`).join('') || '<tr><td colspan="5" class="empty">暂无复盘数据</td></tr>';
+  const timeline = document.getElementById('reviewTimeline');
+  if(timeline){
+    const hitText = (rev.hits||[]).slice(0,4).join('、') || '暂无';
+    const missedText = (rev.missed_actual_top10||[]).slice(0,3).join('、') || '暂无';
+    timeline.innerHTML = `
+      <div class="card review-line-card">
+        <span class="tag info">上周判断</span>
+        <p>模型上周更偏向 <b>${(pred.slice(0,3).map(x=>x.track).join('、')) || '--'}</b>，主抓延续性较强的方向。</p>
+      </div>
+      <div class="card review-line-card">
+        <span class="tag strong">命中亮点</span>
+        <p>成功抓住 <b>${hitText}</b> 等赛道，说明主线识别能力仍然有效。</p>
+      </div>
+      <div class="card review-line-card">
+        <span class="tag watch">主要漏判</span>
+        <p>漏判主要集中在 <b>${missedText}</b>，更多来自风格切换、低位修复或事件催化。</p>
+      </div>`;
+  }
+  document.querySelector('#reviewTable tbody').innerHTML = pred.map(r=>`<tr><td class="rank">${r.pred_rank}</td><td>${trackLabel(r.track)}</td><td class="num">${r.actual_rank??'--'}</td><td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td><td>${r.hit?'<span class="tag strong">命中</span>':'<span class="tag caution">未进前十</span>'}</td></tr>`).join('') || '<tr><td colspan="5" class="empty">暂无复盘数据</td></tr>';
 }
 init().catch(err=>{document.body.innerHTML='<div class="wrap"><div class="card action-card"><h2>数据加载失败</h2><p>'+err.message+'</p><p class="muted">请确认 assets/latest-data.js 已随网站一起上传。</p></div></div>'});
 </script>
