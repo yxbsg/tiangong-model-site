@@ -18,6 +18,8 @@
       <p id="viewSummary" class="view-clean-summary"></p>
     </section>
 
+    <div id="viewQuickCards" class="view-quick-cards"></div>
+
     <section class="card view-clean-card view-clean-wide core-first-card">
       <h2><span>💡</span>核心观点</h2>
       <p id="logicText" class="view-clean-logic"></p>
@@ -25,7 +27,7 @@
 
     <div class="view-clean-grid">
       <section class="card view-clean-card">
-        <h2><span>📝</span>事件事件事件信息整理</h2>
+        <h2><span>📝</span>事件信息整理</h2>
         <ul id="viewInfoList" class="clean-text-list"></ul>
       </section>
 
@@ -41,7 +43,7 @@
     </section>
 
     <div class="risk-box view-clean-risk">
-      本页面内容来自最近一周每日热点事件源事件事件信息整理，观点来自于公开的研究机构资料，仅作为赛道观察和产品映射辅助，不构成投资建议或收益承诺。
+      本页面内容来自最近一周每日热点事件源信息整理，观点来自公开研究机构资料，仅作为赛道观察和产品映射辅助，不构成投资建议或收益承诺。
     </div>
   </div>
 </div>
@@ -77,7 +79,7 @@ function init(){
 
   document.title = `${track} · 赛道最新观点`;
   document.getElementById('viewTitle').textContent = view.title || `${track}最新观点`;
-  document.getElementById('viewTags').innerHTML = '<span class="tag info">最近一周观点</span>';
+  document.getElementById('viewTags').innerHTML = '<span class="tag info">最近一周观点</span><span class="tag purple">事件信息整理</span>';
 
   document.getElementById('viewSummary').textContent = view.summary || '';
 
@@ -93,6 +95,23 @@ function init(){
 
   const metrics = METRIC_MAP[track] || ['订单进展','价格变化','客户验证','业绩兑现','产业催化'];
   document.getElementById('metricGrid').innerHTML = metrics.map(x=>`<span class="plain-chip">${x}</span>`).join('');
+
+  const quickWrap = document.getElementById('viewQuickCards');
+  if(quickWrap){
+    quickWrap.innerHTML = `
+      <div class="card quick-view-card">
+        <span class="tag info">一句话结论</span>
+        <p>${view.summary || '暂无明确结论。'}</p>
+      </div>
+      <div class="card quick-view-card">
+        <span class="tag strong">重点业务</span>
+        <p>${(view.evidence || [])[0] || '关注订单、产能、交付和产品进展。'}</p>
+      </div>
+      <div class="card quick-view-card">
+        <span class="tag watch">跟踪重点</span>
+        <p>${metrics.slice(0,2).join('、')} 等指标是否继续改善。</p>
+      </div>`;
+  }
 }
 init();
 </script>
