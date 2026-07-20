@@ -230,35 +230,8 @@ const moneyClass=v=> Number(v)>=0?'positive':'negative';
 const tierClass=t=> t==='强关注'?'strong':(t==='观察跟踪'?'watch':(t==='谨慎跟踪'?'caution':'info'));
 function link(track, count){return `<a class="btn" href="details/index.html?track=${encodeURIComponent(track)}">净流入详情</a>`}
 function viewLink(track){return `<a class="btn" href="views/index.html?track=${encodeURIComponent(track)}">最新观点</a>`}
-const TRACK_ICON_MAP = {
-  '半导体及设备': {icon:'⚙️', cls:'semis'},
-  '芯片': {icon:'▣', cls:'chip'},
-  '大金融': {icon:'¥', cls:'finance'},
-  '创新药及生物科技': {icon:'🧬', cls:'bio'},
-  '人工智能综合指数': {icon:'AI', cls:'ai'},
-  '通信': {icon:'📡', cls:'comm'},
-  '互联网': {icon:'🌐', cls:'web'},
-  '游戏': {icon:'🎮', cls:'game'},
-  '机器人': {icon:'🤖', cls:'robot'},
-  '卫星及航天': {icon:'🚀', cls:'space'},
-  '军工': {icon:'盾', cls:'mil'},
-  '云计算': {icon:'☁', cls:'ai'},
-  '材料': {icon:'材', cls:'mat'},
-  '消费电子': {icon:'📱', cls:'elect'},
-  '集成电路': {icon:'集', cls:'chip'},
-  '电子': {icon:'电', cls:'elect'},
-  '黄金': {icon:'金', cls:'gold'},
-  '煤炭': {icon:'煤', cls:'coal'}
-};
-function trackIcon(track){
-  const meta = TRACK_ICON_MAP[track] || {icon:(track||'--').slice(0,1), cls:'default'};
-  return `<span class="track-icon ${meta.cls}">${meta.icon}</span>`;
-}
-function trackLabel(track){
-  return `<span class="track-label">${trackIcon(track)}<span class="track-name-text">${track}</span></span>`;
-}
-function chip(track){return `<a class="chip track-chip" href="details/index.html?track=${encodeURIComponent(track)}">${trackIcon(track)}<span>${track}</span></a>`}
-function staticChip(track){return `<span class="chip static track-chip">${trackIcon(track)}<span>${track}</span></span>`}
+function chip(track){return `<a class="chip" href="details/index.html?track=${encodeURIComponent(track)}">${track}</a>`}
+function staticChip(track){return `<span class="chip static">${track}</span>`}
 const DRIVER_OVERRIDES = {
   '半导体及设备': {
     driver: '资金延续 / 引流横截面 / 设备景气'
@@ -356,7 +329,7 @@ function renderTop10(){
   tb.innerHTML = DATA.top10.map(r=>{
     const ov = DRIVER_OVERRIDES[r.track] || {};
     const driver = ov.driver || displayFactorName(r.key_factor);
-    return `<tr><td class="rank">${r.rank}</td><td>${trackLabel(r.track)}</td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${driver}</span></td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`;
+    return `<tr><td class="rank">${r.rank}</td><td><b>${r.track}</b></td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${driver}</span></td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`;
   }).join('');
 }
 function renderMissedReasons(){
@@ -576,7 +549,7 @@ function renderReview(){
         <p>漏判主要集中在 <b>${missedText}</b>，更多来自风格切换、低位修复或事件催化。</p>
       </div>`;
   }
-  document.querySelector('#reviewTable tbody').innerHTML = pred.map(r=>`<tr><td class="rank">${r.pred_rank}</td><td>${trackLabel(r.track)}</td><td class="num">${r.actual_rank??'--'}</td><td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td><td>${r.hit?'<span class="tag strong">命中</span>':'<span class="tag caution">未进前十</span>'}</td></tr>`).join('') || '<tr><td colspan="5" class="empty">暂无复盘数据</td></tr>';
+  document.querySelector('#reviewTable tbody').innerHTML = pred.map(r=>`<tr><td class="rank">${r.pred_rank}</td><td><b>${r.track}</b></td><td class="num">${r.actual_rank??'--'}</td><td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td><td>${r.hit?'<span class="tag strong">命中</span>':'<span class="tag caution">未进前十</span>'}</td></tr>`).join('') || '<tr><td colspan="5" class="empty">暂无复盘数据</td></tr>';
 }
 init().catch(err=>{document.body.innerHTML='<div class="wrap"><div class="card action-card"><h2>数据加载失败</h2><p>'+err.message+'</p><p class="muted">请确认 assets/latest-data.js 已随网站一起上传。</p></div></div>'});
 </script>
