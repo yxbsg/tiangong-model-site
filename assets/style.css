@@ -446,3 +446,76 @@ table th, table td{text-align:center !important;vertical-align:middle !important
 .bar-axis{grid-template-columns:repeat(45,18px) !important;gap:5px;}
 .bar-col{min-width:18px;}
 .reason-cell{min-width:360px;}
+
+
+/* v51 updates */
+.history-chart-wrap,
+.split-bar-chart,
+.bar-axis{min-width:1000px !important;}
+.split-bar-chart{grid-template-columns:repeat(45,18px) !important;gap:5px;}
+.bar-axis{grid-template-columns:repeat(45,18px) !important;gap:5px;}
+.bar-col{min-width:18px;}
+.reason-cell{min-width:380px;}
+
+
+/* v53 four-week analysis */
+.four-week-section .section-title p{max-width:900px}
+.four-week-kpis{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-bottom:14px;
+}
+.four-week-kpi-card{
+  padding:18px;
+  min-height:150px;
+}
+.four-week-kpi-card b{
+  display:block;
+  margin-top:12px;
+  font-size:30px;
+  line-height:1.15;
+  letter-spacing:-.02em;
+  color:#172033;
+}
+.four-week-kpi-card .four-week-core{
+  font-size:18px;
+  line-height:1.55;
+}
+.four-week-kpi-card p{
+  margin:10px 0 0;
+  color:#64748b;
+  line-height:1.7;
+  font-size:13px;
+}
+.four-week-main-card{overflow:hidden;margin-top:4px}
+#fourWeekTable td{white-space:normal;vertical-align:middle !important;line-height:1.65}
+#fourWeekTable td:nth-child(3),#fourWeekTable td:nth-child(5){min-width:210px}
+.four-week-analysis-cell{
+  min-width:420px;
+  text-align:left !important;
+  color:#334155;
+}
+.four-week-conclusions{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-top:14px;
+}
+.four-week-conclusion-card{
+  padding:18px;
+  min-height:178px;
+}
+.four-week-conclusion-card p{
+  margin:12px 0 0;
+  color:#334155;
+  line-height:1.8;
+  font-size:14px;
+}
+@media(max-width:1100px){
+  .four-week-kpis,.four-week-conclusions{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .four-week-kpis,.four-week-conclusions{grid-template-columns:1fr}
+  .four-week-analysis-cell{min-width:280px}
+}

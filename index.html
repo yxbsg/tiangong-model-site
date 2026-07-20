@@ -25,9 +25,9 @@
     <div class="card hero-side factor-card">
       <span class="tag purple">因子解释</span>
       <div class="factor-explains">
-        <div class="factor-item"><b>市场热度</b><span>赛道涨跌与交易表现</span></div>
+        <div class="factor-item"><b>市场热度</b><span>本周异常压缩后低权重使用</span></div>
         <div class="factor-item"><b>用户自行为</b><span>用户主动关注度</span></div>
-        <div class="factor-item"><b>引流因子</b><span>本周暂无数据，暂不参与排序</span></div>
+        <div class="factor-item"><b>引流因子</b><span>仅用本周横截面，不算0706环比</span></div>
         <div class="factor-item"><b>舆论热度</b><span>市场讨论与内容传播强弱</span></div>
         <div class="factor-item"><b>上周排名延续</b><span>资金关注是否延续</span></div>
         <div class="factor-item"><b>低位修复信号</b><span>弱势赛道是否出现边际改善</span></div>
@@ -97,6 +97,33 @@
     <div id="missedReasonCards" class="missed-grid"></div>
   </div>
 
+
+  <div class="section four-week-section">
+    <div class="section-title">
+      <h2>最近四周预测结果分析</h2>
+      <p>汇总近四周预测命中、主线变化和模型漏判来源，用于判断模型是否在持续迭代</p>
+    </div>
+    <div id="fourWeekKpis" class="four-week-kpis"></div>
+    <div class="card four-week-main-card">
+      <div class="table-wrap">
+        <table id="fourWeekTable">
+          <thead>
+            <tr>
+              <th>预测周期</th>
+              <th>模型口径</th>
+              <th>预测前三</th>
+              <th>复盘结果</th>
+              <th>漏判赛道</th>
+              <th>阶段分析</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="fourWeekConclusions" class="four-week-conclusions"></div>
+  </div>
+
   <div class="section">
     <div class="section-title"><h2>模型原理解释</h2><p>解释模型看什么、怎么排序、哪里容易失效</p></div>
     <div class="model-grid">
@@ -157,54 +184,48 @@ function chip(track){return `<a class="chip" href="details/index.html?track=${en
 function staticChip(track){return `<span class="chip static">${track}</span>`}
 const DRIVER_OVERRIDES = {
   '半导体及设备': {
-    driver: '资金延续 / 半导体设备景气'
+    driver: '资金延续 / 引流横截面 / 设备景气'
   },
   '芯片': {
-    driver: '同源修复 / 用户关注'
-  },
-  '人工智能综合指数': {
-    driver: '用户关注 / AI应用扩散'
-  },
-  '云计算': {
-    driver: '市场热度 / AI基础设施扩散'
-  },
-  '游戏': {
-    driver: '市场热度 / AI应用修复'
-  },
-  '通信': {
-    driver: '光通信 / 订单验证'
-  },
-  '卫星及航天': {
-    driver: '事件催化 / 低位科技承接'
-  },
-  '机器人': {
-    driver: '量产节点 / 物理AI'
+    driver: '资金延续 / 用户关注'
   },
   '大金融': {
-    driver: '用户关注 / 风格再平衡'
+    driver: '风格再平衡 / 低位承接'
   },
   '创新药及生物科技': {
     driver: '低位修复 / 非拥挤高风偏'
   },
+  '人工智能综合指数': {
+    driver: 'AI应用 / 用户关注'
+  },
+  '通信': {
+    driver: '光通信 / 订单验证'
+  },
+  '互联网': {
+    driver: '低位修复 / 非硬件科技'
+  },
+  '游戏': {
+    driver: 'AI应用 / 引流横截面'
+  },
+  '机器人': {
+    driver: '量产节点 / 物理AI'
+  },
+  '卫星及航天': {
+    driver: '商业航天 / 事件催化'
+  },
 };
 const MISSED_REASONS = [
   {
-    track: '黄金',
-    actual_rank: 8,
-    actual_net_inflow: 14.098780,
-    reason: '避险和资源品低位轮动强于预期，模型前期更偏科技和AI链条，低估了风格切换。'
-  },
-  {
-    track: '煤炭',
+    track: '互联网',
     actual_rank: 9,
-    actual_net_inflow: 12.171634,
-    reason: '煤炭受低位修复和顺周期轮动支撑，防御/红利类方向承接强于模型预期。'
+    actual_net_inflow: 26.024072,
+    reason: '低位修复和风险偏好回补强于预期，科技链从硬件向非硬件方向扩散。'
   },
   {
-    track: '云计算',
+    track: '军工',
     actual_rank: 10,
-    actual_net_inflow: 9.534578,
-    reason: '云计算热度改善明显，AI基础设施从硬件向云服务和资源调度扩散速度快于模型预期。'
+    actual_net_inflow: 12.937323,
+    reason: '军工受地缘、低位科技轮动和事件催化带动，模型前期低估了短期修复强度。'
   },
 ];
 
@@ -223,15 +244,15 @@ async function init(){
   const next3 = DATA.top10.slice(3,6).map(x=>x.track).join('、');
   const obs = DATA.top10.slice(6,10).map(x=>x.track).join('、');
   document.getElementById('predictionBrief').innerHTML = `
-    <div class="brief-main">本周<b>引流因子暂无数据</b>，模型临时剔除该项，不把大V实盘金额周变动列的0值当作真实降温；排序更侧重市场热度、用户自行为、舆论热度、资金延续和事件催化。</div>
+    <div class="brief-main">本版按稳健口径处理：<b>0706周大V不计算环比</b>，0713周表大V仅作横截面引流信号；上周涨跌幅异常放大，因此市场热度压缩并降权。前列集中在<b>${top3}</b>。</div>
     <div class="brief-grid">
-      <div><b>前排主线</b><span>${top3}：半导体设备和芯片仍有资金延续，人工智能综合指数更多依赖用户关注和AI应用扩散。</span></div>
-      <div><b>第二梯队</b><span>${next3}：云计算、游戏和通信分别对应AI基础设施扩散、AI应用修复和光通信订单验证。</span></div>
-      <div><b>观察方向</b><span>${obs}：卫星及航天、机器人、大金融和创新药更偏事件催化、低位承接和非拥挤修复。</span></div>
-      <div><b>使用提醒</b><span>由于本周缺少引流因子，榜单对“传播带动能力”的刻画会弱一些，建议重点结合热点事件和后续客户行为变化复核。</span></div>
+      <div><b>前排主线</b><span>${top3}：半导体链仍有资金和关注承接，大金融体现低位风格再平衡。</span></div>
+      <div><b>第二梯队</b><span>${next3}：创新药、人工智能综合指数和通信分别对应高风偏修复、AI应用扩散和光通信订单验证。</span></div>
+      <div><b>观察方向</b><span>${obs}：互联网、游戏、机器人、卫星及航天更偏低位修复和事件催化，需要后续数据继续确认。</span></div>
+      <div><b>使用提醒</b><span>本周价格数据噪音较大，不宜用单一涨跌幅判断赛道热度；同源科技链仍需合并理解，避免重复堆叠。</span></div>
     </div>`;
   document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
-  renderTop10(); renderReview(); renderMissedReasons();
+  renderTop10(); renderReview(); renderMissedReasons(); renderFourWeekAnalysis();
 }
 function renderTop10(){
   const tb=document.querySelector('#top10Table tbody');
@@ -254,6 +275,59 @@ function renderMissedReasons(){
     <p>${r.reason}</p>
   </div>`).join('');
 }
+
+function renderFourWeekAnalysis(){
+  const box = DATA.four_week_analysis || {};
+  const weeks = box.weeks || [];
+  const kpis = document.getElementById('fourWeekKpis');
+  const table = document.querySelector('#fourWeekTable tbody');
+  const cons = document.getElementById('fourWeekConclusions');
+  if(!kpis || !table || !cons) return;
+
+  const avg = box.avg_hit_rate != null ? Math.round(box.avg_hit_rate * 100) + '%' : '--';
+  const core = (box.core_tracks || []).join('、') || '--';
+  kpis.innerHTML = `
+    <div class="card four-week-kpi-card">
+      <span class="tag strong">已复盘周数</span>
+      <b>${box.realized_weeks || 0}/4</b>
+      <p>当前周仍待实际资金流向验证</p>
+    </div>
+    <div class="card four-week-kpi-card">
+      <span class="tag info">平均命中率</span>
+      <b>${avg}</b>
+      <p>已复盘三周的前十命中均值</p>
+    </div>
+    <div class="card four-week-kpi-card">
+      <span class="tag purple">命中趋势</span>
+      <b>${box.hit_trend || '--'}</b>
+      <p>模型迭代后复盘结果逐周改善</p>
+    </div>
+    <div class="card four-week-kpi-card">
+      <span class="tag watch">稳定主线</span>
+      <b class="four-week-core">${core}</b>
+      <p>近四周反复进入预测池的核心赛道</p>
+    </div>
+  `;
+
+  table.innerHTML = weeks.map(w => `
+    <tr>
+      <td><b>${w.period}</b><br><span class="muted">${w.status || ''}</span></td>
+      <td>${w.version_note || '--'}</td>
+      <td>${(w.top3 || []).map(staticChip).join('')}</td>
+      <td>${w.hit === '待复盘' ? '<span class="tag caution">待复盘</span>' : '<span class="tag strong">'+w.hit+'</span>'}</td>
+      <td>${(w.missed && w.missed.length) ? w.missed.map(staticChip).join('') : '<span class="muted">暂无</span>'}</td>
+      <td class="four-week-analysis-cell">${w.analysis || '--'}</td>
+    </tr>
+  `).join('');
+
+  cons.innerHTML = (box.conclusions || []).map((t, idx) => `
+    <div class="card four-week-conclusion-card">
+      <span class="tag ${idx===0?'strong':idx===1?'info':idx===2?'purple':'watch'}">${idx===0?'复盘结论':idx===1?'稳定主线':idx===2?'漏判来源':'后续修正'}</span>
+      <p>${t}</p>
+    </div>
+  `).join('');
+}
+
 
 function renderReview(){
   const rev=DATA.last_review || {};
