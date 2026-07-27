@@ -78,7 +78,7 @@
   </div>
 
   <div class="section">
-    <div class="risk-box"><b>同源赛道提示：</b><span id="sameSourceNote">芯片、半导体及设备、集成电路、电子、消费电子存在同源关系；若同时上榜，应理解为半导体链整体信号增强，不要当成多个完全独立方向重复推荐。</span></div>
+    <div class="risk-box"><b>同源赛道提示：</b><span id="sameSourceNote">半导体及设备、芯片、通信等AI硬件同源赛道本周出现明显净流出，需要合并理解为高位去拥挤观察；若后续净流入修复，再重新评估是否回到前排。</span></div>
   </div>
 
   <div class="section">
@@ -230,52 +230,98 @@ const moneyClass=v=> Number(v)>=0?'positive':'negative';
 const tierClass=t=> t==='强关注'?'strong':(t==='观察跟踪'?'watch':(t==='谨慎跟踪'?'caution':'info'));
 function link(track, count){return `<a class="btn" href="details/index.html?track=${encodeURIComponent(track)}">净流入详情</a>`}
 function viewLink(track){return `<a class="btn" href="views/index.html?track=${encodeURIComponent(track)}">最新观点</a>`}
-function chip(track){return `<a class="chip" href="details/index.html?track=${encodeURIComponent(track)}">${track}</a>`}
-function staticChip(track){return `<span class="chip static">${track}</span>`}
+const TRACK_ICON_MAP = {
+  '信息技术': {icon:'IT', cls:'soft'},
+  '半导体及设备': {icon:'⚙️', cls:'semis'},
+  '芯片': {icon:'▣', cls:'chip'},
+  '大金融': {icon:'¥', cls:'finance'},
+  '创新药及生物科技': {icon:'🧬', cls:'bio'},
+  '人工智能综合指数': {icon:'AI', cls:'ai'},
+  '通信': {icon:'📡', cls:'comm'},
+  '互联网': {icon:'🌐', cls:'web'},
+  '游戏': {icon:'🎮', cls:'game'},
+  '机器人': {icon:'🤖', cls:'robot'},
+  '卫星及航天': {icon:'🚀', cls:'space'},
+  '军工': {icon:'盾', cls:'mil'},
+  '云计算': {icon:'☁', cls:'ai'},
+  '材料': {icon:'材', cls:'mat'},
+  '消费电子': {icon:'📱', cls:'elect'},
+  '集成电路': {icon:'集', cls:'chip'},
+  '电子': {icon:'电', cls:'elect'},
+  '黄金': {icon:'金', cls:'gold'},
+  '煤炭': {icon:'煤', cls:'coal'}
+};
+function trackIcon(track){
+  const meta = TRACK_ICON_MAP[track] || {icon:(track||'--').slice(0,1), cls:'default'};
+  return `<span class="track-icon ${meta.cls}">${meta.icon}</span>`;
+}
+function trackLabel(track){
+  return `<span class="track-label">${trackIcon(track)}<span class="track-name-text">${track}</span></span>`;
+}
+function chip(track){return `<a class="chip track-chip" href="details/index.html?track=${encodeURIComponent(track)}">${trackIcon(track)}<span>${track}</span></a>`}
+function staticChip(track){return `<span class="chip static track-chip">${trackIcon(track)}<span>${track}</span></span>`}
 const DRIVER_OVERRIDES = {
-  '半导体及设备': {
-    driver: '资金延续 / 引流横截面 / 设备景气'
-  },
-  '芯片': {
-    driver: '资金延续 / 用户关注'
-  },
-  '大金融': {
-    driver: '风格再平衡 / 低位承接'
-  },
   '创新药及生物科技': {
-    driver: '低位修复 / 非拥挤高风偏'
+    driver: '资金延续 / 舆论热度'
   },
-  '人工智能综合指数': {
-    driver: 'AI应用 / 用户关注'
-  },
-  '通信': {
-    driver: '光通信 / 订单验证'
-  },
-  '互联网': {
-    driver: '低位修复 / 非硬件科技'
-  },
-  '游戏': {
-    driver: 'AI应用 / 引流横截面'
+  '电力': {
+    driver: '资金流入 / AI能源约束'
   },
   '机器人': {
     driver: '量产节点 / 物理AI'
   },
-  '卫星及航天': {
-    driver: '商业航天 / 事件催化'
+  '互联网': {
+    driver: '低位修复 / 引流横截面'
+  },
+  '人工智能综合指数': {
+    driver: 'AI应用 / 用户关注'
+  },
+  '黄金': {
+    driver: '避险修复 / 价格热度'
+  },
+  '游戏': {
+    driver: 'AI应用 / 低位修复'
+  },
+  '大金融': {
+    driver: '风格再平衡 / 用户关注'
+  },
+  '传统医药': {
+    driver: '低位修复 / 医药扩散'
+  },
+  '软件': {
+    driver: 'AI应用 / 软件修复'
   },
 };
 const MISSED_REASONS = [
   {
-    track: '互联网',
-    actual_rank: 9,
-    actual_net_inflow: 26.024072,
-    reason: '低位修复和风险偏好回补强于预期，科技链从硬件向非硬件方向扩散。'
+    track: '电力',
+    actual_rank: 1,
+    actual_net_inflow: 39.026572,
+    reason: '电力实际净流入居前，模型前期低估了AI能源约束和低位电力方向的资金承接。'
   },
   {
-    track: '军工',
+    track: '黄金',
+    actual_rank: 5,
+    actual_net_inflow: 12.313452,
+    reason: '黄金受避险和资源品轮动带动，价格热度强于模型预期。'
+  },
+  {
+    track: '软件',
+    actual_rank: 7,
+    actual_net_inflow: 7.608379,
+    reason: '软件进入实际前十，说明AI应用、信创和企业服务方向的低位修复快于模型预期。'
+  },
+  {
+    track: '工程机械',
+    actual_rank: 9,
+    actual_net_inflow: 5.648454,
+    reason: '工程机械偏顺周期和低位修复，资金承接强于模型前期判断。'
+  },
+  {
+    track: '传统医药',
     actual_rank: 10,
-    actual_net_inflow: 12.937323,
-    reason: '军工受地缘、低位科技轮动和事件催化带动，模型前期低估了短期修复强度。'
+    actual_net_inflow: 5.468460,
+    reason: '传统医药随医药链扩散进入前十，模型低估了创新药之外的医药宽度修复。'
   },
 ];
 
@@ -293,30 +339,30 @@ async function init(){
   const top3 = (DATA.summary?.top3_tracks || DATA.top10.slice(0,3).map(x=>x.track)).join('、');
   const next3 = DATA.top10.slice(3,6).map(x=>x.track).join('、');
   const obs = DATA.top10.slice(6,10).map(x=>x.track).join('、');
-  const techPool = ['半导体及设备','芯片','人工智能综合指数','通信','互联网','游戏','机器人','卫星及航天','集成电路','电子','消费电子','云计算'];
+  const techPool = ['半导体及设备','芯片','人工智能综合指数','通信','互联网','游戏','机器人','卫星及航天','集成电路','电子','消费电子','云计算','软件'];
   const techCount = DATA.top10.filter(x => techPool.includes(x.track)).length;
   document.getElementById('predictionBrief').innerHTML = `
-    <div class="brief-banner"><b>一句话判断：</b>科技主线仍占优，低位修复开始扩散；本周更适合先看主线分层，再看赛道细节。</div>
+    <div class="brief-banner"><b>一句话判断：</b>AI硬件链出现资金撤退，模型从“半导体/芯片强延续”切到“创新药、电力、机器人、互联网、AI应用和低位修复”。</div>
     <div class="brief-cards">
       <div class="brief-card">
         <span class="brief-kicker">前排主线</span>
         <b>${top3}</b>
-        <p>半导体链仍有资金承接，大金融体现风格再平衡。</p>
+        <p>创新药、电力和机器人成为本周模型前排，反映资金从高位硬件链向新承接方向扩散。</p>
       </div>
       <div class="brief-card">
         <span class="brief-kicker">第二梯队</span>
         <b>${next3}</b>
-        <p>对应高风偏修复、AI应用扩散和光通信订单验证。</p>
+        <p>互联网、人工智能综合指数和黄金分别对应非硬件科技、AI应用和避险/资源轮动。</p>
       </div>
       <div class="brief-card">
         <span class="brief-kicker">观察方向</span>
         <b>${obs}</b>
-        <p>更偏低位修复和事件催化，后续仍需数据确认。</p>
+        <p>游戏、大金融、传统医药和软件偏低位修复，需要后续资金继续确认。</p>
       </div>
       <div class="brief-card highlight">
         <span class="brief-kicker">结构特征</span>
         <b>科技链 ${techCount}/10</b>
-        <p>本周价格噪音较大，判断热度时不宜只看涨跌幅。</p>
+        <p>半导体、芯片、通信高关注但净流出，暂降为高波动观察。</p>
       </div>
     </div>`;
   document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
@@ -329,7 +375,7 @@ function renderTop10(){
   tb.innerHTML = DATA.top10.map(r=>{
     const ov = DRIVER_OVERRIDES[r.track] || {};
     const driver = ov.driver || displayFactorName(r.key_factor);
-    return `<tr><td class="rank">${r.rank}</td><td><b>${r.track}</b></td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${driver}</span></td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`;
+    return `<tr><td class="rank">${r.rank}</td><td>${trackLabel(r.track)}</td><td><span class="tag ${tierClass(r.operation_tier)}">${r.operation_tier||'--'}</span></td><td class="num">${fmtPct(r.top10_probability)}</td><td class="num">${r.last_week_rank??'--'}</td><td><span class="factor-pill">${driver}</span></td><td class="reason-cell">${r.prediction_reason||'--'}</td><td>${link(r.track,r.fund_count)}</td><td>${viewLink(r.track)}</td></tr>`;
   }).join('');
 }
 function renderMissedReasons(){
@@ -549,7 +595,7 @@ function renderReview(){
         <p>漏判主要集中在 <b>${missedText}</b>，更多来自风格切换、低位修复或事件催化。</p>
       </div>`;
   }
-  document.querySelector('#reviewTable tbody').innerHTML = pred.map(r=>`<tr><td class="rank">${r.pred_rank}</td><td><b>${r.track}</b></td><td class="num">${r.actual_rank??'--'}</td><td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td><td>${r.hit?'<span class="tag strong">命中</span>':'<span class="tag caution">未进前十</span>'}</td></tr>`).join('') || '<tr><td colspan="5" class="empty">暂无复盘数据</td></tr>';
+  document.querySelector('#reviewTable tbody').innerHTML = pred.map(r=>`<tr><td class="rank">${r.pred_rank}</td><td>${trackLabel(r.track)}</td><td class="num">${r.actual_rank??'--'}</td><td class="num ${moneyClass(r.actual_net_inflow)}">${fmtMoney(r.actual_net_inflow)}</td><td>${r.hit?'<span class="tag strong">命中</span>':'<span class="tag caution">未进前十</span>'}</td></tr>`).join('') || '<tr><td colspan="5" class="empty">暂无复盘数据</td></tr>';
 }
 init().catch(err=>{document.body.innerHTML='<div class="wrap"><div class="card action-card"><h2>数据加载失败</h2><p>'+err.message+'</p><p class="muted">请确认 assets/latest-data.js 已随网站一起上传。</p></div></div>'});
 </script>
