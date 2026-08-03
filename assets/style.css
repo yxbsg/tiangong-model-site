@@ -809,3 +809,12 @@ table th, table td{text-align:center !important;vertical-align:middle !important
 .track-icon.soft{background:linear-gradient(135deg,#6366f1 0%,#a5b4fc 100%);}
 .track-icon.mach{background:linear-gradient(135deg,#64748b 0%,#cbd5e1 100%);}
 .track-icon.energy{background:linear-gradient(135deg,#ea580c 0%,#fdba74 100%);}
+
+
+/* v66 icon classes */
+.track-icon.power{background:linear-gradient(135deg,#0284c7 0%,#7dd3fc 100%)}
+.track-icon.battery{background:linear-gradient(135deg,#16a34a 0%,#86efac 100%)}
+.track-icon.soft{background:linear-gradient(135deg,#6366f1 0%,#a5b4fc 100%)}
+.track-icon.media{background:linear-gradient(135deg,#db2777 0%,#f9a8d4 100%)}
+.track-icon.metal{background:linear-gradient(135deg,#b45309 0%,#fbbf24 100%)}
+.track-icon.consumer{background:linear-gradient(135deg,#0d9488 0%,#5eead4 100%)}

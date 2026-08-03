@@ -25,10 +25,10 @@
     <div class="card hero-side factor-card">
       <span class="tag purple">因子解释</span>
       <div class="factor-explains">
-        <div class="factor-item"><b>市场热度</b><span>本周异常压缩后低权重使用</span></div>
+        <div class="factor-item"><b>市场热度</b><span>参与排序，并对高位降温做惩罚</span></div>
         <div class="factor-item"><b>用户自行为</b><span>用户主动关注度</span></div>
-        <div class="factor-item"><b>引流因子</b><span>仅用本周横截面，不算0706环比</span></div>
-        <div class="factor-item"><b>舆论热度</b><span>市场讨论与内容传播强弱</span></div>
+        <div class="factor-item"><b>引流因子</b><span>使用本周横截面带动信号</span></div>
+        <div class="factor-item"><b>舆论热度</b><span>本周数据缺失，暂不参与排序</span></div>
         <div class="factor-item"><b>上周排名延续</b><span>资金关注是否延续</span></div>
         <div class="factor-item"><b>低位修复信号</b><span>弱势赛道是否出现边际改善</span></div>
       </div>
@@ -78,7 +78,7 @@
   </div>
 
   <div class="section">
-    <div class="risk-box"><b>同源赛道提示：</b><span id="sameSourceNote">半导体及设备、芯片、通信等AI硬件同源赛道本周出现明显净流出，需要合并理解为高位去拥挤观察；若后续净流入修复，再重新评估是否回到前排。</span></div>
+    <div class="risk-box"><b>同源赛道提示：</b><span id="sameSourceNote">半导体及设备与芯片属于同源硬件链，人工智能综合指数、软件与传媒属于应用扩散链。若同时上榜，应按产业链共振理解，避免重复堆叠；高位但价格降温的赛道需观察资金承接是否持续。</span></div>
   </div>
 
   <div class="section">
@@ -261,68 +261,22 @@ function trackLabel(track){
 function chip(track){return `<a class="chip track-chip" href="details/index.html?track=${encodeURIComponent(track)}">${trackIcon(track)}<span>${track}</span></a>`}
 function staticChip(track){return `<span class="chip static track-chip">${trackIcon(track)}<span>${track}</span></span>`}
 const DRIVER_OVERRIDES = {
-  '创新药及生物科技': {
-    driver: '资金延续 / 舆论热度'
-  },
-  '电力': {
-    driver: '资金流入 / AI能源约束'
-  },
-  '机器人': {
-    driver: '量产节点 / 物理AI'
-  },
-  '互联网': {
-    driver: '低位修复 / 引流横截面'
-  },
-  '人工智能综合指数': {
-    driver: 'AI应用 / 用户关注'
-  },
-  '黄金': {
-    driver: '避险修复 / 价格热度'
-  },
-  '游戏': {
-    driver: 'AI应用 / 低位修复'
-  },
-  '大金融': {
-    driver: '风格再平衡 / 用户关注'
-  },
-  '传统医药': {
-    driver: '低位修复 / 医药扩散'
-  },
-  '软件': {
-    driver: 'AI应用 / 软件修复'
-  },
+  '半导体及设备': { driver: '资金延续 / 设备景气' },
+  '电力': { driver: 'AIDC电力 / 订单兑现' },
+  '机器人': { driver: '量产节点 / 物理AI' },
+  '芯片': { driver: '资金延续 / 高位降温' },
+  '黄金': { driver: '避险承接 / 市场热度' },
+  '电池': { driver: '资金修复 / 供给治理' },
+  '有色': { driver: '资源回流 / 用户关注' },
+  '人工智能综合指数': { driver: 'AI应用 / 用户关注' },
+  '软件': { driver: 'AI应用 / 商业化验证' },
+  '传媒': { driver: '多模态内容 / 低位修复' },
 };
 const MISSED_REASONS = [
-  {
-    track: '电力',
-    actual_rank: 1,
-    actual_net_inflow: 39.026572,
-    reason: '电力实际净流入居前，模型前期低估了AI能源约束和低位电力方向的资金承接。'
-  },
-  {
-    track: '黄金',
-    actual_rank: 5,
-    actual_net_inflow: 12.313452,
-    reason: '黄金受避险和资源品轮动带动，价格热度强于模型预期。'
-  },
-  {
-    track: '软件',
-    actual_rank: 7,
-    actual_net_inflow: 7.608379,
-    reason: '软件进入实际前十，说明AI应用、信创和企业服务方向的低位修复快于模型预期。'
-  },
-  {
-    track: '工程机械',
-    actual_rank: 9,
-    actual_net_inflow: 5.648454,
-    reason: '工程机械偏顺周期和低位修复，资金承接强于模型前期判断。'
-  },
-  {
-    track: '传统医药',
-    actual_rank: 10,
-    actual_net_inflow: 5.468460,
-    reason: '传统医药随医药链扩散进入前十，模型低估了创新药之外的医药宽度修复。'
-  },
+  { track: '芯片', actual_rank: 2, actual_net_inflow: 23.130201, reason: '芯片上周由明显流出转为资金承接，用户关注和引流信号仍高，模型低估了链内修复速度。' },
+  { track: '电池', actual_rank: 4, actual_net_inflow: 9.560480, reason: '电池受供给治理和价格修复带动，实际资金进入前列，低位扩散速度快于模型预期。' },
+  { track: '传媒', actual_rank: 8, actual_net_inflow: 3.993593, reason: '传媒受多模态视频与内容应用催化，价格热度与资金修复同步改善。' },
+  { track: '消费', actual_rank: 9, actual_net_inflow: 2.492086, reason: '消费在结构修复中获得资金承接，体现非AI方向对组合的稳定作用。' },
 ];
 
 let DATA;
@@ -339,31 +293,15 @@ async function init(){
   const top3 = (DATA.summary?.top3_tracks || DATA.top10.slice(0,3).map(x=>x.track)).join('、');
   const next3 = DATA.top10.slice(3,6).map(x=>x.track).join('、');
   const obs = DATA.top10.slice(6,10).map(x=>x.track).join('、');
-  const techPool = ['半导体及设备','芯片','人工智能综合指数','通信','互联网','游戏','机器人','卫星及航天','集成电路','电子','消费电子','云计算','软件'];
+  const techPool = ['半导体及设备','芯片','人工智能综合指数','通信','互联网','游戏','机器人','卫星及航天','集成电路','电子','消费电子','云计算','软件','传媒'];
   const techCount = DATA.top10.filter(x => techPool.includes(x.track)).length;
   document.getElementById('predictionBrief').innerHTML = `
-    <div class="brief-banner"><b>一句话判断：</b>AI硬件链出现资金撤退，模型从“半导体/芯片强延续”切到“创新药、电力、机器人、互联网、AI应用和低位修复”。</div>
+    <div class="brief-banner"><b>一句话判断：</b>AI硬件仍有资金承接，但价格端明显降温；本周更偏“半导体设备、电力、机器人”主线，并由黄金、电池、有色和AI应用提供结构平衡。</div>
     <div class="brief-cards">
-      <div class="brief-card">
-        <span class="brief-kicker">前排主线</span>
-        <b>${top3}</b>
-        <p>创新药、电力和机器人成为本周模型前排，反映资金从高位硬件链向新承接方向扩散。</p>
-      </div>
-      <div class="brief-card">
-        <span class="brief-kicker">第二梯队</span>
-        <b>${next3}</b>
-        <p>互联网、人工智能综合指数和黄金分别对应非硬件科技、AI应用和避险/资源轮动。</p>
-      </div>
-      <div class="brief-card">
-        <span class="brief-kicker">观察方向</span>
-        <b>${obs}</b>
-        <p>游戏、大金融、传统医药和软件偏低位修复，需要后续资金继续确认。</p>
-      </div>
-      <div class="brief-card highlight">
-        <span class="brief-kicker">结构特征</span>
-        <b>科技链 ${techCount}/10</b>
-        <p>半导体、芯片、通信高关注但净流出，暂降为高波动观察。</p>
-      </div>
+      <div class="brief-card"><span class="brief-kicker">前排主线</span><b>${top3}</b><p>分别对应科技制造、能源电力和物理AI的订单与交付验证。</p></div>
+      <div class="brief-card"><span class="brief-kicker">第二梯队</span><b>${next3}</b><p>芯片高位承接，黄金与电池承担风格平衡和供给治理逻辑。</p></div>
+      <div class="brief-card"><span class="brief-kicker">观察方向</span><b>${obs}</b><p>有色、人工智能综合指数、软件和传媒分别对应资源、AI应用和多模态商业化。</p></div>
+      <div class="brief-card highlight"><span class="brief-kicker">结构特征</span><b>科技链 ${techCount}/10</b><p>舆论热度本周缺失；半导体与芯片需关注资金承接是否抵消价格降温。</p></div>
     </div>`;
   document.getElementById('compliance').textContent = DATA.ops_summary.compliance;
   renderTop10(); renderCharts(); renderReview(); renderMissedReasons(); renderFourWeekAnalysis();
