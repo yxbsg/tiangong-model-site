@@ -261,22 +261,25 @@ function trackLabel(track){
 function chip(track){return `<a class="chip track-chip" href="details/index.html?track=${encodeURIComponent(track)}">${trackIcon(track)}<span>${track}</span></a>`}
 function staticChip(track){return `<span class="chip static track-chip">${trackIcon(track)}<span>${track}</span></span>`}
 const DRIVER_OVERRIDES = {
-  '半导体及设备': { driver: '资金延续 / 设备景气' },
+  '黄金': { driver: '避险承接 / 市场热度' },
+  '有色': { driver: '资源回流 / 用户关注' },
+  '互联网': { driver: '平台修复 / 引流因子' },
+  '软件': { driver: 'AI应用 / 商业化验证' },
   '电力': { driver: 'AIDC电力 / 订单兑现' },
   '机器人': { driver: '量产节点 / 物理AI' },
-  '芯片': { driver: '资金延续 / 高位降温' },
-  '黄金': { driver: '避险承接 / 市场热度' },
-  '电池': { driver: '资金修复 / 供给治理' },
-  '有色': { driver: '资源回流 / 用户关注' },
-  '人工智能综合指数': { driver: 'AI应用 / 用户关注' },
-  '软件': { driver: 'AI应用 / 商业化验证' },
   '传媒': { driver: '多模态内容 / 低位修复' },
+  '消费': { driver: '低位修复 / 资金回流' },
+  '工程机械': { driver: '制造修复 / 引流因子' },
+  '材料': { driver: '新材料景气 / 市场热度' },
+  '半导体及设备': { driver: '高位降温 / 资金回撤' },
+  '芯片': { driver: '高位降温 / 资金回撤' },
+  '通信': { driver: '订单验证 / 景气观察' }
 };
 const MISSED_REASONS = [
-  { track: '芯片', actual_rank: 2, actual_net_inflow: 23.130201, reason: '芯片上周由明显流出转为资金承接，用户关注和引流信号仍高，模型低估了链内修复速度。' },
-  { track: '电池', actual_rank: 4, actual_net_inflow: 9.560480, reason: '电池受供给治理和价格修复带动，实际资金进入前列，低位扩散速度快于模型预期。' },
-  { track: '传媒', actual_rank: 8, actual_net_inflow: 3.993593, reason: '传媒受多模态视频与内容应用催化，价格热度与资金修复同步改善。' },
-  { track: '消费', actual_rank: 9, actual_net_inflow: 2.492086, reason: '消费在结构修复中获得资金承接，体现非AI方向对组合的稳定作用。' },
+  { track: '互联网', actual_rank: 2, actual_net_inflow: 18.07, reason: '互联网在平台修复与AI应用外溢共振下获得明显回流，模型低估了平台型资产的修复速度。' },
+  { track: '消费', actual_rank: 7, actual_net_inflow: 2.27, reason: '消费体现了低位防御与风格再平衡，模型对内需修复和稳增长承接的敏感度不足。' },
+  { track: '汽车', actual_rank: 9, actual_net_inflow: 1.53, reason: '汽车作为低位制造修复方向进入前十，说明资金开始从高拥挤科技向制造支线扩散。' },
+  { track: '材料', actual_rank: 10, actual_net_inflow: 1.29, reason: '材料受资源与高端材料景气支撑进入前十，模型此前没有充分反映这一扩散链条。' },
 ];
 
 let DATA;
