@@ -2103,224 +2103,6 @@ window.TIANGONG_FUND_MAP = {
         "issue_date": ""
       }
     ],
-    "AI": [
-      {
-        "code": "159022.SZ",
-        "name": "富国中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159139.SZ",
-        "name": "华泰柏瑞中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159140.SZ",
-        "name": "易方达中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159141.SZ",
-        "name": "永赢中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159142.SZ",
-        "name": "景顺长城中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159242.SZ",
-        "name": "大成创业板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159243.SZ",
-        "name": "招商创业板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159246.SZ",
-        "name": "富国创业板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159248.SZ",
-        "name": "万家中证人工智能主题ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159279.SZ",
-        "name": "华安创业板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159363.SZ",
-        "name": "华宝创业板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159381.SZ",
-        "name": "华夏创业板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159382.SZ",
-        "name": "南方创业板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159388.SZ",
-        "name": "国泰创业板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "159819.SZ",
-        "name": "易方达中证人工智能主题ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "512930.SH",
-        "name": "平安中证人工智能主题ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "515070.SH",
-        "name": "华夏中证人工智能主题ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "515980.SH",
-        "name": "华富中证人工智能产业ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "517800.SH",
-        "name": "方正富邦中证沪港深人工智能50ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "588410.SH",
-        "name": "鹏华中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "588420.SH",
-        "name": "摩根中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "588430.SH",
-        "name": "工银瑞信中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "588470.SH",
-        "name": "华安中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "588480.SH",
-        "name": "中金中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "588510.SH",
-        "name": "华夏中证科创创业人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "588730.SH",
-        "name": "易方达上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "588760.SH",
-        "name": "广发上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "588790.SH",
-        "name": "博时上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "588930.SH",
-        "name": "银华上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "589010.SH",
-        "name": "华夏上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "589090.SH",
-        "name": "鹏华上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "589110.SH",
-        "name": "国泰上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "589230.SH",
-        "name": "南方上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "589380.SH",
-        "name": "富国上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "589520.SH",
-        "name": "华宝上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      },
-      {
-        "code": "589560.SH",
-        "name": "汇添富上证科创板人工智能ETF",
-        "track": "AI",
-        "issue_date": ""
-      }
-    ],
     "传媒": [
       {
         "code": "159805.SZ",
@@ -5338,6 +5120,224 @@ window.TIANGONG_FUND_MAP = {
         "track": "银行",
         "issue_date": ""
       }
+    ],
+    "人工智能综合指数": [
+      {
+        "code": "159022.SZ",
+        "name": "富国中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159139.SZ",
+        "name": "华泰柏瑞中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159140.SZ",
+        "name": "易方达中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159141.SZ",
+        "name": "永赢中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159142.SZ",
+        "name": "景顺长城中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159242.SZ",
+        "name": "大成创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159243.SZ",
+        "name": "招商创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159246.SZ",
+        "name": "富国创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159248.SZ",
+        "name": "万家中证人工智能主题ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159279.SZ",
+        "name": "华安创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159363.SZ",
+        "name": "华宝创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159381.SZ",
+        "name": "华夏创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159382.SZ",
+        "name": "南方创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159388.SZ",
+        "name": "国泰创业板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "159819.SZ",
+        "name": "易方达中证人工智能主题ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "512930.SH",
+        "name": "平安中证人工智能主题ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "515070.SH",
+        "name": "华夏中证人工智能主题ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "515980.SH",
+        "name": "华富中证人工智能产业ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "517800.SH",
+        "name": "方正富邦中证沪港深人工智能50ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588410.SH",
+        "name": "鹏华中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588420.SH",
+        "name": "摩根中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588430.SH",
+        "name": "工银瑞信中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588470.SH",
+        "name": "华安中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588480.SH",
+        "name": "中金中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588510.SH",
+        "name": "华夏中证科创创业人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588730.SH",
+        "name": "易方达上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588760.SH",
+        "name": "广发上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588790.SH",
+        "name": "博时上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "588930.SH",
+        "name": "银华上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589010.SH",
+        "name": "华夏上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589090.SH",
+        "name": "鹏华上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589110.SH",
+        "name": "国泰上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589230.SH",
+        "name": "南方上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589380.SH",
+        "name": "富国上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589520.SH",
+        "name": "华宝上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      },
+      {
+        "code": "589560.SH",
+        "name": "汇添富上证科创板人工智能ETF",
+        "track": "人工智能综合指数",
+        "issue_date": ""
+      }
     ]
   }
-}
+};
