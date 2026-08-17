@@ -1956,7 +1956,7 @@ window.TIANGONG_LATEST_DATA = {
   "last_review": {
     "title": "上周预测回顾——20/50个赛道净流入",
     "week": "2026-08-10 至 2026-08-14预测复盘",
-    "summary": "上周预测前10命中实际前10为 4/10，模型抓住了黄金、软件、工程机械、材料，但低估了半导体及设备、煤炭、农业、游戏、地产、食品饮料。",
+    "summary": "上周预测前10命中实际前10为4/10，模型抓住了黄金、软件、工程机械、材料，但低估了半导体及设备、煤炭、农业、游戏、地产、食品饮料。",
     "hit_rate": 0.4,
     "hit_count": 4,
     "total": 10,
@@ -1987,61 +1987,71 @@ window.TIANGONG_LATEST_DATA = {
         "pred_rank": 1,
         "track": "黄金",
         "actual_rank": 4,
-        "hit": true
+        "hit": true,
+        "actual_net_inflow": 5.76
       },
       {
         "pred_rank": 2,
         "track": "有色",
         "actual_rank": null,
-        "hit": false
+        "hit": false,
+        "actual_net_inflow": null
       },
       {
         "pred_rank": 3,
         "track": "互联网",
         "actual_rank": null,
-        "hit": false
+        "hit": false,
+        "actual_net_inflow": null
       },
       {
         "pred_rank": 4,
         "track": "软件",
         "actual_rank": 2,
-        "hit": true
+        "hit": true,
+        "actual_net_inflow": 10.73
       },
       {
         "pred_rank": 5,
         "track": "电力",
         "actual_rank": null,
-        "hit": false
+        "hit": false,
+        "actual_net_inflow": null
       },
       {
         "pred_rank": 6,
         "track": "机器人",
         "actual_rank": null,
-        "hit": false
+        "hit": false,
+        "actual_net_inflow": null
       },
       {
         "pred_rank": 7,
         "track": "传媒",
         "actual_rank": null,
-        "hit": false
+        "hit": false,
+        "actual_net_inflow": null
       },
       {
         "pred_rank": 8,
         "track": "消费",
         "actual_rank": null,
-        "hit": false
+        "hit": false,
+        "actual_net_inflow": null
       },
       {
         "pred_rank": 9,
         "track": "工程机械",
         "actual_rank": 5,
-        "hit": true
+        "hit": true,
+        "actual_net_inflow": 1.88
       },
       {
         "pred_rank": 10,
         "track": "材料",
         "actual_rank": 9,
-        "hit": true
+        "hit": true,
+        "actual_net_inflow": 1.29
       }
     ],
     "actual_top10": [
@@ -2062,52 +2072,52 @@ window.TIANGONG_LATEST_DATA = {
       {
         "rank": 1,
         "track": "半导体及设备",
-        "actual_net_inflow": 58.123484843373
+        "actual_net_inflow": 58.12
       },
       {
         "rank": 2,
         "track": "软件",
-        "actual_net_inflow": 10.733666899064
+        "actual_net_inflow": 10.73
       },
       {
         "rank": 3,
         "track": "煤炭",
-        "actual_net_inflow": 7.569358177728
+        "actual_net_inflow": 7.57
       },
       {
         "rank": 4,
         "track": "黄金",
-        "actual_net_inflow": 5.762308873832
+        "actual_net_inflow": 5.76
       },
       {
         "rank": 5,
         "track": "工程机械",
-        "actual_net_inflow": 1.88367098929
+        "actual_net_inflow": 1.88
       },
       {
         "rank": 6,
         "track": "农业",
-        "actual_net_inflow": 1.509839280223
+        "actual_net_inflow": 1.51
       },
       {
         "rank": 7,
         "track": "游戏",
-        "actual_net_inflow": 0.984776389704
+        "actual_net_inflow": 1.2
       },
       {
         "rank": 8,
         "track": "地产",
-        "actual_net_inflow": 0.944921239265
+        "actual_net_inflow": 0.94
       },
       {
         "rank": 9,
         "track": "材料",
-        "actual_net_inflow": 0.463507123197
+        "actual_net_inflow": 1.29
       },
       {
         "rank": 10,
         "track": "食品饮料",
-        "actual_net_inflow": 0.385198491228
+        "actual_net_inflow": 0.39
       }
     ]
   },
